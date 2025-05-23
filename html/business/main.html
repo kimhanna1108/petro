@@ -4959,15 +4959,15 @@ Minify Error */
 
         /*# sourceMappingURL=critical.gen.css.map */
     </style>
-    <link rel="preload" href="/Content/PetroCanada/style.bundle.css?v=1DmWOj95ZL_ez4ZEwoyPX4Uvem24FTJgvg3two5jUW41"
+    <link rel="preload" href="/petro/common/css/style.css"
         as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript>
         <link rel="stylesheet"
-            href="/Content/PetroCanada/style.bundle.css?v=1DmWOj95ZL_ez4ZEwoyPX4Uvem24FTJgvg3two5jUW41">
+            href="/petro/common/css/style.css">
     </noscript>
-    <link rel="preload" href="/Content/PetroCanada/retail.bundle.css?v=-6GNITFutNNBD3BPlKy1cWx5yn3tA31_T2wllXnhoEA1"
+    <link rel="preload" href="/petro/common/css/retail.css"
         as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript>
         <link rel="stylesheet"
-            href="/Content/PetroCanada/retail.bundle.css?v=-6GNITFutNNBD3BPlKy1cWx5yn3tA31_T2wllXnhoEA1">
+            href="/petro/common/css/retail.css">
     </noscript>
     <script>/*! For license information please see head.gen.js.LICENSE.txt */!function () { function n(r) { var f = t[r], u; return void 0 !== f ? f.exports : (u = t[r] = { exports: {} }, i[r].call(u.exports, u, u.exports, n), u.exports) } var i = { 6481: function () { !function (n, t, i) { function o(n, t) { return typeof n === t } function d(n) { return n.replace(/([a-z])-([a-z])/g, function (n, t, i) { return t + i.toUpperCase() }).replace(/^-/, "") } function s() { return "function" != typeof t.createElement ? t.createElement(arguments[0]) : c ? t.createElementNS.call(t, "http://www.w3.org/2000/svg", arguments[0]) : t.createElement.apply(t, arguments) } function g(n, i, r, u) { var h, a, v, y, l = "modernizr", o = s("div"), f = function () { var n = t.body; return n || ((n = s(c ? "svg" : "body")).fake = !0), n }(); if (parseInt(r, 10)) for (; r--;)(v = s("div")).id = u ? u[r] : l + (r + 1), o.appendChild(v); return (h = s("style")).type = "text/css", h.id = "s" + l, (f.fake ? f : o).appendChild(h), f.appendChild(o), h.styleSheet ? h.styleSheet.cssText = n : h.appendChild(t.createTextNode(n)), o.id = l, f.fake && (f.style.background = "", f.style.overflow = "hidden", y = e.style.overflow, e.style.overflow = "hidden", e.appendChild(f)), a = i(o, n), f.fake ? (f.parentNode.removeChild(f), e.style.overflow = y, e.offsetHeight) : o.parentNode.removeChild(o), !!a } function ut(n, t) { return !!~("" + n).indexOf(t) } function ft(n, t) { return function () { return n.apply(t, arguments) } } function nt(n) { return n.replace(/([A-Z])/g, function (n, t) { return "-" + t.toLowerCase() }).replace(/^ms-/, "-ms-") } function et(t, i, r) { var u, f; return "getComputedStyle" in n ? (u = getComputedStyle.call(n, t, i), f = n.console, null !== u ? r && (u = u.getPropertyValue(r)) : f && f[f.error ? "error" : "log"].call(f, "getComputedStyle returning null, its possible modernizr test results are inaccurate")) : u = !i && t.currentStyle && t.currentStyle[r], u } function ot(t, r) { var u = t.length, f; if ("CSS" in n && "supports" in n.CSS) { for (; u--;)if (n.CSS.supports(nt(t[u]), r)) return !0; return !1 } if ("CSSSupportsRule" in n) { for (f = []; u--;)f.push("(" + nt(t[u]) + ":" + r + ")"); return g("@supports (" + (f = f.join(" or ")) + ") { #modernizr { position: absolute; } }", function (n) { return "absolute" == et(n, null, "position") }) } return i } function st(n, t, r, u) { function c() { v && (delete f.style, delete f.modElem) } var l, v, h, y, e, p, a; if ((u = !o(u, "undefined") && u, !o(r, "undefined")) && (l = ot(n, r), !o(l, "undefined"))) return l; for (a = ["modernizr", "tspan", "samp"]; !f.style && a.length;)v = !0, f.modElem = s(a.shift()), f.style = f.modElem.style; for (y = n.length, h = 0; y > h; h++)if (e = n[h], p = f.style[e], ut(e, "-") && (e = d(e)), f.style[e] !== i) { if (u || o(r, "undefined")) return c(), "pfx" != t || e; try { f.style[e] = r } catch (n) { } if (f.style[e] != p) return c(), "pfx" != t || e } return c(), !1 } function v(n, t, i, r, u) { var f = n.charAt(0).toUpperCase() + n.slice(1), e = (n + " " + p.join(f + " ") + f).split(" "); return o(t, "string") || o(t, "undefined") ? st(e, t, r, u) : function (n, t, i) { var u, r; for (r in n) if (n[r] in t) return !1 === i ? n[r] : o(u = t[n[r]], "function") ? ft(u, i || t) : u; return !1 }(e = (n + " " + b.join(f + " ") + f).split(" "), t, i) } var tt = [], h = [], u = { _version: "3.6.0", _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 }, _q: [], on: function (n, t) { var i = this; setTimeout(function () { t(i[n]) }, 0) }, addTest: function (n, t, i) { h.push({ name: n, fn: t, options: i }) }, addAsyncTest: function (n) { h.push({ name: null, fn: n }) } }, r = function () { }, it, y, p, w, b, k, f, rt, a; r.prototype = u; (r = new r).addTest("cookies", function () { try { t.cookie = "cookietest=1"; var n = -1 != t.cookie.indexOf("cookietest="); return t.cookie = "cookietest=1; expires=Thu, 01-Jan-1970 00:00:01 GMT", n } catch (n) { return !1 } }); r.addTest("sessionstorage", function () { var n = "modernizr"; try { return sessionStorage.setItem(n, n), sessionStorage.removeItem(n), !0 } catch (n) { return !1 } }); var e = t.documentElement, c = "svg" === e.nodeName.toLowerCase(), l = u._config.usePrefixes ? " -webkit- -moz- -o- -ms- ".split(" ") : ["", ""]; for (u._prefixes = l, it = u.testStyles = g, r.addTest("touchevents", function () { var i, r; return "ontouchstart" in n || n.DocumentTouch && t instanceof DocumentTouch ? i = !0 : (r = ["@media (", l.join("touch-enabled),("), "heartz", ")", "{#modernizr{top:9px;position:absolute}}"].join(""), it(r, function (n) { i = 9 === n.offsetTop })), i }), y = "Moz O ms Webkit", p = u._config.usePrefixes ? y.split(" ") : [], u._cssomPrefixes = p, w = function (t) { var e, o = l.length, u = n.CSSRule, r, f; if (void 0 === u) return i; if (!t) return !1; if ((e = (t = t.replace(/^@/, "")).replace(/-/g, "_").toUpperCase() + "_RULE") in u) return "@" + t; for (r = 0; o > r; r++)if (f = l[r], f.toUpperCase() + "_" + e in u) return "@-" + f.toLowerCase() + "-" + t; return !1 }, u.atRule = w, b = u._config.usePrefixes ? y.toLowerCase().split(" ") : [], u._domPrefixes = b, k = { elem: s("modernizr") }, r._q.push(function () { delete k.elem }), f = { style: k.elem.style }, r._q.unshift(function () { delete f.style }), u.testAllProps = v, rt = u.prefixed = function (n, t, i) { return 0 === n.indexOf("@") ? w(n) : (-1 != n.indexOf("-") && (n = d(n)), t ? v(n, t, i) : v(n, "pfx")) }, r.addTest("objectfit", !!rt("objectFit"), { aliases: ["object-fit"] }), function () { var i, n, u, f, e, t, s; for (s in h) if (h.hasOwnProperty(s)) { if (i = [], (n = h[s]).name && (i.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (u = 0; u < n.options.aliases.length; u++)i.push(n.options.aliases[u].toLowerCase()); for (f = o(n.fn, "function") ? n.fn() : n.fn, e = 0; e < i.length; e++)1 === (t = i[e].split(".")).length ? r[t[0]] = f : (!r[t[0]] || r[t[0]] instanceof Boolean || (r[t[0]] = new Boolean(r[t[0]])), r[t[0]][t[1]] = f), tt.push((f ? "" : "no-") + t.join("-")) } }(), function (n) { var t = e.className, i = r._config.classPrefix || "", u; (c && (t = t.baseVal), r._config.enableJSClass) && (u = new RegExp("(^|\\s)" + i + "no-js(\\s|$)"), t = t.replace(u, "$1" + i + "js$2")); r._config.enableClasses && (t += " " + i + n.join(" " + i), c ? e.className.baseVal = t : e.className = t) }(tt), delete u.addTest, delete u.addAsyncTest, a = 0; a < r._q.length; a++)r._q[a](); n.Modernizr = r }(window, document) }, 6244: function (n, t, i) { !function (n) { "use strict"; var i, r; n.loadCSS || (n.loadCSS = function () { }); i = loadCSS.relpreload = {}; (i.support = function () { var t; try { t = n.document.createElement("link").relList.supports("preload") } catch (n) { t = !1 } return function () { return t } }(), i.bindMediaToggle = function (n) { function t() { n.addEventListener ? n.removeEventListener("load", t) : n.attachEvent && n.detachEvent("onload", t); n.setAttribute("onload", null); n.media = i } var i = n.media || "all"; n.addEventListener ? n.addEventListener("load", t) : n.attachEvent && n.attachEvent("onload", t); setTimeout(function () { n.rel = "stylesheet"; n.media = "only x" }); setTimeout(t, 3e3) }, i.poly = function () { var u, r, t; if (!i.support()) for (u = n.document.getElementsByTagName("link"), r = 0; r < u.length; r++)t = u[r], "preload" !== t.rel || "style" !== t.getAttribute("as") || t.getAttribute("data-loadcss") || (t.setAttribute("data-loadcss", !0), i.bindMediaToggle(t)) }, i.support()) || (i.poly(), r = n.setInterval(i.poly, 500), n.addEventListener ? n.addEventListener("load", function () { i.poly(); n.clearInterval(r) }) : n.attachEvent && n.attachEvent("onload", function () { i.poly(); n.clearInterval(r) })); t.loadCSS = loadCSS }(void 0 !== i.g ? i.g : this) } }, t = {}; n.n = function (t) { var i = t && t.__esModule ? function () { return t.default } : function () { return t }; return n.d(i, { a: i }), i }; n.d = function (t, i) { for (var r in i) n.o(i, r) && !n.o(t, r) && Object.defineProperty(t, r, { enumerable: !0, get: i[r] }) }; n.g = function () { if ("object" == typeof globalThis) return globalThis; try { return this || new Function("return this")() } catch (n) { if ("object" == typeof window) return window } }(); n.o = function (n, t) { return Object.prototype.hasOwnProperty.call(n, t) }, function () { "use strict"; function t() { try { return window.self !== window.top } catch (n) { return !0 } } n(6481); n(6244); window.PetroCanada = window.PetroCanada || {}; window.PetroCanada.asynchronousLoad = function (n, t) { var i = new XMLHttpRequest; i.open("GET", t, !0); i.onreadystatechange = function () { if (4 === this.readyState && 200 === this.status) { var i = /\u003cbody.*?>([\s\S]*)<\/body>/.exec(this.responseText)[1], t = document.querySelector(n); t && (function (n, t) { var o; n.innerHTML = t; for (var s = n.getElementsByTagName("script"), u = [], i = 0; i < s.length; i++)u.push(s[i]); for (i = 0; i < u.length; i++) { for (var r = u[i], f = document.createElement("script"), e = 0; e < r.attributes.length; e++)o = r.attributes[e], f.setAttribute(o.name, o.value); f.appendChild(document.createTextNode(r.innerHTML)); r.parentNode && r.parentNode.replaceChild(f, r) } }(t, i), window.PetroCanada.replaceNonBreakingPhrases && window.PetroCanada.replaceNonBreakingPhrases()) } }; window.Tokens && window.Tokens.Debug ? setTimeout(function () { i.send() }, 2e3) : i.send() }, function (n, t, i) { void 0 === n && (n = "html"); void 0 === t && (t = "no-js"); void 0 === i && (i = "js"); var r = document.querySelector(n); r instanceof HTMLElement && (r.classList.remove(t), r.classList.add(i)) }(), function (n, i, r) { void 0 === n && (n = "html"); void 0 === i && (i = "iframe"); void 0 === r && (r = "no-iframe"); var u = document.querySelector(n); u instanceof HTMLHtmlElement && t() ? u.classList.add(i) : u instanceof HTMLHtmlElement && !t() && u.classList.add(r) }(), function (n, t) { if (void 0 === n && (n = "html"), void 0 === t && (t = "windows"), navigator.platform.indexOf("Win") > -1) { var i = document.querySelector(n); i instanceof HTMLHtmlElement && i.classList.add(t) } }(), function (n) { void 0 === n && (n = 'a[target="Modal"], a[target="modal"]'); var t = document.querySelector("html"); t && t.addEventListener("click", function (t) { t.currentTarget && t.currentTarget instanceof HTMLAnchorElement && t.currentTarget.matches(n) && t.preventDefault() }) }(); !window.crypto && window.msCrypto && (window.crypto = window.msCrypto) }() }()</script>
     <script>
@@ -5414,7 +5414,7 @@ Minify Error */
                         <li class="global-navigation__item
 global-navigation__item--has-children 								">
                             <a id="global-navigation" onclick="TrackNavigationItem('top header');"
-                                class="global-navigation__link " href="/en/personal" title="Personal">
+                                class="global-navigation__link " href="/petro/index.html" title="Personal">
                                 <span class="global-navigation__link-text ">
                                     Personal
                                 </span>
@@ -5444,40 +5444,11 @@ global-navigation__item--has-children 								">
                 </nav>
                 <nav class="utility-navigation">
                     <ul class="utility-navigation__list">
-                        <li class="utility-navigation__item
-">
+                        <li class="utility-navigation__itemutility-navigation__item--hide-on-mobile 					">
                             <a onclick="TrackNavigationItem('utility');" class="utility-navigation__link "
-                                href="/en/business/login" target="_modal">
-                                <span class="utility-navigation__link-text ">Sign in</span>
-                            </a>
-                        </li>
-                        <li class="utility-navigation__item
-utility-navigation__item--hide-on-mobile 					">
-                            <a onclick="TrackNavigationItem('utility');" class="utility-navigation__link "
-                                href="/en/business/rack-prices" target="">
-                                <span class="utility-navigation__link-text ">Rack prices</span>
-                            </a>
-                        </li>
-                        <li class="utility-navigation__item
-utility-navigation__item--hide-on-mobile 					">
-                            <a onclick="TrackNavigationItem('utility');" class="utility-navigation__link "
-                                href="/en/business/contact" target="">
+                                href="/petro/html/contact/contact.html" target="">
                                 <span class="utility-navigation__link-text ">Contact</span>
                             </a>
-                        </li>
-                        <li class="utility-navigation__item">
-                            <a onclick="TrackNavigationItem('utility');"
-                                class="utility-navigation__link language-switcher" href="/fr/entreprises">
-                                <abbr title="Fran&#231;ais" class="language-switcher__language">FR</abbr>
-                            </a>
-                        </li>
-                        <li class="utility-navigation__item utility-navigation__item--hidden">
-                            <div class="global-search">
-                                <button aria-controls="search-overlay" aria-expanded="false"
-                                    class="global-search__button" data-search-button type="button">
-                                    Toggle search
-                                </button>
-                            </div>
                         </li>
                     </ul>
                 </nav>
@@ -6699,90 +6670,6 @@ footer-navigation__item--has-children 																">
                         </ul>
                     </nav>
                 </div>
-                <div class="footer__column footer__column--social-icons">
-                    <h2 class="footer__heading">Connect with us</h2>
-                    <nav class="social-icons">
-                        <ul class="social-icons__list">
-                            <li class="social-icons__item">
-                                <a onclick="SocialMediaExit('Facebook')" class="social-icons__link"
-                                    href="https://www.facebook.com/petrocanada" target="_blank">
-                                    <span class="u-visually-hidden">Facebook</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
-                                        <path fill-rule="evenodd"
-                                            d="M0 18a18 18 0 1 1 36 0 18 18 0 0 1-36 0zm19.3 10v-9.8H22l.3-3.4h-3v-1.7c0-.9 0-1.3 1.3-1.3h1.7V8.4h-2.7c-3.2 0-4.4 1.6-4.4 4.4v2h-2v3.4h2V28h4z">
-                                        </path>
-                                    </svg> </a>
-                            </li>
-                            <li class="social-icons__item">
-                                <a onclick="SocialMediaExit('Instagram')" class="social-icons__link"
-                                    href="https://www.instagram.com/petrocanada/" target="_blank">
-                                    <span class="u-visually-hidden">Instagram</span>
-                                    <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" data-name="Layer 1"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-                                        <circle fill-rule="evenodd" cx="18.06" cy="17.94" r="3.2" />
-                                        <path fill-rule="evenodd"
-                                            d="m22.55,9.74s-2.16-.11-4.27-.11c-2.36,0-4.71.11-4.71.11-2.05,0-3.72,1.66-3.72,3.72h0s-.05,2.41-.05,4.72c0,2.16.05,4.25.05,4.25,0,2.05,1.66,3.72,3.72,3.72,0,0,2.32.11,4.6.11s4.37-.11,4.37-.11c2.05,0,3.72-1.66,3.72-3.71,0,0,.11-2.09.11-4.25,0-2.32-.11-4.72-.11-4.72,0-2.05-1.66-3.72-3.71-3.72,0,0,0,0,0,0Zm-4.49,13.67c-2.99,0-5.41-2.42-5.41-5.41s2.42-5.41,5.41-5.41,5.41,2.42,5.41,5.41h0c0,2.99-2.42,5.41-5.41,5.41h0Zm5.57-9.77c-.7,0-1.26-.57-1.26-1.26s.57-1.26,1.26-1.26,1.26.57,1.26,1.26h0c0,.7-.56,1.26-1.26,1.26h0Z" />
-                                        <path fill-rule="evenodd"
-                                            d="m18.03.78C8.52.78.81,8.49.81,18s7.71,17.22,17.22,17.22,17.22-7.71,17.22-17.22S27.54.78,18.03.78Zm10.43,21.64c.02,3.28-2.62,5.96-5.91,5.98-.03,0-.05,0-.08,0l-4.17.06-4.67-.06c-3.28.02-5.96-2.62-5.99-5.91,0-.03,0-.05,0-.08l-.05-4.21.05-4.63c-.02-3.28,2.62-5.96,5.91-5.98.03,0,.05,0,.08,0l4.67-.05,4.17.06c3.28-.02,5.96,2.62,5.98,5.91,0,.03,0,.05,0,.08l.06,4.63-.06,4.21Z" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-icons__item">
-                                <a onclick="SocialMediaExit('LinkedIn')" class="social-icons__link"
-                                    href="https://ca.linkedin.com/showcase/petrocanada" target="_blank">
-                                    <span class="u-visually-hidden">LinkedIn</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248.9 248.9">
-                                        <defs />
-                                        <path
-                                            d="M124.4 0C55.7 0 0 55.7 0 124.4s55.7 124.4 124.4 124.4 124.4-55.7 124.4-124.4C248.9 55.7 193.2 0 124.4 0zm66.7 180.9c0 5.2-4.2 9.3-9.4 9.4H66.5c-5.2 0-9.3-4.2-9.3-9.4V65.6c0-5.2 4.2-9.3 9.3-9.3h115.3c5.2 0 9.3 4.2 9.4 9.3l-.1 115.3z" />
-                                        <path
-                                            d="M169.6 134.2v34.5h-20v-32.2c0-8.1-2.9-13.6-10.1-13.6-5.5 0-8.8 3.7-10.3 7.3-.5 1.6-.7 3.2-.7 4.9v33.6h-20s.3-54.5 0-60.1h20v8.5l-.1.2h.1v-.3c2.7-4.1 7.4-9.9 18-9.9 13.3 0 23.1 8.6 23.1 27.1zM87.7 79.6c-6.8 0-11.3 4.5-11.3 10.4s4.3 10.4 11 10.4h.1c7 0 11.3-4.6 11.3-10.4s-4.2-10.4-11.1-10.4zm-10.1 89h20v-60.1h-20v60.1z" />
-                                    </svg> </a>
-                            </li>
-                            <li class="social-icons__item">
-                                <a onclick="SocialMediaExit('Twitter')" class="social-icons__link"
-                                    href="https://twitter.com/petrocanada" target="_blank">
-                                    <span class="u-visually-hidden">Twitter</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
-                                        <path fill-rule="evenodd"
-                                            d="M18 36a18 18 0 1 0 0-36 18 18 0 0 0 0 36Zm8.42-27-6.7 7.63L27 27h-5.36l-4.9-6.99L10.59 27H9l7.03-7.99L9 9h5.36L19 15.63 24.83 9h1.59Zm-9.6 9.1.72 1 4.85 6.8h2.44l-5.94-8.33-.71-.99-4.58-6.4h-2.44l5.67 7.92Z"
-                                            clip-rule="evenodd" />
-                                    </svg> </a>
-                            </li>
-                            <li class="social-icons__item">
-                                <a onclick="SocialMediaExit('YouTube')" class="social-icons__link"
-                                    href="https://www.youtube.com/PetroCanada" target="_blank">
-                                    <span class="u-visually-hidden">YouTube</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
-                                        <g fill-rule="evenodd">
-                                            <path
-                                                d="M0 18a18 18 0 1 1 36 0 18 18 0 0 1-36 0zm27.4-3.6s-.2-1.4-.8-2c-.7-.8-1.5-.8-2-.8-2.6-.2-6.6-.2-6.6-.2s-4 0-6.7.2c-.4 0-1.2 0-2 .8-.5.6-.7 2-.7 2l-.2 3.2V19l.2 3.2s.2 1.4.7 2c.8.7 1.7.7 2.2.8 1.5.2 6.5.2 6.5.2s4 0 6.7-.2c.4 0 1.2 0 2-.8.5-.6.7-2 .7-2l.2-3.2v-1.4l-.2-3.2z">
-                                            </path>
-                                            <path d="M16 21v-5l5 2.5z"></path>
-                                        </g>
-                                    </svg> </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav class="button-navigation">
-                        <ul class="button-navigation__list">
-                            <li class="button-navigation__item
-">
-                                <a onclick="TrackButtonClickEvent();" class="button button-navigation__link "
-                                    href="/en/personal/petro-canada-retail-app" target="" title="Petro-Canada apps">
-                                    <span class="button__text button-navigation__link-text ">Petro-Canada apps</span>
-                                </a>
-                            </li>
-                            <li class="button-navigation__item
-">
-                                <a onclick="TrackButtonClickEvent();" class="button button-navigation__link "
-                                    href="/en/personal/contact-customer-service" target="" title="Contact us">
-                                    <span class="button__text button-navigation__link-text ">Contact us</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
             </div>
         </div>
         <div class="suncor-family">
@@ -6809,7 +6696,9 @@ footer-navigation__item--has-children 																">
             </ul>
         </nav>
         <div class="copyright rte">
-            <p>&copy; Copyright <span class="current-year"></span> Suncor Energy Inc.</p>
+            <p>회사명 : 한국캐나디언골드 <span class="current-year"></span> 대표 : 이준열 <span class="current-year"></span> 주소 : 경기도 여주시 강천면 곱새기1길 19</p>
+            <p>TEL : 02-422-0051 <span class="current-year"></span> FAX : 031-881-3103 <span class="current-year"></span> 사업자번호 : 219-81-20180</p>
+            <p>&copy; Copyright by petro-korea.co.kr All rights reserved.</p>
         </div>
         <div class="footer-logo">
             <img alt="Canadian Olympic Committee, Petro-Canada National Partner and Canadian Paralympic Committee logos"
