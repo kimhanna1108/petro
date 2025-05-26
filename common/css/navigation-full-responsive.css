@@ -78,7 +78,7 @@ body {
 .main-nav-links {
   width: 82%;
   float: left;
-  background: url(../images/nav/10x10.png);
+  background: url('/petro/common/images/nav/10x10.png');
 }
 
 .navbar-brand {
@@ -215,7 +215,7 @@ body {
   }
 .nav-panel-group .nav-panel-heading a.collapsed:after {
   content: '';
-  background: url('../images/nav/plus_red.svg');
+  background: url('/petro/common/images/nav/plus_red.svg');
   position: absolute;
   width: 20px;
   height: 20px;
@@ -541,7 +541,7 @@ a.subnav-link-with-image:hover .subnav-image-text-link {
   max-height: 80px;
 }
 .main-nav-links-full-background {
-  background-image: url('../images/nav/10x10.png');
+  background-image: url('/petro/common/images/nav/10x10.png');
   height: 80px;
   width: 100%;
   position: relative;
@@ -549,7 +549,7 @@ a.subnav-link-with-image:hover .subnav-image-text-link {
 .main-nav-links-full-shard {
   position: relative;
   z-index: 1;
-  background-image: url('../images/nav/pcl_navassets_shard-white.png');
+  background-image: url('/petro/common/images/nav/pcl_navassets_shard-white.png');
   background-repeat: no-repeat;
   background-position: 84px;
   background-size: auto 80px;
@@ -742,7 +742,7 @@ a.subnav-link-with-image:hover .subnav-image-text-link {
     max-height: 110px;
   }
   .main-nav-links-full-background {
-    background-image: url('../images/nav/10x10.png');
+    background-image: url('/petro/common/images/nav/10x10.png');
     height: 110px;
     width: 100%;
     position: absolute;
@@ -753,7 +753,7 @@ a.subnav-link-with-image:hover .subnav-image-text-link {
   .main-nav-links-full-shard {
     position: relative;
     z-index: 1;
-    background-image: url('../images/nav/pcl_navassets_shard-white.png');
+    background-image: url('/petro/common/images/nav/pcl_navassets_shard-white.png');
     background-position: 166px;
     background-repeat: no-repeat;
     width: 450px;
