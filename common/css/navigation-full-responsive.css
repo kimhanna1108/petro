@@ -78,7 +78,7 @@ body {
 .main-nav-links {
   width: 82%;
   float: left;
-  background: url('../images/nav/10x10.png');
+  background: url('/petro/common/images/nav/10x10.png');
 }
 
 .navbar-brand {
@@ -541,7 +541,7 @@ a.subnav-link-with-image:hover .subnav-image-text-link {
   max-height: 80px;
 }
 .main-nav-links-full-background {
-  background-image: url('../images/nav/10x10.png');
+  background-image: url('/petro/common/images/nav/10x10.png');
   height: 80px;
   width: 100%;
   position: relative;
@@ -742,7 +742,7 @@ a.subnav-link-with-image:hover .subnav-image-text-link {
     max-height: 110px;
   }
   .main-nav-links-full-background {
-    background-image: url('../images/nav/10x1022.png');
+    background-image: url('/petro/common/images/nav/10x10.png');
     height: 110px;
     width: 100%;
     position: absolute;
