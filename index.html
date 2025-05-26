@@ -4929,8 +4929,9 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="copyright copyright"><span style="font-size:12px"><sup>TM</sup>Owned or used under
-                                license. ©2025 Petro‐Canada Lubricants Inc., all rights reserved.</span></div>
+                        <!-- <div class="copyright copyright"><span style="font-size:12px"><sup>TM</sup>Owned or used under
+                                license. ©2025 Petro‐Canada Lubricants Inc., all rights reserved.</span></div> -->
+                        <iframe src="/petro/html/footer.html" width="100%" height="100" frameborder="0"></iframe>
                     </div>
                 </div>
 
@@ -4963,13 +4964,6 @@
     <script>(function () { var s = document.createElement('script'), e = !document.body ? document.querySelector('head') : document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function () { acsbJS.init({ statementLink: '', footerHtml: 'Web Accessibility Solution By Petro-Canada Lubricants', hideMobile: false, hideTrigger: false, language: 'en', position: 'left', leadColor: '#eb3142', triggerColor: '#eb3142', triggerRadius: '10px', triggerPositionX: 'right', triggerPositionY: 'bottom', triggerIcon: 'people', triggerSize: 'medium', triggerOffsetX: 20, triggerOffsetY: 20, mobile: { triggerSize: 'small', triggerPositionX: 'right', triggerPositionY: 'bottom', triggerOffsetX: 10, triggerOffsetY: 10, triggerRadius: '5px' } }); }; e.appendChild(s); }());</script>
     <!--AccessiBe Script Embed END-->
 
-    <script>
-
-        // footer.html 삽입
-        fetch("/petro/html/footer.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("footer").innerHTML = data);
-    </script>
 
 </body>
 
