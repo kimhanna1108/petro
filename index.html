@@ -23,14 +23,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="application-name" content="PCL">
 
-    <div id="link"></div>
-    <script>
-        fetch('link.html')                 // header.html 파일을 가져오고
-            .then(res => res.text())          // 텍스트(HTML 문자열)로 바꾸고
-            .then(data => {
-                document.getElementById('link').innerHTML = data;  // 해당 div에 삽입
-            });
-    </script>
+    <iframe src="/petro/link.html" height="0" width="0"></iframe>
 
 </head>
 
