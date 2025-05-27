@@ -13,7 +13,7 @@ div.contact-ribbon {
     -ms-transform: skewY(-4deg);
     -o-transform: skewY(-4deg);
     transform: skewY(-4deg);
-    min-height: 450px;
+    min-height: 30px;
     position: relative
 }
 
