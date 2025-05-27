@@ -206,7 +206,7 @@ body {
 }
   .nav-panel-group .nav-panel-heading a:after, .footer-nav-panel .nav-panel-heading a:after {
     content: '';
-    background: url('../images/nav/minus_red.svg');
+    background: url('/petro/common/images/nav/minus_red.svg');
     position: absolute;
     width: 20px;
     height: 3px;
@@ -223,7 +223,7 @@ body {
 #product-collapse .nav-panel-heading a:after,
 #proven-collapse .nav-panel-heading a:after {
   content: '';
-  background: url('../images/nav/minus_gray.svg');
+  background: url('/petro/common/images/nav/minus_gray.svg');
   position: absolute;
   width: 20px;
   height: 2px;

@@ -4340,37 +4340,37 @@
                             </div>
                             <div class="item no-opacity">
                                 <p><a href="/en-kr/brand/duron" target="_self"><img
-                                            src="/-/media/images/lubes/new-2019-hp/feature-product-carousel/hp_duron-uhp.ashx?h=360&amp;w=302&amp;la=en-KR"
+                                            src="/petro/common/images/HP_Duron-UHP.jpg"
                                             alt="" /></a></p>
                                 <h4><a href="/en-kr/brand/duron" target="_self">DURON</a></h4>
                             </div>
                             <div class="item no-opacity">
                                 <p><a href="/en-kr/brand/supreme" target="_self"><img
-                                            src="/-/media/images/lubes/new-2019-hp/feature-product-carousel/hp_supreme-synthetic.ashx?h=360&amp;w=302&amp;la=en-KR"
+                                            src="/petro/common/images/HP_Supreme-Synthetic.jpg"
                                             alt="" /></a></p>
                                 <h4><a href="/en-kr/brand/supreme" target="_self">SUPREME</a></h4>
                             </div>
                             <div class="item no-opacity">
                                 <p><a href="/en-kr/brand/precision" target="_self"><img
-                                            src="/-/media/images/lubes/new-2019-hp/feature-product-carousel/hp_precision-xl-ep2.ashx?h=360&amp;w=302&amp;la=en-KR"
+                                            src="/petro/common/images/HP_Precision-XL-EP2.jpg"
                                             alt="" /></a></p>
                                 <h4><a href="/en-kr/brand/precision" target="_self">PRECISION</a></h4>
                             </div>
                             <div class="item no-opacity">
                                 <p><a href="/en-kr/brand/duradrive" target="_self"><img
-                                            src="/-/media/images/lubes/new-2019-hp/feature-product-carousel/hp_duradrive-mv-synthetic.ashx?h=360&amp;w=302&amp;la=en-KR"
+                                            src="/petro/common/images/HP_DuraDrive-MV-Synthetic.jpg"
                                             alt="" /></a></p>
                                 <h4><a href="/en-kr/brand/duradrive" target="_self">DuraDrive</a></h4>
                             </div>
                             <div class="item no-opacity">
                                 <p><a href="/en-kr/brand/sentron" target="_self"><img
-                                            src="/-/media/images/lubes/new-2019-hp/feature-product-carousel/hp_sentron-ld8000.ashx?h=360&amp;w=302&amp;la=en-KR"
+                                            src="/petro/common/images/HP_Sentron-LD8000.jpg"
                                             alt="" /></a></p>
                                 <h4><a href="/en-kr/brand/sentron" target="_self">SENTRON</a></h4>
                             </div>
                             <div class="item no-opacity">
                                 <p><a href="/en-kr/brand/atf-d3m" target="_self"><img
-                                            src="/-/media/images/lubes/new-2019-hp/feature-product-carousel/hp_atf-d3m.ashx?h=360&amp;w=302&amp;la=en-KR"
+                                            src="/petro/common/images/HP_ATF-D3M.jpg"
                                             alt="" /></a></p>
                                 <h4><a href="/en-kr/brand/atf-d3m" target="_self">ATF D3M</a></h4>
                             </div>
@@ -4711,7 +4711,7 @@
             <div class="row">
                 <div class="footer-nav-column footer-nav-utility col-xs-12 col-md-2">
 
-                    <img src="/-/media/images/lubes/global/pcl_navassets_logo.ashx?h=129&amp;w=115&amp;la=en-KR"
+                    <img src="/petro/common/images/pcl_navassets_logo.png"
                         class="footer-nav-logo" alt="Petro-Canada Lubricants logo" />
 
                     <a href="/en-kr/about/our-promise" target="_parent">Our Promise</a>
@@ -4931,7 +4931,15 @@
                         </div>
                         <!-- <div class="copyright copyright"><span style="font-size:12px"><sup>TM</sup>Owned or used under
                                 license. ©2025 Petro‐Canada Lubricants Inc., all rights reserved.</span></div> -->
-                        <iframe src="/petro/html/footer.html" width="100%" height="100" frameborder="0"></iframe>
+                        <!-- <iframe src="/petro/html/footer.html" width="100%" height="100" frameborder="0"></iframe> -->
+                         <script>
+                            // 푸터 불러오기
+                            fetch('/petro/html/footer.html')
+                                .then(res => res.text())
+                                .then(data => {
+                                document.getElementById('footer').innerHTML = data;
+                                });
+                            </script>
                     </div>
                 </div>
 
