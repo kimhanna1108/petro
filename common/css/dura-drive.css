@@ -1,0 +1,1061 @@
+﻿.page-wrapper-dura-drive {
+    overflow:hidden;
+}
+
+.page-wrapper-dura-drive img {
+    max-width: 100%;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.play-video {
+    margin-left:10px;
+}
+.double-down {
+    position:relative;
+    top:1px;
+    right:19px;
+}
+.golden {
+    color: #d3ad40;
+}
+.request-quote{
+    margin-top:15px;
+}
+
+.request-quote a {
+    color: #d3ad40;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pl-0 {
+    padding-left:0 !important;
+}
+.pr-0 {
+    padding-right:0 !important;
+}
+
+.mt-0 {
+    margin-top: 0px;
+}
+.mb-0 {
+    margin-bottom: 0px;
+}
+.mt-1{
+    margin-top: 8px;
+}
+.mb-1 {
+    margin-bottom: 8px;
+}
+.mt-2{
+    margin-top:16px;
+}
+.mb-2 {
+    margin-bottom: 16px;
+}
+.mt-4 {
+    margin-top: 32px;
+}
+.mb-4 {
+    margin-bottom: 32px;
+}
+
+.page-wrapper-dura-drive h3 {
+    font-size: 25px !important;
+    line-height: 26px;
+    letter-spacing: -2px;
+    font-family: Helvetica, sans-serif;
+}
+
+.page-wrapper-dura-drive h1 {
+    font-size: 36px !important;
+    line-height: 31px;
+    letter-spacing: -2px;
+    font-family: Helvetica, sans-serif;
+}
+
+.page-wrapper-dura-drive h4 {
+    font-size: 20px !important;
+    line-height: 20px;
+    letter-spacing: 0px;
+    font-family: Helvetica, sans-serif;
+}
+
+.page-wrapper-dura-drive p {
+    font-family: Helvetica, sans-serif;
+}
+
+.form-selection {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.down-btn {
+    border: #d3ad40;
+    color: #fff;
+    font-weight: 800;
+    background: transparent linear-gradient(82deg, #D3AD40 0%, #EBCD68 44%, #BA9624 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 16px #0000000F;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 50px;
+    max-width: 400px;
+    /*    width: 100%;
+*/
+}
+
+    
+    a.down-btn:hover {
+    text-decoration: none;
+   color: #d3ad40;
+    background: #000;
+    border:#d3ad40;
+}
+
+a.play-btn:hover {
+    text-decoration: none;
+   background-color: #ebcd68;
+    color:#fff;
+}
+
+.play-btn {
+    border: 2px solid #d3ad40;
+    color: #d3ad40;
+    font-weight: 800;
+    background-color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 50px;
+    max-width: 400px;
+    /*    width: 100%;
+*/
+}
+
+
+.image-text-component {
+    border-bottom: 2px solid #000;
+    padding-bottom: 25px;
+    margin: 25px 0 0;
+    width: 95%;
+}
+
+.video-place-holder {
+    padding:0 !important;
+}
+
+.dura-drive-video-mobile .dura-drive-video-text {
+    padding-top:25px;
+    padding-bottom:25px;
+}
+.dura-drive-video-mobile .dura-drive-video-text .game-changer-block img {
+    width:50%;
+}
+
+.dura-drive-video-mobile .dura-drive-video-text .game-changer-block p {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing:-1px;
+    text-transform:uppercase;
+}
+
+.dura-drive-video-mobile .dura-drive-video-text .game-changer-block {
+    padding-left: 0;
+}
+
+.dura-drive-video-mobile .dura-drive-video-text .game-changer-block:last-child {
+    padding-left: 16px;
+}
+
+.performance-section-mobile .performance-section-text .performance-section-block img {
+    width: 50%;
+}
+
+.performance-section-mobile .performance-section-text .performance-section-block p {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -1px;
+    text-transform:uppercase;
+}
+
+.performance-section-mobile .performance-section-text .performance-section-block {
+    padding-left: 0;
+}
+
+.performance-section-mobile .performance-section-text .performance-section-block:last-child {
+    padding-left: 10px;
+}
+
+
+
+
+/*.oil-section {
+    padding: 20px;
+}*/
+
+.performance-section .performance-section-text {
+    background-color: #f0f0f0;
+    padding:20px;
+}
+
+.dura-drive-oem .dura-drive-oem-text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #f0f0f0;
+}
+.dura-drive-oem .dura-drive-oem-text .dura-drive-oem-text-block {
+     position:relative;
+     margin-bottom:16px;
+}
+
+.dura-drive-oem .dura-drive-oem-text  p {
+    line-height: 29px;
+    font-size: 16px;
+   
+}
+
+/*.dura-drive-oem .dura-drive-oem-text .dura-drive-oem-text-block .dura-drive-oem-image-block {
+     width:25%;
+}*/
+
+.dura-drive-oem .dura-drive-oem-text .dura-drive-oem-text-inner-block {
+    position: absolute;
+    left: 26%;
+    top:27%;
+}
+
+
+    /*.dura-drive-oem .dura-drive-oem-text .dura-drive-oem-text-inner-block2 {
+    width: 9%;
+    position: absolute;
+    left: 8%;
+    top: 26%;
+}
+
+.dura-drive-oem .dura-drive-oem-text .dura-drive-oem-text-inner-block3 {
+    width: 5%;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+}*/
+.hexagon-black-section {
+        background-color: #000;
+        color: #fff;
+        padding: 30px 20px;
+}
+
+.hexagon-black-section .hexagon-subtext {
+    font-size:20px;
+    line-height:26px;
+}
+
+.hexagon-black-section .hex-block .hex-block-subtext {
+    font-size: 24px;
+    line-height: 25px;
+}
+
+
+.hexagon-gold-section {
+    background: url('../../Design/images/Product/Mask_Group.png') 0% 0% no-repeat padding-box;
+    color: #000;
+}
+
+.hexagon-gold-section .hex-second-image-section {
+        background: url('../../Design/images/Product/Rectangle_777.png') 0% 0% no-repeat padding-box;
+        padding: 30px 20px;
+    }
+
+.hexagon-gold-section .hex-gold-block .gold-block-text {
+    font-size: 20px;
+    line-height: 19px;
+ }
+
+.hexagon-gold-section .hex-gold-block .gold-block-white {
+     font-size: 18px;
+     line-height: 24px;
+}
+
+.image-dura-component .image-section-left-component {
+     z-index: 99;
+}
+.image-dura-component .image-component-top {
+    position: relative;
+/*    overflow: hidden;
+*/}
+
+.image-dura-component .image-hexagon-component {
+    bottom: 90px;
+    position: relative;
+    z-index: 1;
+    left: 54%;
+}
+
+.image-dura-component .image-rails-component {
+    left: 10%;
+    position: absolute;
+    top: 0%;
+    max-width: none;
+    width: 140%;
+}
+
+.image-dura-component .image-technician-component {
+    position: absolute;
+    left: 25%;
+    width: 51%;
+    top: 0%;
+    z-index: 2;
+}
+
+.image-dura-component .image-oil-component {
+    position: absolute;
+    top: 32%;
+    left: 37%;
+    width: 30%;
+    z-index: 3;
+}
+
+
+.image-dura-component .image-shards-component {
+    position: absolute;
+    left: -9%;
+    top: 75%;
+    z-index: 4;
+    max-width: none;
+    width: 110%;
+}
+
+
+.hexagon-black-section .hex-block-content .hex-block {
+    position: relative;
+}
+
+.hexagon-black-section .hex-block-content .hex-block .next {
+        position: absolute;
+        top: 100px;
+        right: 30px;
+}
+
+.hexagon-black-section .hex-block-content .hex-block .prev {
+        position: absolute;
+        top: 100px;
+        left: 30px;
+}
+.hexagon-gold-section .hex-gold-content .hex-gold-block {
+    position: relative;
+}
+
+.hexagon-gold-section .hex-gold-content .hex-gold-block .next-gold {
+        position: absolute;
+        top: 100px;
+        right: 30px;
+}
+
+.hexagon-gold-section .hex-gold-content .hex-gold-block .prev-gold {
+        position: absolute;
+        top: 100px;
+        left: 30px;
+}
+
+.hexagon-black-section .hex-block-content .hex-block.active {
+    display: block;
+}
+
+.hexagon-black-section .hex-block-content .hex-block {
+    display: none;
+}
+
+.hexagon-black-section .hex-block-content .hex-block .hex-block-inner {
+        position: absolute;
+        top: 5%;
+        left: 22%;
+}
+
+.hexagon-black-section .hex-block-content .hex-block .hex-block-icon {
+        position: absolute;
+        top: 25%;
+        left: 39%;
+        width: 22%;
+}
+
+.hexagon-black-section .hex-block-content .hex-block .hex-block-drop-icon {
+        position: absolute;
+        top: 31%;
+        left: 46%;
+        width: 6%;
+}
+
+.hexagon-gold-section .hex-gold-content .hex-gold-block.active {
+    display: block;
+}
+
+.hexagon-gold-section .hex-gold-content .hex-gold-block {
+    display: none;
+}
+
+.hexagon-gold-section .hex-gold-content .hex-gold-block .hex-gold-inner{
+    position:absolute;
+    top:5%;
+    left:22%;
+}
+
+.hexagon-gold-section .hex-gold-content .hex-gold-block .hex-gold-icon {
+    position: absolute;
+    top: 25%;
+    left: 39%;
+}
+
+.dura-drive-video .video-place-holder {
+    position:relative;
+}
+
+.dura-drive-video .video-place-holder .hexa-video-selector {
+        position: absolute;
+        left: 40%;
+        top: 30%;
+        width: 16%;
+}
+
+    .dura-drive-video .video-place-holder .hexa-video-play {
+        position: absolute;
+        left: 47%;
+        top: 45%;
+        width: 3%;
+    }
+
+.bottom-banner {
+    padding: 60px 0;
+    background-color: rgba(211,173,64,0.9);
+    color: #fff;
+}
+
+.bottom-banner a {
+    color:#fff;
+    text-decoration:none;
+}
+
+ .bottom-banner p{
+     font-size:20px;
+ }
+
+ .bottom-banner span {
+     font-weight: bold;
+     margin-right: 5px;
+ }
+
+.dura-drive-video-desktop {
+    display:none;
+}
+
+.performance-section-desktop {
+    display:none;
+}
+
+.oil-section-desktop {
+    display:none;
+}
+
+.hex-block-content{
+    min-height:460px;
+}
+
+.hex-gold-content{
+    min-height:380px;
+}
+
+.ProductRecommendText{
+   font-size: 15px;
+}
+
+@media(max-width:320px) {
+    .hexagon-black-section .hex-block-content .hex-block .hex-block-inner {
+        position: absolute;
+        top: 5%;
+        left: 16%;
+    }
+
+    .hexagon-black-section .hex-block-content .hex-block .next {
+        position: absolute;
+        top: 100px;
+        right: 15px;
+    }
+
+    .hexagon-black-section .hex-block-content .hex-block .prev {
+        position: absolute;
+        top: 100px;
+        left: 15px;
+    }
+    .hexagon-gold-section .hex-gold-content .hex-gold-block .hex-gold-inner {
+        position: absolute;
+        top: 5%;
+        left: 16%;
+    }
+
+    .hexagon-gold-section .hex-gold-content .hex-gold-block  .next-gold {
+         position: absolute;
+         top: 100px;
+         right: 15px;
+    }
+
+    .hexagon-gold-section .hex-gold-content .hex-gold-block .prev-gold {
+        position: absolute;
+        top: 100px;
+        left: 15px;
+    }
+    /*.dura-drive-oem .dura-drive-oem-text .dura-drive-oem-text-block .dura-drive-oem-image-block {
+        width: 30%;
+    }
+    .dura-drive-oem .dura-drive-oem-text .dura-drive-oem-text-inner-block {
+        width: 9%;
+        height: 37%;
+        position: absolute;
+        left: 10%;
+        top: 18%;
+    }*/
+}
+@media(min-width:321px) and (max-width:360px) {
+    .hexagon-black-section .hex-block-content .hex-block .hex-block-inner {
+        left: 21%;
+    }
+    .hexagon-gold-section .hex-gold-content .hex-gold-block .hex-gold-inner {
+        left: 21%;
+    }    
+}
+
+
+@media(min-width:767px)and (max-width:990px){
+    .ProductRecommendText {
+        padding-left: 7%;
+        padding-right: 18%;
+    }
+}
+
+@media(min-width:411px) {
+    .hexagon-black-section .hex-block-content .hex-block .hex-block-inner {
+        left: 25%;
+    }
+
+    .hexagon-gold-section .hex-gold-content .hex-gold-block .hex-gold-inner {
+        left: 25%;
+    }
+}
+
+@media(min-width:767px) {
+    .hexagon-black-section .hex-block-content .hex-block .hex-block-inner {
+        left: 37%;
+    }
+    .hexagon-black-section .hex-block-content .hex-block .hex-block-icon {
+        top: 29%;
+        left: 45%;
+        width: 10%;
+    }
+    .hexagon-gold-section .hex-gold-content .hex-gold-block .hex-gold-inner {
+        left: 37%;
+    }
+
+    .hexagon-gold-section .hex-gold-content .hex-gold-block .hex-gold-icon {
+        top: 29%;
+        left: 45%;
+        width: 10%;
+    }
+    .image-dura-component {
+        margin-top:50px;
+    }
+}
+
+@media(min-width:991px) {
+    .page-wrapper-dura-drive h1 {
+        font-size: 50px !important;
+        line-height: 43px;
+        letter-spacing: -3px;
+        font-family:Helvetica, sans-serif;
+    }
+
+    .page-wrapper-dura-drive h3 {
+        font-size: 36px !important;
+        line-height: 34px;
+        letter-spacing: -3px;
+        font-family: Helvetica, sans-serif;
+    }
+
+    .page-wrapper-dura-drive h4 {
+        font-size: 24px !important;
+        line-height: 23px;
+        letter-spacing: 0;
+        font-family: Helvetica, sans-serif;
+    }
+    .oil-section .oil-section-image {
+        padding: 50px;
+    }
+
+    .oil-section .oil-section-text {
+        padding: 50px 30px 0px 30px;
+    }
+
+    .dura-drive-video {
+        padding: 50px;
+    }
+
+    .dura-drive-video .dura-drive-video-text {
+        padding: 0 32px;
+    }
+
+    .performance-section .performance-section-content {
+        display: flex;
+    }
+    .dura-drive-oem-text h1{
+        padding-bottom:40px;
+    }
+
+    /*.dura-drive-oem .dura-drive-oem-text .dura-drive-oem-text-inner-block {
+        top: 25%;
+    }
+
+    .dura-drive-oem .dura-drive-oem-text .dura-drive-oem-text-inner-block2 {
+        width: 9%;
+        position: absolute;
+        left: 8%;
+        top: 46%;
+    }
+
+    .dura-drive-oem .dura-drive-oem-text .dura-drive-oem-text-inner-block3 {
+        width: 6%;
+        left: 10%;
+        top: 68%;
+    }*/
+
+    .dura-drive-oem .dura-drive-oem-content {
+        display: flex;
+    }
+
+    .dura-drive-oem .dura-drive-oem-text {
+        padding: 50px 90px;
+        background-color: #f0f0f0;
+    }
+
+    .dura-drive-oem .dura-drive-oem-text p {
+        line-height:29px;
+        font-size: 20px;
+    }
+
+    .dura-drive-oem .dura-drive-oem-text .dura-drive-oem-text-block {
+       margin-bottom: 32px;
+    }
+
+    .image-dura-component {
+        margin-top:50px;
+    }
+
+    .image-dura-component .hero-text-holder {
+        padding: 0px 0px 5px 40px;
+    }
+
+    .image-dura-component .hero-text-holder .hero-text-holder-buttons {
+        padding: 0px 70px 0px 0px;
+    }
+
+    .image-dura-component .image-text-component {
+        border-bottom:2px solid #000;
+        padding-bottom:24px;
+    }
+
+    .image-dura-component .image-text-component  img{
+        max-width:none;
+        width:100%;
+    }
+
+    .image-dura-component .image-section-component {
+         display:flex;
+    }
+
+    .image-dura-component .image-component-top {
+         overflow: visible;
+    }
+
+        .image-dura-component .image-hexagon-component {
+            bottom: 40%;
+            position: relative;
+            z-index: 1;
+            max-width: none;
+            width: 150%;
+            left: -14%;
+        }
+        .image-dura-component .image-rails-component {
+            left: 5%;
+            position: absolute;
+            top: 0%;
+            max-width: none;
+            width: 150%;
+        }
+        .image-dura-component .image-technician-component {
+            position: absolute;
+            left: 12%;
+            width: 75%;
+            top: 0%;
+            z-index: 2;
+            max-width: none;
+        }
+        .image-dura-component .image-oil-component {
+            position: absolute;
+            top: 25%;
+            left: 30%;
+            width: 35%;
+            z-index: 3;
+        }
+        .image-dura-component .image-shards-component {
+            top: 78%;
+            position: absolute;
+            max-width: none;
+            width: 143%;
+            right: 0%;
+            left: -40%;
+        }
+    /*.image-dura-component .image-component-top {
+        position: relative;
+    }
+
+    .image-dura-component .image-hexagon-component {
+        bottom: -91px;
+        position: absolute;
+    }
+
+    .image-dura-component .image-technician-component {
+        position:absolute;
+        top:0;
+    }
+
+    .image-dura-component .image-technician-component img {
+        width:60%;
+    }
+
+    .image-dura-component .image-oil-component {
+        position: absolute;
+        top: 210px;
+        right: 140px;
+    }
+
+    .image-dura-component .image-oil-component img {
+        width:50%;
+    }*/
+
+    .hexagon-black-section .hexagon-subtext {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .hexagon-black-section .hex-block .hex-block-subtext {
+        font-size: 20px;
+        line-height: 24px;
+        margin-right:-30%;
+        margin-left:-30%;
+    }
+
+    .hexagon-black-section{
+        margin-top:0%;
+    }
+    .hexagon-black-section .mb-4 p {
+        padding-left: 18%;
+        padding-right: 18%;
+    }
+    .hexagon-black-section .hex-block-content .hex-block .next,
+    .hexagon-black-section .hex-block-content .hex-block .prev {
+        display: none;
+    }
+
+    .hexagon-gold-section .hex-gold-content .hex-gold-block .next-gold,
+    .hexagon-gold-section .hex-gold-content .hex-gold-block .prev-gold {
+        display: none;
+    }
+
+    .hexagon-black-section .hex-block-content .hex-block {
+            display: block;
+            margin-right: 12%;
+    }
+    .hexagon-black-section .hex-block-content .hex-block:first-child {
+            margin-left: 12%;
+    }
+
+
+    .hexagon-gold-section .hex-gold-content .hex-gold-block {
+            display: block;
+            margin-right: 12%;
+    }
+    .hexagon-gold-section .hex-gold-content .hex-gold-block:first-child {
+        margin-left: 12%;
+    }
+
+    .hexagon-black-section .hex-block-content .hex-block .hex-block-inner {
+            top: 5%;
+            left: 15%;
+            width: 71%;
+    }
+
+    .hexagon-black-section .hex-block-content .hex-block .hex-block-icon {
+        position: absolute;
+        top: 25%;
+        left: 39%;
+        width: 22%;
+    }
+
+    .hexagon-black-section .hex-block-content .hex-block .hex-block-drop-icon {
+        position: absolute;
+        top: 30%;
+        left: 47%;
+        width: 5%;
+    }
+
+    .hexagon-gold-section .hex-gold-content .hex-gold-block .hex-gold-inner {
+        top: 5%;
+        left: 15%;
+        width: 71%;
+    }
+
+    .hexagon-gold-section .hex-gold-content .hex-gold-block .hex-gold-icon {
+        top: 24%;
+        left: 36%;
+        width: 26%;
+    }
+
+    .hexagon-gold-section .hex-gold-block .gold-block-text {
+        font-size: 22px;
+        line-height: 24px;
+        margin-left: -30%;
+        margin-right:-30%;
+    }
+    .hexagon-gold-section .hex-gold-block .gold-block-white {
+        
+        margin-left: -30%;
+        margin-right: -30%;
+    }
+
+     
+
+    .dura-drive-video-desktop {
+        display: block;
+    }
+
+    .dura-drive-video-desktop .dura-drive-video-text .text-align p {
+        font-size: 18px;
+        line-height: 19px;
+    }
+
+    .dura-drive-video-mobile {
+        display: none;
+    }
+
+    .performance-section-desktop {
+        display: block;
+    }
+
+    .performance-section-desktop .performance-section-text .col-md-4.col-xs-4 p {
+        font-size: 20px;
+        line-height: 19px;
+    }
+
+    .performance-section-mobile {
+        display: none;
+    }
+
+    .oil-section-desktop {
+        display: block;
+    }
+    .oil-section-mobile {
+        display: none;
+    }
+    .ProductRecommendText{
+      padding-left: 7%;
+      padding-right: 18%;
+    }
+
+}
+
+@media(min-width:1030px){
+    .image-dura-component .image-technician-component {
+/*        width:74%;*/
+    }
+    .image-dura-component .image-shards-component {
+/*        top: 76%;*/
+        width: 141%;
+    }
+}
+
+/*@media(min-width:1100px){
+ .image-dura-component .image-shards-component {
+ top: 75%;
+ width: 141%;
+ }
+}*/
+
+@media (min-width: 1200px) {
+    .oil-section .oil-section-text {
+        padding: 6%;
+    }
+    .hexagon-black-section {
+        margin-top: -7%;
+    }
+
+    .image-dura-component .image-text-component img {
+        max-width: none;
+        width: 100%;
+    }
+    .image-dura-component .image-hexagon-component {
+        bottom: 40%;
+        position: relative;
+        z-index: 1;
+        max-width: none;
+        width: 150%;
+        left: -14%;
+    }
+
+    .image-dura-component .image-rails-component {
+        left: 5%;
+        position: absolute;
+        top: 0%;
+        max-width: none;
+        width: 150%;
+    }
+
+    .image-dura-component .image-technician-component {
+        position: absolute;
+        left: 12%;
+        width: 68%;
+        top: 0%;
+        z-index: 2;
+        max-width: none;
+    }
+
+    .image-dura-component .image-oil-component {
+        position: absolute;
+        top: 25%;
+        left: 30%;
+        width: 35%;
+        z-index: 3;
+    }
+
+    .image-dura-component .image-shards-component {
+        top: 67%;
+        position: absolute;
+        max-width: none;
+        width: 144%;
+        right: 0%;
+        left: -40%;
+    }
+
+}
+
+.oil-section-mobile .oil-section-image img {
+    padding: 20px;
+}
+
+@media (min-width: 1600px) {
+    .dura-drive-video-desktop .dura-drive-video-text p.mb-2 {
+        margin-bottom:40px;
+    }
+}
+
+@media (min-width: 1750px) {
+    .dura-drive-video-desktop .dura-drive-video-text {
+        padding: 4%;
+    }
+    .dura-drive-video-desktop .dura-drive-video-text p.mb-2 {
+        margin-bottom:40px;
+    }
+    .dura-drive-oem .dura-drive-oem-text p {
+        margin-left:-5%;
+    }
+    .performance-section .performance-section-text{
+        padding:4%;
+    }
+    .dura-drive-oem .dura-drive-oem-text {
+        padding:5%;
+    }
+    
+}
+
+/*@media (min-width: 1300px) {
+    .image-dura-component .image-technician-component {
+        position: absolute;
+        left: 12%;
+        width: 59%;
+        top: 0%;
+        z-index: 2;
+        max-width: none;
+    }
+    .image-dura-component .image-shards-component {
+        top: 79%;
+        max-width: none;
+        width: 140%;
+        right: 0%;
+        left: -40%;
+    }
+
+}
+
+@media (min-width: 1600px) {
+    .image-dura-component .image-technician-component {
+        position: absolute;
+        left: 12%;
+        width: 50%;
+        top: 0%;
+        z-index: 2;
+        max-width: none;
+    }
+
+    .image-dura-component .image-shards-component {
+        top: 75%;
+        max-width: none;
+        width: 140%;
+        right: 0%;
+        left: -40%;
+    }
+}*/
+
+@media all and (max-width: 1999px) {
+    /* Can combine into one class name. Or break out into several selectors if multiple different heights are needed */    
+    .sampleDiv, .sampleDiv2 {
+        height: 100%;
+    }
+    .divParent {
+        overflow: hidden;
+        justify-content: center;
+    }
+    /* use re-usable class name for all images with this treatment, or separate for different values, if needed */
+    img.imageManTruck, img.imageDumpTruck {
+/*        width: auto !important;*/
+        height: 100% !important;
+        object-fit: cover;
+    }
+}
+
+@media all and (min-width: 2000px) {
+    /* use re-usable class name for all images with this treatment, or separate for different values, if needed */
+    img.imageDumpTruck {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media all and (min-width: 1600px) {
+    /* use re-usable class name for all images with this treatment, or separate for different values, if needed */
+    img.imageManTruck {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
