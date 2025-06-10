@@ -274,12 +274,12 @@ a.play-btn:hover {
 
 
 .hexagon-gold-section {
-    background: url('../petro/common/images/mask_group.png') 0% 0% no-repeat padding-box;
+    background: url('../images/mask_group.png') 0% 0% no-repeat padding-box;
     color: #000;
 }
 
 .hexagon-gold-section .hex-second-image-section {
-        background: url('../petro/common/images/rectangle_777.png') 0% 0% no-repeat padding-box;
+        background: url('../images/rectangle_777.png') 0% 0% no-repeat padding-box;
         padding: 30px 20px;
     }
 
