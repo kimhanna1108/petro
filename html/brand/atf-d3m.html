@@ -145,7 +145,7 @@
     <!--Header START -->
     <div id="header"></div>
     <script>
-        fetch('../../header.html')                 // header.html 파일을 가져오고
+        fetch('../../../header.html')                 // header.html 파일을 가져오고
             .then(res => res.text())          // 텍스트(HTML 문자열)로 바꾸고
             .then(data => {
                 document.getElementById('header').innerHTML = data;  // 해당 div에 삽입
@@ -439,7 +439,7 @@
     <!--Footer START -->
     <div id="footer"></div>
     <script>
-        fetch('../../footer.html')
+        fetch('../../../footer.html')
             .then(res => res.text())
             .then(data => {
                 document.getElementById('footer').innerHTML = data;
