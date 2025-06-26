@@ -22,24 +22,26 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="application-name" content="PCL">
 
-    <script src='/petro/common/js/jquery.min.js'></script>
-    <script src="/petro/common/js/jquery-ui.min.js"></script>
-    <script src="/petro/common/js/jquery.validate.min.js"></script>
-    <script src="/petro/common/js/jquery.nicescroll.min.js"></script>
-    <script src='/petro/common/js/owl.carousel.min.js'></script>
-    <script src='/petro/common/js/bootstrap.min.js'></script>
-    <script src="/petro/common/js/dropdown-plugin.min.js"></script>
-    <script src="/petro/common/js/bootstrap3-typeahead.min.js"></script>
-    <script src="/petro/common/js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="/petro/common/js/jquery.jqplot.min.js" type="text/javascript"></script>
-    <script src="/petro/common/js/jqplot.categoryAxisRenderer.min.js" type="text/javascript"></script>
-    <script src="/petro/common/js/jqplot.barRenderer.min.js" type="text/javascript"></script>
-    <script src="/petro/common/js/bootstrap-tabcollapse.min.js"></script>
-    <script src="/petro/common/js/lubes.min.js"></script>
-    <script src="/petro/common/js/lubes-custom_v2.min.js"></script>
-    <script src="/petro/common/js/navigation-full.js"></script>
-    <script src="/petro/common/js/ps-custom.min.js"></script>
-    <script src="/petro/common/js/product-carousel.js"></script>
+    <link rel="icon" type="image" sizes="48x48" href="/petro/common/images/favicon.ico">
+    <link rel="shortcut icon" type="image" sizes="48x48" href="/petro/common/images/favicon.ico">
+    <link rel="icon" type="image" sizes="32x32" href="/petro/common/images/favicon-32x32.png">
+    <link rel="shortcut icon" type="image" sizes="32x32" href="/petro/common/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" type="image" sizes="180x180" href="/petro/common/images/apple-touch-icon.png">
+    <link rel="icon" type="image" sizes="512x512" href="/petro/common/images/android-chrome-512x512.png">
+    <link rel="shortcut icon" type="image" sizes="512x512" href="/petro/common/images/android-chrome-512x512.png">
+    <link rel="icon" type="image" sizes="192x192" href="/petro/common/images/android-chrome-192x192.png">
+    <link rel="shortcut icon" type="image" sizes="192x192" href="/petro/common/images/android-chrome-192x192.png">
+    <link rel="manifest" href="/petro/common/manifest.json">
+    <link rel='stylesheet' href='/petro/common/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/petro/common/css/bootstrap-custom.min.css'>
+    <link rel='stylesheet' href='/petro/common/css/owl.carousel.min.css'>
+    <link rel='stylesheet' href='/petro/common/css/owl.theme.min.css' />
+    <link rel='stylesheet' href='/petro/common/css/lubes.min.css'>
+    <link rel='stylesheet' href='/petro/common/css/dura-drive.css'>
+
+    <link rel='stylesheet' href='/petro/common/css/print.min.css' media="print">
+    <link rel="stylesheet" href="/petro/common/css/navistar-location.min.css" />
+    <link rel="stylesheet" href="/petro/common/css/navigation-full-responsive.css" />
     <link rel="canonical" href="https://petrocanadalubricants.com/en-kr/knowledge-centre/all" />
 
     <script src='/petro/common/js/jquery.min.js'></script>
@@ -217,34 +219,28 @@
                                                 <p>
                                                     <input type="checkbox" name="all" data-role="none" id="All"
                                                         value="All" onchange="ResourceSearch()">
-                                                    <label for="All">All</label>
-                                                </p>
-                                                <p>
-                                                    <input type="checkbox" id="articles" data-role="none"
-                                                        name="articles" value="{14E72500-35D6-41C6-AEE1-57F47139A718}"
-                                                        onchange="ResourceSearch()">
-                                                    <label for="articles">Articles</label>
+                                                    <label for="All">전체</label>
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="brochures" data-role="none"
                                                         name="brochures"
                                                         value="{ECB47121-ABD7-48C4-A1C9-5B4AB0798BD9}|{8585DCE8-ADDA-4323-AEBB-5DFD7603CE79}"
                                                         onchange="ResourceSearch()">
-                                                    <label for="brochures">Brochures</label>
+                                                    <label for="brochures">매뉴얼</label>
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="case-studies" data-role="none"
                                                         name="case-studies"
                                                         value="{65A9AF9A-0781-4E5A-B157-2FF9FC6897E0}|{5297CA04-B849-49BE-85D7-64474FB1C5BB}|{43C1EFC6-1CE7-4114-B2D9-AEC28E81F0A9}|{80C6521B-A999-4D16-863D-9766C84508B4}"
                                                         onchange="ResourceSearch()">
-                                                    <label for="case-studies">Case Studies</label>
+                                                    <label for="case-studies">적용 분야</label>
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="expert-q-and-as" data-role="none"
                                                         name="expert-q-and-as"
                                                         value="{1676B08F-5FC1-4B0A-8D92-5C5EFC1B1FA7}"
                                                         onchange="ResourceSearch()">
-                                                    <label for="expert-q-and-as">Expert Q&amp;As</label>
+                                                    <label for="expert-q-and-as">전문가 Q&amp;As</label>
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="infographics" data-role="none"
@@ -254,18 +250,11 @@
                                                     <label for="infographics">Infographics</label>
                                                 </p>
                                                 <p>
-                                                    <input type="checkbox" id="news" data-role="none" name="news"
-                                                        value="{A8758323-9FB3-4BEA-A4EF-44E4157E377A}"
-                                                        onchange="ResourceSearch()">
-                                                    <label for="news">News</label>
-                                                </p>
-                                                <p>
                                                     <input type="checkbox" id="oem-approvals-and-credentials"
                                                         data-role="none" name="oem-approvals-and-credentials"
                                                         value="{4AB6B405-D3E2-413C-B4E4-44DFF5D18357}|{34B5D146-8F09-40B6-9B66-9E3B6CADFED8}"
                                                         onchange="ResourceSearch()">
-                                                    <label for="oem-approvals-and-credentials">OEM Approvals &amp;
-                                                        Credentials</label>
+                                                    <label for="oem-approvals-and-credentials">OEM Approvals &amp; Credentials</label>
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="podcasts" data-role="none"
@@ -278,7 +267,7 @@
                                                     <input type="checkbox" id="schematics" data-role="none"
                                                         name="schematics" value="{049751AF-5748-48E1-A7D7-1DE99BEB48DB}"
                                                         onchange="ResourceSearch()">
-                                                    <label for="schematics">Schematics</label>
+                                                    <label for="schematics">회로도</label>
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="sds" data-role="none" name="sds"
@@ -290,14 +279,14 @@
                                                     <input type="checkbox" id="tech-data" data-role="none"
                                                         name="tech-data" value="{EAB9767A-BB8A-4DC3-8B59-68408818D3F2}"
                                                         onchange="ResourceSearch()">
-                                                    <label for="tech-data">Tech Data</label>
+                                                    <label for="tech-data">기술 자료</label>
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="tools-and-services" data-role="none"
                                                         name="tools-and-services"
                                                         value="{2F7CA4E4-291D-45DE-8689-BD5BA2C5E515}"
                                                         onchange="ResourceSearch()">
-                                                    <label for="tools-and-services">Tools and Services</label>
+                                                    <label for="tools-and-services">지원 도구 및 서비스</label>
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="videos" data-role="none" name="videos"
@@ -310,7 +299,7 @@
                                                         name="white-papers"
                                                         value="{D3CB8547-0A56-45AB-8F8E-46D913D1397E}|{D5B8BE0E-5CC0-42CE-8807-A34C715E544D}"
                                                         onchange="ResourceSearch()">
-                                                    <label for="white-papers">White Papers</label>
+                                                    <label for="white-papers">기술 백서</label>
                                                 </p>
                                             </form>
                                         </div>
@@ -319,13 +308,11 @@
 
 
                                 <div id="services-utilites" class="tab-pane services-utilites-pane">
-                                    <div class="service-block">
+                                    <!-- <div class="service-block">
                                         <h3><img alt="" height="23" width="66"
-                                                src="/-/media/images/lubes/resources/icon-service-utilities.ashx?la=en-en" />&nbsp;Tools
-                                            &amp; Services</h3>
+                                                src="/-/media/images/lubes/resources/icon-service-utilities.ashx?la=en-en" />&nbsp;Tools &amp; Services</h3>
                                         <ul>
-                                            <!--<li><a href="/en-kr/knowledge-centre/product-selector" target="_parent"><img style="width: 23px; height: 23px;" alt="LUBE360 Product Selector" src="/-/media/images/lubes/resources/icon-prod-selector.ashx?h=23&amp;w=23&amp;hash=16ACAFBF53C3A883F9C891132A4897910DC0CD0D,F5CH=I">Product Selector</a></li>-->
-                                            <!--<li><a class="ui-link" href="/en-kr/knowledge-centre/lube-360-services" target="_parent"><img style="width: 23px; height: 23px;" alt="LUBE360 Oil Diagnostics" src="/-/media/images/lubes/resources/icon-oil-analyzer.ashx?h=23&amp;w=23&amp;hash=063664FB9BAFC29C4D92945E0E4C2783C82D68D7,F5CH=I">Oil Diagnostics</a></li>-->
+                                            
                                             <li style="padding-left:25px"><a class="ui-link"
                                                     href="/en-kr/knowledge-centre/lube-360-services"
                                                     target="_parent"><img alt="" height="23" width="23"
@@ -344,25 +331,23 @@
                                                         src="/-/media/images/lubes/resources/icon-duron-calculator.ashx?la=en-en" />HYDREX&trade;
                                                     <strong>Calculator</strong></a></li>
                                         </ul>
-                                    </div>
+                                    </div> -->
 
                                     <div class="handbook-block">
-                                        <h3>Lubricants Handbook</h3>
+                                        <h3>Lubricants 안내서</h3>
 
                                         <div class="image-component">
-                                            <img src="/-/media/images/lubes/lubes-assets/imagesnov21/additional-images-resourcecentre/lubricantshandbook-727x1164-kc_en.ashx?h=1164&amp;w=726&amp;la=en-KR"
+                                            <img src="/petro/common/images/brand/LubricantsHandbook-727x1164-KC_EN.jpg"
                                                 alt="" />
                                         </div>
                                         <div class="download-handbook">
                                             <a class="btn red-txt-button"
-                                                href="/-/media/pdfs/handbook/pcl-handbook_en.ashx"
-                                                target="_parent">Download <strong>Now</strong></a>
+                                                href="/petro/common/pdf/PCL-Handbook_EN.pdf"
+                                                target="_blank"> <strong>다운로드</strong></a>
                                             <p>(PDF, 10 MB)</p>
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <div></div>
 
                             </div>
@@ -373,10 +358,10 @@
                             <div class="row lube-col2 item-list">
                                 <div class="col-sm-6">
                                     <div class="box-container case-study dark-grey">
-                                        <div class="component-tag">Case Study</div>
+                                        <div class="component-tag">적용 사례</div>
                                         <div class="image-component">
 
-                                            <img src="/-/media/images/lubes/featuredresources/derkgray-quote.ashx" />
+                                            <img src="/petro/common/images/derkgray-quote.png" />
                                         </div>
                                         <div class="text-component">
                                             <h2 class="title">“What really sets Petro-Canada apart is their experience
@@ -389,12 +374,12 @@
 
                                             <a href="/en-kr/knowledge-centre/casestudy/copper-mountain-mine"
                                                 target="_parent" class="btn red-button">
-                                                Read<b>Case Study</b>
+                                                <b>사례 보기</b>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <!-- <div class="col-sm-6">
 
                                     <div class="box-container hp-text-grid with-btn light-grey">
                                         <div class="component-tag">Article</div>
@@ -409,13 +394,13 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-sm-6">
                                     <div class="box-container case-study dark-grey">
-                                        <div class="component-tag">Case Study</div>
+                                        <div class="component-tag">적용 사례</div>
                                         <div class="image-component">
 
-                                            <img src="/-/media/images/lubes/featuredresources/derkgray-quote.ashx" />
+                                            <img src="/petro/common/images/derkgray-quote.png" />
                                         </div>
                                         <div class="text-component">
                                             <h2 class="title">“Switching to PURITY™ FG has reduced costs, increased our
@@ -427,7 +412,7 @@
 
                                             <a href="/en-kr/knowledge-centre/casestudy/cadbury" target="_parent"
                                                 class="btn red-button">
-                                                Read<b>Case Study</b>
+                                                <b>사례 보기</b>
                                             </a>
                                         </div>
                                     </div>
@@ -435,12 +420,12 @@
                                 <div class="col-sm-6">
 
                                     <div class="box-container hp-textVideo-grid dark-grey">
-                                        <div class="component-tag">Video</div>
+                                        <div class="component-tag">영상</div>
                                         <div class="video-block">
                                             <a href="#" data-toggle="modal"
                                                 data-target="#6686f9a5-c53a-46e8-ac33-ff392bb23286">
                                                 <img
-                                                    src="/-/media/images/lubes/lubes-assets/imagesnov7/additional-resource-card-images/video-widget-with-text_cruickshank.ashx" />
+                                                    src="/petro/common/images/brand/Video-Widget-with-Text_Cruickshank.jpg" />
                                             </a>
                                         </div>
                                         <div class="text-component">
@@ -467,7 +452,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <!-- <div class="col-sm-6">
                                     <div class="box-container hp-textImage-grid dark-grey">
                                         <div class="component-tag">Tools</div>
                                         <div class="image-component">
@@ -484,13 +469,13 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-sm-6">
                                     <div class="box-container case-study dark-grey">
-                                        <div class="component-tag">Case Study</div>
+                                        <div class="component-tag">적용 사례</div>
                                         <div class="image-component">
 
-                                            <img src="/-/media/images/lubes/featuredresources/derkgray-quote.ashx" />
+                                            <img src="/petro/common/images/derkgray-quote.png" />
                                         </div>
                                         <div class="text-component">
                                             <h2 class="title">“Switching to SENTRON LD 5000 set new standards for drain
@@ -502,23 +487,15 @@
 
                                             <a href="/en-kr/knowledge-centre/casestudy/biogas-aholfing" target="_parent"
                                                 class="btn red-button">
-                                                Read<b>Case Study</b>
+                                                <b>사례 보기</b>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-
-
-
                         </div>
-
-
                     </div>
-
                 </div>
-
             </div>
         </div>
 
