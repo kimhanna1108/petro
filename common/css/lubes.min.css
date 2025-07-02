@@ -236,7 +236,7 @@ button:hover {
     text-decoration: none;
     overflow: hidden;
     text-indent: -999px;
-    background: url(../images/social-media-icons.png) no-repeat;
+    background: url(../images/nav/social-media-icons.png) no-repeat;
     display: none
 }
 
@@ -2808,7 +2808,7 @@ span.btn-title {
 }
 
 .footer-nav-icon-search {
-    background: url(../images/icon-search.png) center no-repeat;
+    background: url(../images/nav/icon-search.png) center no-repeat;
     width: 25px;
     height: 25px;
     position: absolute;
@@ -2821,7 +2821,7 @@ span.btn-title {
 }
 
 .footer-nav-icon-search:hover {
-    background-image: url(../images/search-icon-open.png)
+    background-image: url(../images/nav/search-icon-open.png)
 }
 
 .search-form-control {
@@ -4013,7 +4013,7 @@ footer .nav>li>a:hover {
 .header-search-btn>a,
 .header-search-btn>a:focus {
     color: #000;
-    background: url(../images/search-icon.png) left center no-repeat;
+    background: url(../images/nav/search-icon.png) left center no-repeat;
     text-indent: -999px;
     padding: 15px 0 15px 30px;
     text-decoration: none
@@ -4022,7 +4022,7 @@ footer .nav>li>a:hover {
 .news-btn>a,
 .news-btn>a:focus {
     color: #000;
-    background: url(../images/news-icon.png) left center no-repeat;
+    background: url(../images/nav/news-icon.png) left center no-repeat;
     padding: 15px 15px 15px 30px;
     text-decoration: none
 }
@@ -4031,7 +4031,7 @@ footer .nav>li>a:hover {
 .header-search-btn.open.open>a:hover,
 .header-search-btn>a:hover {
     color: #d10f1f;
-    background: url(../images/search-icon-open.png) left center no-repeat #fff
+    background: url(../images/nav/search-icon-open.png) left center no-repeat #fff
 }
 
 .news-search {
@@ -4163,7 +4163,7 @@ form.frm-search {
     .news-btn>a:hover {
         color: #d10f1f;
         padding-left: 30px;
-        background: url(../images/news-icon-open.png) left center no-repeat #fff;
+        background: url(../images/nav/news-icon-open.png) left center no-repeat #fff;
         text-decoration: none
     }
 
@@ -4416,7 +4416,7 @@ form.frm-search {
     .news-btn.open>a,
     .news-btn.open>a:hover {
         color: #fff;
-        background: url(../images/news-icon-white.png) no-repeat #d10f1f;
+        background: url(../images/nav/news-icon-white.png) no-repeat #d10f1f;
         background-position: calc(100% - 20px) center;
         padding-left: 20px !important
     }
@@ -5187,7 +5187,7 @@ button.close:after {
     }
 
     .search-block>.frm-search>.search-group>input[type=search] {
-        background: url(../images/icon-search.png) center no-repeat #f3f3f3;
+        background: url(../images/nav/icon-search.png) center no-repeat #f3f3f3;
         background-position: calc(100% - 20px) center;
         height: 44px;
         padding: 15px 20px !important
@@ -5286,7 +5286,7 @@ button.close:after {
 
     form.frm-search .search-group .search-img {
         position: absolute;
-        background: url(../images/icon-search.png) center no-repeat #f3f3f3;
+        background: url(../images/nav/icon-search.png) center no-repeat #f3f3f3;
         background-position: calc(100% - 20px) center;
         content: '';
         right: 0;
@@ -5302,7 +5302,7 @@ button.close:after {
 
 @media (min-width:768px) and (max-width:991px) {
     form.frm-search .search-group .search-img {
-        background: url(../images/search-tab-arrow.png) center no-repeat #f3f3f3 !important;
+        background: url(../images/nav/search-tab-arrow.png) center no-repeat #f3f3f3 !important;
         content: '';
         top: 5px;
         height: 44px
@@ -7680,7 +7680,7 @@ button.close:after {
 
     .product-grades-accordion .panel-default>.panel-heading .panel-title-details ul li a {
         font-size: 15px;
-        background: url(../images/pdf-icon.png) right center no-repeat;
+        background: url(../images/nav/pdf-icon.png) right center no-repeat;
         padding: 4px 32px 4px 0
     }
 
@@ -8262,7 +8262,7 @@ button.close:after {
 }
 
 .resource-center-icon-search {
-    background: url(../images/icon-search.png) 0 10px no-repeat;
+    background: url(../images/nav/icon-search.png) 0 10px no-repeat;
     width: 40px;
     height: 40px;
     padding: 20px 22px;
@@ -8275,7 +8275,7 @@ button.close:after {
 }
 
 .resource-center-icon-search:hover {
-    background: url(../images/search-icon-open.png) 0 10px no-repeat
+    background: url(../images/nav/search-icon-open.png) 0 10px no-repeat
 }
 
 .filter-element-list,
@@ -9493,7 +9493,7 @@ a.view-count span.caret {
     top: 50%;
     left: 50%;
     margin: -20px 0 0 -28px;
-    background: url(../images/play-icon.png) center center no-repeat;
+    background: url(../images/nav/play-icon.png) center center no-repeat;
     z-index: 1
 }
 
@@ -11553,7 +11553,7 @@ a.about-article-promo-link {
 }
 
 .searchbox-cont .form-group .search-icon {
-    background: url(../images/icon-search.png) center no-repeat;
+    background: url(../images/nav/icon-search.png) center no-repeat;
     height: 100%;
     position: absolute;
     top: 0;
@@ -11565,7 +11565,7 @@ a.about-article-promo-link {
 }
 
 .searchbox-cont .form-group .search-icon:hover {
-    background: url(../images/search-icon-open.png) center no-repeat
+    background: url(../images/nav/search-icon-open.png) center no-repeat
 }
 
 .searchfilter-cont .label-chklist-title {
@@ -13271,7 +13271,7 @@ i.indicator.glyphicon.glyphicon-chevron-up.pull-right {
     font-family: Verdana;
     font-weight: 400;
     font-size: 20px;
-    background: url(../images/bothside-arrow-white.png) left 5px no-repeat;
+    background: url(../images/nav/bothside-arrow-white.png) left 5px no-repeat;
     padding-left: 30px
 }
 
@@ -13367,16 +13367,16 @@ i.indicator.glyphicon.glyphicon-chevron-up.pull-right {
 
 .contact-prefer-call h3 {
     margin: 0;
-    background: url(../images/phone-contact.png) left 0 no-repeat
+    background: url(../images/nav/phone-contact.png) left 0 no-repeat
 }
 
 .contact-find-us h3 {
-    background: url(../images/location-contact.png) left 0 no-repeat;
+    background: url(../images/nav/location-contact.png) left 0 no-repeat;
     margin: 0
 }
 
 .contact-privacy h3 {
-    background: url(../images/privacy-contact.png) left 0 no-repeat;
+    background: url(../images/nav/privacy-contact.png) left 0 no-repeat;
     margin: 0;
     line-height: 1.5
 }
@@ -16209,7 +16209,7 @@ ul.sublist li:before {
 .panel-title-details .dropbtn {
     width: 100%;
     margin-top: -10px;
-    background: url(../images/pdf-icon.png) right center no-repeat;
+    background: url(../images/nav/pdf-icon.png) right center no-repeat;
     background-color: transparent;
     text-align: left
 }
