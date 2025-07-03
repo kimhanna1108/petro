@@ -161,7 +161,21 @@
                         .then(data => {
                             document.getElementById('knowledge_right').innerHTML = data;
                         });
+                } else if (selectedValue === "infographics") {
+                    fetch('../knowledge-centre/infographics.html')
+                        .then(res => res.text())
+                        .then(data => {
+                            document.getElementById('knowledge_right').innerHTML = data;
+                        });
+                } else if (selectedValue === "oem") {
+                    fetch('../knowledge-centre/oem-approvals-and-credentials.html')
+                        .then(res => res.text())
+                        .then(data => {
+                            document.getElementById('knowledge_right').innerHTML = data;
+                        });
                 }
+                
+                
 
             } else {
                 console.log('체크 해제됨');
@@ -288,16 +302,16 @@
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="infographics" data-role="none"
-                                                        name="infographics"
-                                                        value="{B630FFBD-2C75-4179-80A1-082096AAC25D}"
-                                                        onchange="ResourceSearch()">
+                                                        name="knowledge"
+                                                        value="infographics"
+                                                        onchange="knowledge_rightFunc()">
                                                     <label for="infographics">시각 정보 자료</label>
                                                 </p>
                                                 <p>
-                                                    <input type="checkbox" id="oem-approvals-and-credentials"
-                                                        data-role="none" name="oem-approvals-and-credentials"
-                                                        value="{4AB6B405-D3E2-413C-B4E4-44DFF5D18357}|{34B5D146-8F09-40B6-9B66-9E3B6CADFED8}"
-                                                        onchange="ResourceSearch()">
+                                                    <input type="checkbox" id="oem-approvals-and-credentials" data-role="none" 
+                                                        name="knowledge"
+                                                        value="oem"
+                                                        onchange="knowledge_rightFunc()">
                                                     <label for="oem-approvals-and-credentials">OEM 승인 &amp; 인증</label>
                                                 </p>
                                                 <p>
