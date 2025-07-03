@@ -130,8 +130,12 @@
     <script type="text/javascript">
         function OptanonWrapper() { }
         function knowledge_rightFunc(){
-            alert("hi11");
-            alert($(this).val());
+            const checkbox = document.getElementById('case-studies');
+            if (checkbox.checked) {
+                console.log('체크됨, 값:', checkbox.value); // 'casestudy'
+            } else {
+                console.log('체크 해제됨');
+            }
         }
     </script>
     <!-- CookiePro Cookies Consent Notice end for petrocanadalubricants.com -->
