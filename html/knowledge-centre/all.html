@@ -129,20 +129,43 @@
         data-domain-script="eb5a307c-1c60-47ba-9f43-cf1bbf82b5d0"></script> -->
     <script type="text/javascript">
         function OptanonWrapper() { }
-        function knowledge_rightFunc(){
-            const checkbox = document.getElementById('case-studies');
-            if (checkbox.checked) {
-                console.log('체크됨, 값:', checkbox.value); // 'casestudy'
-                if(checkbox.value == "casestudy"){
-                    alert("yes");
-                    fetch('../knowledge-centre/case-studies.html')
-                    .then(res => res.text())
-                    .then(data => {
-                        document.getElementById('knowledge_right').innerHTML = data;
-                    });
+        function knowledge_rightFunc() {
+            // name이 knowledge인 체크박스들 모두 선택
+            const checkboxes = document.querySelectorAll('input[name="knowledge"]');
+            let selectedValue = null;
+
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    selectedValue = checkbox.value;
                 }
+            });
+
+            if (selectedValue) {
+                console.log('체크됨, 값:', selectedValue);
+
+                if (selectedValue === "brochures") {
+                    fetch('../knowledge-centre/brochures.html')
+                        .then(res => res.text())
+                        .then(data => {
+                            document.getElementById('knowledge_right').innerHTML = data;
+                        });
+                } else if (selectedValue === "casestudy") {
+                    fetch('../knowledge-centre/case-studies.html')
+                        .then(res => res.text())
+                        .then(data => {
+                            document.getElementById('knowledge_right').innerHTML = data;
+                        });
+                } else if (selectedValue === "expertqnas") {
+                    fetch('../knowledge-centre/expert-q-and-as.html')
+                        .then(res => res.text())
+                        .then(data => {
+                            document.getElementById('knowledge_right').innerHTML = data;
+                        });
+                }
+
             } else {
                 console.log('체크 해제됨');
+                document.getElementById('knowledge_right').innerHTML = ''; // 체크 해제 시 내용 비우기
             }
         }
     </script>
@@ -239,9 +262,9 @@
                                             <form action="" id="filters" class="filter-element">
                                                 <p>
                                                     <input type="checkbox" id="brochures" data-role="none"
-                                                        name="brochures"
-                                                        value="{ECB47121-ABD7-48C4-A1C9-5B4AB0798BD9}|{8585DCE8-ADDA-4323-AEBB-5DFD7603CE79}"
-                                                        onchange="ResourceSearch()">
+                                                        name="knowledge"
+                                                        value="brochures"
+                                                        onchange="knowledge_rightFunc()">
                                                     <label for="brochures">매뉴얼</label>
                                                 </p>
                                                 <p>
@@ -251,21 +274,17 @@
                                                         onchange="ResourceSearch()">
                                                     <label for="case-studies">적용 사례</label> -->
                                                     <input type="checkbox" id="case-studies" data-role="none"
-                                                        name="case-studies"
+                                                        name="knowledge"
                                                         value="casestudy"
                                                         onchange="knowledge_rightFunc()">
                                                     <label for="case-studies">적용 사례</label>
-                                                <!-- <div class="light-grey"
-                                                    style="display: inline-block;padding-inline: 10px;"><a
-                                                        href="/petro/html/knowledge-centre/casestudy/case-studies.html"
-                                                        target="_parent" style="font-size: 15px;">적용 사례</a></div> -->
                                                 </p>
                                                 <p>
-                                                    <input type="checkbox" id="expert-q-and-as" data-role="none"
-                                                        name="expert-q-and-as"
-                                                        value="{1676B08F-5FC1-4B0A-8D92-5C5EFC1B1FA7}"
-                                                        onchange="ResourceSearch()">
-                                                    <label for="expert-q-and-as">전문가 Q&amp;As</label>
+                                                    <input type="checkbox" id="expertqnas" data-role="none"
+                                                        name="knowledge"
+                                                        value="expertqnas"
+                                                        onchange="knowledge_rightFunc()">
+                                                    <label for="expertqnas">전문가 Q&amp;A</label>
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="infographics" data-role="none"
