@@ -133,6 +133,14 @@
             const checkbox = document.getElementById('case-studies');
             if (checkbox.checked) {
                 console.log('체크됨, 값:', checkbox.value); // 'casestudy'
+                if(checkbox.value == "casestudy"){
+                    alert("yes");
+                    fetch('../knowledge-centre/case-studies.html')
+                    .then(res => res.text())
+                    .then(data => {
+                        document.getElementById('knowledge_right').innerHTML = data;
+                    });
+                }
             } else {
                 console.log('체크 해제됨');
             }
