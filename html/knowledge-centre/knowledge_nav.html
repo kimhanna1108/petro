@@ -1,112 +1,111 @@
-<div class="col-xs-12 col-sm-4 col-md-4 resource-center-filter-cont">
-    <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#resource-center" role="tab" data-toggle="tab">Resource Centre
-                Items</a></li>
-        <li role="presentation"><a href="#services-utilites" role="tab" data-toggle="tab">Services &amp; Utilities</a>
-        </li>
-    </ul>
-    <div class="tab-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#resource-center" role="tab" data-toggle="tab">Resource Centre
+            Items</a></li>
+    <li role="presentation"><a href="#services-utilites" role="tab" data-toggle="tab">Services &amp; Utilities</a>
+    </li>
+</ul>
+<div class="tab-content">
 
-        <div role="tabpanel" class="tab-pane resource-center-pane active" id="resource-center">
-            <button type="button" class="btn btn-filter collapsed" data-toggle="collapse"
-                data-target="#filter">Filter</button>
-            <div id="filter" class="filter collapse">
-                <div class="resource-center-search">
-                    <form role="search">
-                        <div class="form-group">
-                            <input type="text" id="SearchText" data-role="none" class="search-form-control form-control"
-                                placeholder="What are you looking for ?" data-placeholder="What are you looking for ?"
-                                autocomplete="off">
-                            <a href="#" id="ResourceCenterSearch" class="resource-center-icon-search"></a>
-                        </div>
-                    </form>
-                </div>
-                <div class="filter-element-list">
-                    <h3 class="show-title">Show:</h3>
-                    <form action="" id="filters" class="filter-element">
-                        <p>
-                            <input type="checkbox" name="all" data-role="none" id="All" value="All"
-                                onchange="ResourceSearch()">
-                            <label for="All">전체</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="brochures" data-role="none" name="brochures"
-                                value="{ECB47121-ABD7-48C4-A1C9-5B4AB0798BD9}|{8585DCE8-ADDA-4323-AEBB-5DFD7603CE79}"
-                                onchange="ResourceSearch()">
-                            <label for="brochures">매뉴얼</label>
-                        </p>
-                        <p>
-                            <!-- <input type="checkbox" id="case-studies" data-role="none"
+    <div role="tabpanel" class="tab-pane resource-center-pane active" id="resource-center">
+        <button type="button" class="btn btn-filter collapsed" data-toggle="collapse"
+            data-target="#filter">Filter</button>
+        <div id="filter" class="filter collapse">
+            <div class="resource-center-search">
+                <form role="search">
+                    <div class="form-group">
+                        <input type="text" id="SearchText" data-role="none" class="search-form-control form-control"
+                            placeholder="What are you looking for ?" data-placeholder="What are you looking for ?"
+                            autocomplete="off">
+                        <a href="#" id="ResourceCenterSearch" class="resource-center-icon-search"></a>
+                    </div>
+                </form>
+            </div>
+            <div class="filter-element-list">
+                <h3 class="show-title">Show:</h3>
+                <form action="" id="filters" class="filter-element">
+                    <p>
+                        <input type="checkbox" name="all" data-role="none" id="All" value="All"
+                            onchange="ResourceSearch()">
+                        <label for="All">전체</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="brochures" data-role="none" name="brochures"
+                            value="{ECB47121-ABD7-48C4-A1C9-5B4AB0798BD9}|{8585DCE8-ADDA-4323-AEBB-5DFD7603CE79}"
+                            onchange="ResourceSearch()">
+                        <label for="brochures">매뉴얼</label>
+                    </p>
+                    <p>
+                        <!-- <input type="checkbox" id="case-studies" data-role="none"
                                                         name="case-studies"
                                                         value="{65A9AF9A-0781-4E5A-B157-2FF9FC6897E0}|{5297CA04-B849-49BE-85D7-64474FB1C5BB}|{43C1EFC6-1CE7-4114-B2D9-AEC28E81F0A9}|{80C6521B-A999-4D16-863D-9766C84508B4}"
                                                         onchange="ResourceSearch()">
                                                     <label for="case-studies">적용 사례</label> -->
-                        <div class="light-grey" style="display: inline-block;padding-inline: 10px;"><a
-                                href="/petro/html/knowledge-centre/casestudy/case-studies.html" target="_parent"
-                                style="font-size: 15px;">적용 사례</a></div>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="expert-q-and-as" data-role="none" name="expert-q-and-as"
-                                value="{1676B08F-5FC1-4B0A-8D92-5C5EFC1B1FA7}" onchange="ResourceSearch()">
-                            <label for="expert-q-and-as">전문가 Q&amp;As</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="infographics" data-role="none" name="infographics"
-                                value="{B630FFBD-2C75-4179-80A1-082096AAC25D}" onchange="ResourceSearch()">
-                            <label for="infographics">시각 정보 자료</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="oem-approvals-and-credentials" data-role="none"
-                                name="oem-approvals-and-credentials"
-                                value="{4AB6B405-D3E2-413C-B4E4-44DFF5D18357}|{34B5D146-8F09-40B6-9B66-9E3B6CADFED8}"
-                                onchange="ResourceSearch()">
-                            <label for="oem-approvals-and-credentials">OEM 승인 &amp; 인증</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="podcasts" data-role="none" name="podcasts"
-                                value="{FC748EDF-47B6-4407-8D86-A7054D348EFC}|{0F9BF7D7-C71B-4500-A860-120690C18CA4}"
-                                onchange="ResourceSearch()">
-                            <label for="podcasts">팟캐스트 &amp; 웨비나</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="schematics" data-role="none" name="schematics"
-                                value="{049751AF-5748-48E1-A7D7-1DE99BEB48DB}" onchange="ResourceSearch()">
-                            <label for="schematics">회로도</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="sds" data-role="none" name="sds"
-                                value="{CF3BBFCE-D48A-45C9-A6F9-CDDE560D6AF5}" onchange="ResourceSearch()">
-                            <label for="sds">SDS</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="tech-data" data-role="none" name="tech-data"
-                                value="{EAB9767A-BB8A-4DC3-8B59-68408818D3F2}" onchange="ResourceSearch()">
-                            <label for="tech-data">기술 자료</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="tools-and-services" data-role="none" name="tools-and-services"
-                                value="{2F7CA4E4-291D-45DE-8689-BD5BA2C5E515}" onchange="ResourceSearch()">
-                            <label for="tools-and-services">지원 도구 및 서비스</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="videos" data-role="none" name="videos"
-                                value="{87AB8D91-2E43-4F47-AEB0-C5236F5E96E4}" onchange="ResourceSearch()">
-                            <label for="videos">영상</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="white-papers" data-role="none" name="white-papers"
-                                value="{D3CB8547-0A56-45AB-8F8E-46D913D1397E}|{D5B8BE0E-5CC0-42CE-8807-A34C715E544D}"
-                                onchange="ResourceSearch()">
-                            <label for="white-papers">기술 백서</label>
-                        </p>
-                    </form>
-                </div>
+                    <div class="light-grey" style="display: inline-block;padding-inline: 10px;"><a
+                            href="/petro/html/knowledge-centre/casestudy/case-studies.html" target="_parent"
+                            style="font-size: 15px;">적용 사례</a></div>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="expert-q-and-as" data-role="none" name="expert-q-and-as"
+                            value="{1676B08F-5FC1-4B0A-8D92-5C5EFC1B1FA7}" onchange="ResourceSearch()">
+                        <label for="expert-q-and-as">전문가 Q&amp;As</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="infographics" data-role="none" name="infographics"
+                            value="{B630FFBD-2C75-4179-80A1-082096AAC25D}" onchange="ResourceSearch()">
+                        <label for="infographics">시각 정보 자료</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="oem-approvals-and-credentials" data-role="none"
+                            name="oem-approvals-and-credentials"
+                            value="{4AB6B405-D3E2-413C-B4E4-44DFF5D18357}|{34B5D146-8F09-40B6-9B66-9E3B6CADFED8}"
+                            onchange="ResourceSearch()">
+                        <label for="oem-approvals-and-credentials">OEM 승인 &amp; 인증</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="podcasts" data-role="none" name="podcasts"
+                            value="{FC748EDF-47B6-4407-8D86-A7054D348EFC}|{0F9BF7D7-C71B-4500-A860-120690C18CA4}"
+                            onchange="ResourceSearch()">
+                        <label for="podcasts">팟캐스트 &amp; 웨비나</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="schematics" data-role="none" name="schematics"
+                            value="{049751AF-5748-48E1-A7D7-1DE99BEB48DB}" onchange="ResourceSearch()">
+                        <label for="schematics">회로도</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="sds" data-role="none" name="sds"
+                            value="{CF3BBFCE-D48A-45C9-A6F9-CDDE560D6AF5}" onchange="ResourceSearch()">
+                        <label for="sds">SDS</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="tech-data" data-role="none" name="tech-data"
+                            value="{EAB9767A-BB8A-4DC3-8B59-68408818D3F2}" onchange="ResourceSearch()">
+                        <label for="tech-data">기술 자료</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="tools-and-services" data-role="none" name="tools-and-services"
+                            value="{2F7CA4E4-291D-45DE-8689-BD5BA2C5E515}" onchange="ResourceSearch()">
+                        <label for="tools-and-services">지원 도구 및 서비스</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="videos" data-role="none" name="videos"
+                            value="{87AB8D91-2E43-4F47-AEB0-C5236F5E96E4}" onchange="ResourceSearch()">
+                        <label for="videos">영상</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="white-papers" data-role="none" name="white-papers"
+                            value="{D3CB8547-0A56-45AB-8F8E-46D913D1397E}|{D5B8BE0E-5CC0-42CE-8807-A34C715E544D}"
+                            onchange="ResourceSearch()">
+                        <label for="white-papers">기술 백서</label>
+                    </p>
+                </form>
             </div>
         </div>
+    </div>
 
 
-        <div id="services-utilites" class="tab-pane services-utilites-pane">
-            <!-- <div class="service-block">
+    <div id="services-utilites" class="tab-pane services-utilites-pane">
+        <!-- <div class="service-block">
                                         <h3><img alt="" height="23" width="66"
                                                 src="/-/media/images/lubes/resources/icon-service-utilities.ashx?la=en-en" />&nbsp;Tools &amp; Services</h3>
                                         <ul>
@@ -131,20 +130,19 @@
                                         </ul>
                                     </div> -->
 
-            <div class="handbook-block">
-                <h3>Lubricants 안내서</h3>
+        <div class="handbook-block">
+            <h3>Lubricants 안내서</h3>
 
-                <div class="image-component">
-                    <img src="/petro/common/images/brand/LubricantsHandbook-727x1164-KC_EN.jpg" alt="" />
-                </div>
-                <div class="download-handbook">
-                    <a class="btn red-txt-button" href="/petro/common/pdf/PCL-Handbook_EN.pdf" target="_blank">
-                        <strong>다운로드</strong></a>
-                    <p>(PDF, 10 MB)</p>
-                </div>
+            <div class="image-component">
+                <img src="/petro/common/images/brand/LubricantsHandbook-727x1164-KC_EN.jpg" alt="" />
+            </div>
+            <div class="download-handbook">
+                <a class="btn red-txt-button" href="/petro/common/pdf/PCL-Handbook_EN.pdf" target="_blank">
+                    <strong>다운로드</strong></a>
+                <p>(PDF, 10 MB)</p>
             </div>
         </div>
-        <div></div>
-
     </div>
+    <div></div>
+
 </div>
