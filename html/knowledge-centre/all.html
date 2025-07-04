@@ -129,59 +129,44 @@
         data-domain-script="eb5a307c-1c60-47ba-9f43-cf1bbf82b5d0"></script> -->
     <script type="text/javascript">
         function OptanonWrapper() { }
-        function knowledge_rightFunc() {
-            // name이 knowledge인 체크박스들 모두 선택
+        function knowledge_rightFunc(selectedValue) {
             const checkboxes = document.querySelectorAll('input[name="knowledge"]');
-            let selectedValue = null;
-
-            checkboxes.forEach(checkbox => {
-                if (checkbox.checked) {
-                    selectedValue = checkbox.value;
-                }
+            
+            // 다른 체크박스는 해제
+            checkboxes.forEach(cb => {
+            cb.checked = cb.value === selectedValue;
             });
 
-            if (selectedValue) {
-                console.log('체크됨, 값:', selectedValue);
+            const fileMap = {
+            "brochures": "brochures.html",
+            "casestudy": "case-studies.html",
+            "expertqnas": "expert-q-and-as.html",
+            "infographics": "infographics.html",
+            "oem": "oem-approvals-and-credentials.html"
+            };
 
-                if (selectedValue === "brochures") {
-                    fetch('../knowledge-centre/brochures.html')
-                        .then(res => res.text())
-                        .then(data => {
-                            document.getElementById('knowledge_right').innerHTML = data;
-                        });
-                } else if (selectedValue === "casestudy") {
-                    fetch('../knowledge-centre/case-studies.html')
-                        .then(res => res.text())
-                        .then(data => {
-                            document.getElementById('knowledge_right').innerHTML = data;
-                        });
-                } else if (selectedValue === "expertqnas") {
-                    fetch('../knowledge-centre/expert-q-and-as.html')
-                        .then(res => res.text())
-                        .then(data => {
-                            document.getElementById('knowledge_right').innerHTML = data;
-                        });
-                } else if (selectedValue === "infographics") {
-                    fetch('../knowledge-centre/infographics.html')
-                        .then(res => res.text())
-                        .then(data => {
-                            document.getElementById('knowledge_right').innerHTML = data;
-                        });
-                } else if (selectedValue === "oem") {
-                    fetch('../knowledge-centre/oem-approvals-and-credentials.html')
-                        .then(res => res.text())
-                        .then(data => {
-                            document.getElementById('knowledge_right').innerHTML = data;
-                        });
-                }
-                
-                
-
-            } else {
-                console.log('체크 해제됨');
-                document.getElementById('knowledge_right').innerHTML = ''; // 체크 해제 시 내용 비우기
+            const file = fileMap[selectedValue];
+            if (file) {
+            fetch(`../knowledge-centre/${file}`)
+                .then(res => res.text())
+                .then(data => {
+                document.getElementById('knowledge_right').innerHTML = data;
+                });
             }
         }
+
+        // ✅ URL 파라미터로 체크값 받아 실행 (최초 진입 시)
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const checkValue = params.get('check');
+            if (checkValue) {
+            const checkbox = document.querySelector(`input[name="knowledge"][value="${checkValue}"]`);
+            if (checkbox) {
+                checkbox.checked = true;
+                knowledge_rightFunc(checkValue);
+            }
+            }
+        });
     </script>
     <!-- CookiePro Cookies Consent Notice end for petrocanadalubricants.com -->
 
@@ -278,7 +263,7 @@
                                                     <input type="checkbox" id="brochures" data-role="none"
                                                         name="knowledge"
                                                         value="brochures"
-                                                        onchange="knowledge_rightFunc()">
+                                                        onchange="knowledge_rightFunc(this.value)">
                                                     <label for="brochures">매뉴얼</label>
                                                 </p>
                                                 <p>
@@ -290,28 +275,28 @@
                                                     <input type="checkbox" id="case-studies" data-role="none"
                                                         name="knowledge"
                                                         value="casestudy"
-                                                        onchange="knowledge_rightFunc()">
+                                                        onchange="knowledge_rightFunc(this.value)">
                                                     <label for="case-studies">적용 사례</label>
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="expertqnas" data-role="none"
                                                         name="knowledge"
                                                         value="expertqnas"
-                                                        onchange="knowledge_rightFunc()">
+                                                        onchange="knowledge_rightFunc(this.value)">
                                                     <label for="expertqnas">전문가 Q&amp;A</label>
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="infographics" data-role="none"
                                                         name="knowledge"
                                                         value="infographics"
-                                                        onchange="knowledge_rightFunc()">
+                                                        onchange="knowledge_rightFunc(this.value)">
                                                     <label for="infographics">시각 정보 자료</label>
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="oem-approvals-and-credentials" data-role="none" 
                                                         name="knowledge"
                                                         value="oem"
-                                                        onchange="knowledge_rightFunc()">
+                                                        onchange="knowledge_rightFunc(this.value)">
                                                     <label for="oem-approvals-and-credentials">OEM 승인 &amp; 인증</label>
                                                 </p>
                                                 <p>
@@ -319,7 +304,7 @@
                                                         name="podcasts"
                                                         value="{FC748EDF-47B6-4407-8D86-A7054D348EFC}|{0F9BF7D7-C71B-4500-A860-120690C18CA4}"
                                                         onchange="ResourceSearch()">
-                                                    <label for="podcasts">팟캐스트 &amp; 웨비나</label>
+                                                    <label for="podcasts">팟캐스트 및 웨비나</label>
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="schematics" data-role="none"
