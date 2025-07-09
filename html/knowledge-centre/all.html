@@ -145,6 +145,7 @@
             "oem": "oem-approvals-and-credentials.html",
             "podcasts" : "podcasts",
             "schematics" : "schematics",
+            "sds" : "sds",
             };
 
             const file = fileMap[selectedValue];
@@ -316,8 +317,8 @@
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="sds" data-role="none" name="sds"
-                                                        value="{CF3BBFCE-D48A-45C9-A6F9-CDDE560D6AF5}"
-                                                        onchange="ResourceSearch()">
+                                                        value="sds"
+                                                        onchange="knowledge_rightFunc(this.value)">
                                                     <label for="sds">SDS</label>
                                                 </p>
                                                 <p>
