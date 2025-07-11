@@ -146,6 +146,7 @@
             "podcasts" : "podcasts",
             "schematics" : "schematics",
             "sds" : "sds",
+            "tech-data" : "tech-data"
             };
 
             const file = fileMap[selectedValue];
@@ -322,9 +323,9 @@
                                                     <label for="sds">SDS</label>
                                                 </p>
                                                 <p>
-                                                    <input type="checkbox" id="tech-data" data-role="none"
-                                                        name="tech-data" value="{EAB9767A-BB8A-4DC3-8B59-68408818D3F2}"
-                                                        onchange="ResourceSearch()">
+                                                    <input type="checkbox" id="tech-data" data-role="none" name="tech-data" 
+                                                        value="tech-data"
+                                                        onchange="knowledge_rightFunc(this.value)">
                                                     <label for="tech-data">기술 자료</label>
                                                 </p>
                                                 <p>
