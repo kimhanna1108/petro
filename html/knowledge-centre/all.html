@@ -146,7 +146,9 @@
             "podcasts" : "podcasts",
             "schematics" : "schematics",
             "sds" : "sds",
-            "tech-data" : "tech-data"
+            "tech-data" : "tech-data",
+            "videos" : "videos",
+            "white-papers" : "white-papers"
             };
 
             const file = fileMap[selectedValue];
@@ -331,21 +333,21 @@
                                                 <p>
                                                     <input type="checkbox" id="tools-and-services" data-role="none"
                                                         name="tools-and-services"
-                                                        value="{2F7CA4E4-291D-45DE-8689-BD5BA2C5E515}"
-                                                        onchange="ResourceSearch()">
+                                                        value="tools-and-services"
+                                                        onchange="knowledge_rightFunc(this.value)">
                                                     <label for="tools-and-services">지원 도구 및 서비스</label>
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="videos" data-role="none" name="videos"
-                                                        value="{87AB8D91-2E43-4F47-AEB0-C5236F5E96E4}"
-                                                        onchange="ResourceSearch()">
+                                                        value="videos"
+                                                        onchange="knowledge_rightFunc(this.value)">
                                                     <label for="videos">영상</label>
                                                 </p>
                                                 <p>
                                                     <input type="checkbox" id="white-papers" data-role="none"
                                                         name="white-papers"
-                                                        value="{D3CB8547-0A56-45AB-8F8E-46D913D1397E}|{D5B8BE0E-5CC0-42CE-8807-A34C715E544D}"
-                                                        onchange="ResourceSearch()">
+                                                        value="white-papers"
+                                                        onchange="knowledge_rightFunc(this.value)">
                                                     <label for="white-papers">기술 백서</label>
                                                 </p>
                                             </form>
