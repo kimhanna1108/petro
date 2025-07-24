@@ -1,0 +1,205 @@
+#digital-handbook .breadcrumb {
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: white;
+    border-radius: 0;
+}
+
+#digital-handbook .table-container .table-wrapper thead tr:not(:last-child) {
+    border-bottom: 2px solid #fff
+}
+
+
+@media (max-width: 767px) {
+    #digital-handbook .breadcrumb__list li.parent a:before {
+        content: url(../../images/Digital-Handbook/svgs/arrow-circle.svg);
+    }
+}
+
+@media (max-width: 500px) {
+    #digital-handbook .table-mobile {
+        width: 22% !important;
+    }
+}
+
+#digital-handbook input[type="search"] {
+    -webkit-appearance: searchfield;
+}
+
+    #digital-handbook input[type="search"]::-webkit-search-cancel-button {
+        -webkit-appearance: searchfield-cancel-button;
+    }
+
+#digital-handbook .search-panel__ctrl:focus {
+    outline-width: 3px;
+    outline-color: black;
+}
+
+#digital-handbook a.card:hover .icon--grey {
+    fill: #707070 !important;
+    stroke: #fff !important;
+}
+
+#digital-handbook .breadcrumb__list li {
+    font-size: 15px;
+}
+
+#digital-handbook .rich-content p {
+    font-size: 1.5rem;
+}
+
+#digital-handbook p.card--textcontent {
+    font-size: 16px;
+}
+
+#digital-handbook .accordion__header {
+    font-size: 1.5rem;
+}
+
+    #digital-handbook .accordion__header .text {
+        font-weight: 700;
+    }
+
+#digital-handbook .subnav-container .l2 .section > a:before {
+    background: none
+}
+
+@media (max-width: 992px) {
+    #digital-handbook .row-container .content-row .col-nav {
+        z-index: 1100;
+    }
+
+    #digital-handbook .symbols-panel.expanded {
+        z-index: 1120;
+    }
+
+    #digital-handbook .search-panel__suggest-list.show {
+        z-index: 1130;
+    }
+}
+
+#digital-handbook .bulletList {
+    list-style-type: disc;
+}
+#digital-handbook .bulletList li {
+    font-size: 1.5rem;
+    line-height: 1.58;
+    letter-spacing: -0.025em;
+    margin-top: 1em;
+    margin-left: 3rem;
+}
+#digital-handbook p.Fontsize{
+    font-size:1.25rem;
+}
+
+#digital-handbook .greyborder--hide {
+    display: none;
+}
+
+#digital-handbook .hide--printButton {
+    display: none;
+}
+
+#digital-handbook .search__icon--hide {
+    display: none;
+}
+
+#digital-handbook .show--printButton {
+    display: block;
+}
+
+#digital-handbook .subnav-container .l4 > li a {
+    line-height: 21px;
+    font-size: 17px;
+}
+
+#digital-handbook .blue {
+    color: var(--color-blue) !important;
+}
+
+#digital-handbook .yellow {
+    color: var(--color-yellow) !important;
+}
+
+#digital-handbook .orange {
+    color: var(--color-orange) !important;
+}
+
+#digital-handbook #zoomContainer .close {
+    opacity: 1;
+}
+
+#digital-handbook .subject-index-item .accordion__panel li {
+    padding: 0px !important;
+}
+
+#digital-handbook .subject-index-item .accordion__panel li::before {
+    background: none !important;
+}
+#digital-handbook .fs0 {
+    font-weight: 700 !important;
+}
+
+@media print {
+
+    #digital-handbook .paging {
+        display: none
+    }
+
+    .footer-nav-section {
+        display: none
+    }
+
+    .ico-chevron--outline-white {
+        display: none
+    }
+
+    .lube-container.footer-nav-section {
+        display: none
+    }
+
+    #digital-handbook .btn--outline {
+        display: none
+    }
+
+    #digital-handbook .hide-on-print {
+        display: none
+    }
+
+    #digital-handbook .breadcrumb {
+        display: none;
+    }
+
+    #digital-handbook .search-panel {
+        display: none;
+    }
+
+    .acsb-trigger.acsb-ready {
+        display: none !important;
+    }
+
+    .acsb-trigger.acsb-bg-lead.acsb-ready {
+        display: none !important;
+    }
+
+    .print-only-image {
+        display: block !important;
+        float: right !important;
+        width: auto !important
+    }
+
+        .print-only-image img {
+            margin: 0 !important
+        }
+
+    @page {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    body {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
