@@ -1,3 +1,47 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 현재 페이지 경로 예시:
+        // 1) /petro/index.html        -> basePath = './'
+        // 2) /petro/html/brand/...    -> basePath = '../../'
+        // 3) /petro/html/a.html       -> basePath = '../'
+
+        const pathname = location.pathname;
+
+        let basePath = './'; // 기본값
+
+        if (pathname.includes('/html/brand/')) {
+            // 예: /petro/html/brand/duradrive.html
+            basePath = '../../';
+        } else if (pathname.includes('/html/')) {
+            // 예: /petro/html/a.html
+            basePath = '../';
+        } else {
+            // 예: /petro/index.html
+            basePath = './';
+        }
+
+        // 이미지 경로 수정
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            const src = img.getAttribute('src');
+            if (src && src.startsWith('common/')) {
+                img.src = basePath + src;
+            }
+        });
+
+        // a 링크 경로 수정
+        const links = document.querySelectorAll('a');
+        links.forEach(a => {
+            const href = a.getAttribute('href');
+            if (!href) return;
+
+            if (href.startsWith('html/') || href.startsWith('common/')) {
+                a.href = basePath + href;
+            }
+        });
+    });
+
+</script>
 
 <div class="lube-container mainHeader-cont mainHeader-full">
     <div class="container-fluid main-nav-bar-full">
@@ -76,16 +120,16 @@
                                                     class="nav-panel-collapse collapse in brand-collapse">
                                                     <div class="nav-panel-body">
 
-                                                        <a href="html/brand/duradrive/duradrive.html" class="special-brands"
-                                                            target="_parent">DURADRIVE</a>
+                                                        <a href="html/brand/duradrive/duradrive.html"
+                                                            class="special-brands" target="_parent">DURADRIVE</a>
                                                         <a href="html/brand/duron/duron.html" class="special-brands"
                                                             target="_parent">DURON</a>
                                                         <a href="html/brand/hydrex/hydrex.html" class="special-brands"
                                                             target="_parent">HYDREX</a>
                                                         <a href="html/brand/produro/produro.html" class="special-brands"
                                                             target="_parent">PRODURO</a>
-                                                        <a href="html/brand/purity-fg/purity-fg.html" class="special-brands"
-                                                            target="_parent">PURITY FG</a>
+                                                        <a href="html/brand/purity-fg/purity-fg.html"
+                                                            class="special-brands" target="_parent">PURITY FG</a>
                                                         <a href="html/brand/suniso.html" class="special-brands"
                                                             target="_parent">SUNISO</a>
                                                         <a href="html/brand/sentron/sentron.html" class="special-brands"
@@ -107,8 +151,8 @@
                                                         <a href="html/brand/turboflo/turboflo.html" class=""
                                                             target="_parent">TURBOFLO</a>
 
-                                                        <a href="html/brand/productoverview.html#brands" class="nav-cta-link"
-                                                            target="_parent">전체 제품 보기</a>
+                                                        <a href="html/brand/productoverview.html#brands"
+                                                            class="nav-cta-link" target="_parent">전체 제품 보기</a>
 
 
 
@@ -139,7 +183,8 @@
                                                             target="_parent">Automatic/CVT/DCT Transmission Fluids</a>
                                                         <a href="html/category/food-grade-lubricants.html"
                                                             target="_parent">Food Grade Lubricants</a>
-                                                        <a href="html/category/greases.html" target="_parent">Greases</a>
+                                                        <a href="html/category/greases.html"
+                                                            target="_parent">Greases</a>
                                                         <a href="html/category/heat-transfer-fluids.html"
                                                             target="_parent">Heat Transfer Fluids</a>
                                                         <a href="html/category/heavy-duty-diesel-engine-oils.html"
@@ -149,7 +194,7 @@
                                                         <a href="html/category/industrial-gear-oils.html"
                                                             target="_parent">Industrial Gear Oils
 
-</a>
+                                                        </a>
                                                         <a href="html/category/natural-gas-compressor-fluids.html"
                                                             target="_parent">Natural Gas Compressor Fluids</a>
                                                         <a href="html/category/refrigeration-compressor.html"
@@ -161,8 +206,8 @@
                                                         <a href="html/category/white-mineral-oils.html"
                                                             target="_parent">White Mineral Oils</a>
 
-                                                        <a href="html/brand/productoverview.html#products" class="nav-cta-link"
-                                                            target="_parent">전체 적용 분야 보기</a>
+                                                        <a href="html/brand/productoverview.html#products"
+                                                            class="nav-cta-link" target="_parent">전체 적용 분야 보기</a>
 
 
                                                     </div><!--/.panel-body -->
@@ -202,7 +247,8 @@
                                                     class="panel-collapse collapse product-data-collapse">
                                                     <div class="nav-panel-body">
 
-                                                        <a href="html/knowledge-centre/all.html?check=sds" target="_parent">SDS</a>
+                                                        <a href="html/knowledge-centre/all.html?check=sds"
+                                                            target="_parent">SDS</a>
                                                         <a href="html/knowledge-centre/all.html?check=techdata"
                                                             target="_parent">기술 자료</a>
                                                     </div><!--/.panel-body -->
@@ -245,12 +291,17 @@
                                                 target="_parent">SUPREME</a>
                                             <a href="html/brand/duratac/duratac-chain-oil.html" class=""
                                                 target="_parent">DURATAC</a>
-                                            <a href="html/brand/duratran/duratran.html" class="" target="_parent">DURATRAN</a>
-                                            <a href="html/brand/environ/environ.html" class="" target="_parent">ENVIRON</a>
-                                            <a href="html/brand/precision/precision.html" class="" target="_parent">PRECISION</a>
-                                            <a href="html/brand/luminol/luminol-tri.html" class="" target="_parent">LUMINOL</a>
+                                            <a href="html/brand/duratran/duratran.html" class=""
+                                                target="_parent">DURATRAN</a>
+                                            <a href="html/brand/environ/environ.html" class=""
+                                                target="_parent">ENVIRON</a>
+                                            <a href="html/brand/precision/precision.html" class=""
+                                                target="_parent">PRECISION</a>
+                                            <a href="html/brand/luminol/luminol-tri.html" class=""
+                                                target="_parent">LUMINOL</a>
                                             <a href="html/brand/traxon/traxon.html" class="" target="_parent">TRAXON</a>
-                                            <a href="html/brand/turboflo/turboflo.html" class="" target="_parent">TURBOFLO</a>
+                                            <a href="html/brand/turboflo/turboflo.html" class=""
+                                                target="_parent">TURBOFLO</a>
                                             <a href="html/brand/productoverview.html#brands" class="nav-cta-link"
                                                 target="_parent">전체 제품 보기</a>
 
@@ -261,27 +312,36 @@
                                         <h3>적용 분야</h3>
                                         <div class="applications-section">
 
-                                            <a href="html/category/air-compressor-fluids.html" target="_parent">Air Compressor Fluids</a>
+                                            <a href="html/category/air-compressor-fluids.html" target="_parent">Air
+                                                Compressor Fluids</a>
                                             <a href="html/category/automatic-transmission-fluids.html"
                                                 target="_parent">Automatic/CVT/DCT Transmission Fluids</a>
-                                            <a href="html/category/automotive-gear-fluid.html" target="_parent">Automotive Axle/Gear &amp; Manual Transmission Fluids</a>
+                                            <a href="html/category/automotive-gear-fluid.html"
+                                                target="_parent">Automotive Axle/Gear &amp; Manual Transmission
+                                                Fluids</a>
                                             <a href="html/category/electrical-insulating-oil.html"
                                                 target="_parent">Electrical Insulating Oil</a>
-                                            <a href="html/category/food-grade-lubricants.html" target="_parent">Food Grade Lubricants</a>
+                                            <a href="html/category/food-grade-lubricants.html" target="_parent">Food
+                                                Grade Lubricants</a>
                                             <a href="html/category/greases.html" target="_parent">Greases</a>
-                                            <a href="html/category/heat-transfer-fluids.html" target="_parent">Heat Transfer Fluids</a>
+                                            <a href="html/category/heat-transfer-fluids.html" target="_parent">Heat
+                                                Transfer Fluids</a>
                                             <a href="html/category/heavy-duty-diesel-engine-oils.html"
                                                 target="_parent">Heavy-Duty Diesel Engine Oils</a>
-                                            <a href="html/category/hydraulic-fluids.html" target="_parent">Hydraulic Fluids</a>
-                                            <a href="html/category/industrial-gear-oils.html" target="_parent">Industrial Gear Oils</a>
+                                            <a href="html/category/hydraulic-fluids.html" target="_parent">Hydraulic
+                                                Fluids</a>
+                                            <a href="html/category/industrial-gear-oils.html"
+                                                target="_parent">Industrial Gear Oils</a>
                                             <a href="html/category/natural-gas-compressor-fluids.html"
                                                 target="_parent">Natural Gas Compressor Fluids</a>
                                             <a href="html/category/refrigeration-compressor.html"
                                                 target="_parent">Refrigeration Compressor Fluids </a>
-                                            <a href="html/category/passenger-car-motor-oil.html" target="_parent">Passenger Car Motor Oil</a>
+                                            <a href="html/category/passenger-car-motor-oil.html"
+                                                target="_parent">Passenger Car Motor Oil</a>
                                             <a href="html/category/stationary-gas-engine-oils.html"
                                                 target="_parent">Stationary Gas Engine Oils</a>
-                                            <a href="html/category/white-mineral-oils.html" target="_parent">White Mineral Oils</a>
+                                            <a href="html/category/white-mineral-oils.html" target="_parent">White
+                                                Mineral Oils</a>
 
                                             <a href="html/brand/productoverview.html#products" class="nav-cta-link"
                                                 target="_parent">전체 적용 분야 보기</a>
@@ -297,7 +357,8 @@
 
                                             <h3 class="product-data">자료실</h3>
                                             <a href="html/knowledge-centre/all.html?check=sds" target="_parent">SDS</a>
-                                            <a href="html/knowledge-centre/all.html?check=techdata" target="_parent">기술자료</a>
+                                            <a href="html/knowledge-centre/all.html?check=techdata"
+                                                target="_parent">기술자료</a>
 
 
                                         </div>
@@ -329,19 +390,26 @@
                                         <a target="_parent" href="html/industries/adhesives.html">접착제</a>
                                         <a target="_parent" href="html/industries/agriculture.html">농업</a>
                                         <a target="_parent" href="html/industries/construction.html">건설</a>
-                                        <a target="_parent" href="html/industries/consumer-automotive.html">일반 소비자용 자동차</a>
+                                        <a target="_parent" href="html/industries/consumer-automotive.html">일반 소비자용
+                                            자동차</a>
                                         <a target="_parent" href="html/industries/corrugated-packaging.html">골판지 포장</a>
                                         <a target="_parent" href="html/industries/food-and-beverage.html">식품 및 음료</a>
-                                        <a target="_parent" href="html/industries/forestry-and-saw-mill.html">산림업 및 제재소</a>
-                                        <a target="_parent" href="html/industries/gas-plants-pipelines-power-gen.html">가스 시설, 배관망 및 전력 생산</a>
+                                        <a target="_parent" href="html/industries/forestry-and-saw-mill.html">산림업 및
+                                            제재소</a>
+                                        <a target="_parent"
+                                            href="html/industries/gas-plants-pipelines-power-gen.html">가스 시설, 배관망 및 전력
+                                            생산</a>
                                         <a target="_parent" href="html/industries/general-manufacturing.html">일반 제조업</a>
                                         <a target="_parent" href="html/industries/health-and-beauty.html">건강 및 뷰티</a>
-                                        <a target="_parent" href="html/industries/heavy-duty-transportation.html">중장비 운송</a>
+                                        <a target="_parent" href="html/industries/heavy-duty-transportation.html">중장비
+                                            운송</a>
                                         <a target="_parent" href="html/industries/mining.html">광업</a>
                                         <a target="_parent" href="html/industries/pharmaceutical.html">제약산업</a>
-                                        <a target="_parent" href="html/industries/plastics-processors.html">플라스틱 가공업체</a>
+                                        <a target="_parent" href="html/industries/plastics-processors.html">플라스틱
+                                            가공업체</a>
                                         <a target="_parent" href="html/industries/waste-operations.html">폐기물 처리 작업</a>
-                                        <a class="nav-cta-link" href="html/industries/industries.html" target="_parent">전체 산업 보기</a>
+                                        <a class="nav-cta-link" href="html/industries/industries.html"
+                                            target="_parent">전체 산업 보기</a>
 
                                     </div><!--/.panel-body -->
                                 </div><!--/.panel-collapse -->
@@ -362,7 +430,8 @@
                                         <a href="html/industries/adhesives.html" target="_parent"> 접착제</a>
                                         <a href="html/industries/agriculture.html" target="_parent"> 농업</a>
                                         <a href="html/industries/construction.html" target="_parent"> 건설</a>
-                                        <a href="html/industries/consumer-automotive.html" target="_parent"> 일반 소비자용 자동차</a>
+                                        <a href="html/industries/consumer-automotive.html" target="_parent"> 일반 소비자용
+                                            자동차</a>
 
 
                                     </div>
@@ -371,7 +440,8 @@
                                         <a href="html/industries/corrugated-packaging.html" target="_parent">
                                             골판지 포장</a>
                                         <a href="html/industries/food-and-beverage.html" target="_parent"> 식품 및 음료</a>
-                                        <a href="html/industries/forestry-and-saw-mill.html" target="_parent"> 산림업 및 제재소</a>
+                                        <a href="html/industries/forestry-and-saw-mill.html" target="_parent"> 산림업 및
+                                            제재소</a>
                                         <a href="html/industries/gas-plants-pipelines-power-gen.html" target="_parent">
                                             가스 시설, 배관망 및 전력 생산</a>
 
@@ -379,9 +449,11 @@
                                     </div>
 
                                     <div class="col-md-3 dropdown-section">
-                                        <a href="html/industries/general-manufacturing.html" target="_parent"> 일반 제조업</a>
+                                        <a href="html/industries/general-manufacturing.html" target="_parent"> 일반
+                                            제조업</a>
                                         <a href="html/industries/health-and-beauty.html" target="_parent"> 건강 및 뷰티</a>
-                                        <a href="html/industries/heavy-duty-transportation.html" target="_parent"> 중장비 운송</a>
+                                        <a href="html/industries/heavy-duty-transportation.html" target="_parent"> 중장비
+                                            운송</a>
                                         <a href="html/industries/mining.html" target="_parent"> 광업</a>
 
 
@@ -390,9 +462,11 @@
                                     <div class="col-md-3 dropdown-section">
                                         <a href="html/industries/pharmaceutical.html" target="_parent">
                                             제약산업</a>
-                                        <a href="html/industries/plastics-processors.html" target="_parent"> 플라스틱 가공업체</a>
+                                        <a href="html/industries/plastics-processors.html" target="_parent"> 플라스틱
+                                            가공업체</a>
                                         <a href="html/industries/waste-operations.html" target="_parent"> 폐기물 처리 작업</a>
-                                        <a class="nav-cta-link" href="html/industries/industries.html" target="_parent">전체 산업보기</a>
+                                        <a class="nav-cta-link" href="html/industries/industries.html"
+                                            target="_parent">전체 산업보기</a>
 
 
 
@@ -454,9 +528,9 @@
                                                         <a href="html/knowledge-centre/casestudy/komteks.html"
                                                             class="subnav-link-with-image" target="_parent">
                                                             <span class="subnav-image-text">
-                                                                <span
-                                                                    class="subnav-image-text-title">제조업</span>
-                                                                <span class="subnav-image-text-link">Komteks Kompresör</span>
+                                                                <span class="subnav-image-text-title">제조업</span>
+                                                                <span class="subnav-image-text-link">Komteks
+                                                                    Kompresör</span>
                                                             </span>
                                                             <span class="subnav-image-container">
 
@@ -517,8 +591,7 @@
                                                             class="subnav-link-with-image" target="_parent">
                                                             <span class="subnav-image-text">
                                                                 <span class="subnav-image-text-title">자동차용 윤활유</span>
-                                                                <span
-                                                                    class="subnav-image-text-link">자동 변속기 센터</span>
+                                                                <span class="subnav-image-text-link">자동 변속기 센터</span>
                                                             </span>
                                                             <span class="subnav-image-container">
 
@@ -530,9 +603,9 @@
                                                         <a href="html/knowledge-centre/casestudy/flesch-arbeitsbuhnen.html"
                                                             class="subnav-link-with-image" target="_parent">
                                                             <span class="subnav-image-text">
-                                                                <span
-                                                                    class="subnav-image-text-title">일반 제조업</span>
-                                                                <span class="subnav-image-text-link">Flesch 리프트 장비</span>
+                                                                <span class="subnav-image-text-title">일반 제조업</span>
+                                                                <span class="subnav-image-text-link">Flesch 리프트
+                                                                    장비</span>
                                                             </span>
                                                             <span class="subnav-image-container">
 
@@ -593,7 +666,8 @@
                                                             class="subnav-link-with-image" target="_parent">
                                                             <span class="subnav-image-text">
                                                                 <span class="subnav-image-text-title">운송 차량</span>
-                                                                <span class="subnav-image-text-link">라이트 스피드 사용 후기</span>
+                                                                <span class="subnav-image-text-link">라이트 스피드 사용
+                                                                    후기</span>
                                                             </span>
                                                             <span class="subnav-image-container">
 
@@ -697,7 +771,8 @@
                                             class="subnav-link-with-image" target="_parent">
                                             <span class="subnav-image-text">
                                                 <span class="subnav-image-text-title">제조업</span>
-                                                <span class="subnav-image-text-link">Komteks Kompresör(Komteks 압축기)</span>
+                                                <span class="subnav-image-text-link">Komteks Kompresör(Komteks
+                                                    압축기)</span>
                                             </span>
                                             <span class="subnav-image-container">
 
@@ -720,7 +795,8 @@
                                             </span>
                                         </a>
 
-                                        <a href="html/knowledge-centre/all.html" class="nav-cta-link" target="_parent">더보기</a>
+                                        <a href="html/knowledge-centre/all.html" class="nav-cta-link"
+                                            target="_parent">더보기</a>
 
                                     </div>
 
@@ -735,8 +811,8 @@
                                             </span>
                                             <span class="subnav-image-container">
 
-                                                <img src="common/images/ProvenResults_Mining.jpg"
-                                                    class="subnav-image" alt="" title="" />
+                                                <img src="common/images/ProvenResults_Mining.jpg" class="subnav-image"
+                                                    alt="" title="" />
 
                                             </span>
                                         </a>
@@ -767,7 +843,8 @@
                                             </span>
                                         </a>
 
-                                        <a href="html/knowledge-centre/all.html" class="nav-cta-link" target="_parent">더보기</a>
+                                        <a href="html/knowledge-centre/all.html" class="nav-cta-link"
+                                            target="_parent">더보기</a>
 
                                     </div>
 
@@ -792,12 +869,13 @@
                                             class="subnav-link-with-image" target="_parent">
                                             <span class="subnav-image-text">
                                                 <span class="subnav-image-text-title">삼림업</span>
-                                                <span class="subnav-image-text-link">Terminal Forest Products<br>(목재 및 임산물 가공)</span>
+                                                <span class="subnav-image-text-link">Terminal Forest Products<br>(목재 및
+                                                    임산물 가공)</span>
                                             </span>
                                             <span class="subnav-image-container">
 
-                                                <img src="common/images/ProvenResults_Forestry.jpg"
-                                                    class="subnav-image" alt="" title="" />
+                                                <img src="common/images/ProvenResults_Forestry.jpg" class="subnav-image"
+                                                    alt="" title="" />
 
                                             </span>
                                         </a>
@@ -809,13 +887,14 @@
                                             </span>
                                             <span class="subnav-image-container">
 
-                                                <img src="common/images/ProvenResults_Fleet2.jpg"
-                                                    class="subnav-image" alt="" title="" />
+                                                <img src="common/images/ProvenResults_Fleet2.jpg" class="subnav-image"
+                                                    alt="" title="" />
 
                                             </span>
                                         </a>
 
-                                        <a href="html/knowledge-centre/all.html" class="nav-cta-link" target="_parent">더보기</a>
+                                        <a href="html/knowledge-centre/all.html" class="nav-cta-link"
+                                            target="_parent">더보기</a>
 
                                     </div>
 
@@ -837,7 +916,8 @@
 
                                         <h3>고객과의 약속</h3>
                                         <p class="our-promise-quote"> 전 세계 비즈니스를 지속적으로 움직이게 하는 가치 있는 혁신 솔루션.</p>
-                                        <a href="/en-kr/about/our-promise" class="nav-cta-link" target="_parent">영상 보기</a>
+                                        <a href="/en-kr/about/our-promise" class="nav-cta-link" target="_parent">영상
+                                            보기</a>
 
                                     </div>
 
@@ -862,20 +942,31 @@
                                     <p class="title-desc">궁금한 점이 있으신가요? 저희가 답해드리겠습니다.</p>
                                     <div class="nav-panel-body">
 
-                                        <a href="html/knowledge-centre/all.html?check=brochures" target="_parent"> 매뉴얼</a>
-                                        <a href="html/knowledge-centre/all.html?check=casestudy" target="_parent"> 적용 사례</a>
-                                        <a href="html/knowledge-centre/all.html?check=expertqnas" target="_parent"> 전문가 Q&A</a>
-                                        <a href="html/knowledge-centre/all.html?check=infographics" target="_parent"> 시각 자료</a>
-                                        <a href="html/knowledge-centre/all.html?check=oem" target="_parent"> OEM 인증 및 승인</a>
-                                        <a href="html/knowledge-centre/all.html?check=podcasts" target="_parent"> 팟캐스트 및 웨비나 자료 모음</a>
+                                        <a href="html/knowledge-centre/all.html?check=brochures" target="_parent">
+                                            매뉴얼</a>
+                                        <a href="html/knowledge-centre/all.html?check=casestudy" target="_parent"> 적용
+                                            사례</a>
+                                        <a href="html/knowledge-centre/all.html?check=expertqnas" target="_parent"> 전문가
+                                            Q&A</a>
+                                        <a href="html/knowledge-centre/all.html?check=infographics" target="_parent"> 시각
+                                            자료</a>
+                                        <a href="html/knowledge-centre/all.html?check=oem" target="_parent"> OEM 인증 및
+                                            승인</a>
+                                        <a href="html/knowledge-centre/all.html?check=podcasts" target="_parent"> 팟캐스트 및
+                                            웨비나 자료 모음</a>
                                         <a href="html/knowledge-centre/all.html?check=sds" target="_parent"> SDS</a>
-                                        <a href="html/knowledge-centre/all.html?check=schematics" target="_parent">회로도</a>
-                                        <a href="html/knowledge-centre/all.html?check=techdata" target="_parent"> 기술 자료</a>
-                                        <a href="html/knowledge-centre/all.html?check=toolsandservices" target="_parent"> 지원 도구 및 서비스</a>
+                                        <a href="html/knowledge-centre/all.html?check=schematics"
+                                            target="_parent">회로도</a>
+                                        <a href="html/knowledge-centre/all.html?check=techdata" target="_parent"> 기술
+                                            자료</a>
+                                        <a href="html/knowledge-centre/all.html?check=toolsandservices"
+                                            target="_parent"> 지원 도구 및 서비스</a>
                                         <a href="html/knowledge-centre/all.html?check=videos" target="_parent"> 영상</a>
-                                        <a href="html/knowledge-centre/all.html?check=whitepapers" target="_parent"> 기술 백서</a>
+                                        <a href="html/knowledge-centre/all.html?check=whitepapers" target="_parent"> 기술
+                                            백서</a>
 
-                                        <a href="html/knowledge-centre/all.html" class="nav-cta-link" target="_parent">전체 자료 보기</a>
+                                        <a href="html/knowledge-centre/all.html" class="nav-cta-link"
+                                            target="_parent">전체 자료 보기</a>
 
                                     </div><!--/.panel-body -->
                                 </div><!--/.panel-collapse -->
@@ -895,23 +986,34 @@
 
 
                                     <div class="col-md-3 dropdown-section">
-                                        <a href="html/knowledge-centre/all.html?check=brochures" target="_parent"> 매뉴얼</a>
-                                        <a href="html/knowledge-centre/all.html?check=casestudy" target="_parent"> 적용 사례</a>
-                                        <a href="html/knowledge-centre/all.html?check=expertqnas" target="_parent"> 전문가 Q&A</a>
-                                        <a href="html/knowledge-centre/all.html?check=infographics" target="_parent"> 시각 자료</a>
-                                        <a href="html/knowledge-centre/all.html?check=oem" target="_parent"> OEM 인증 및 승인</a>
+                                        <a href="html/knowledge-centre/all.html?check=brochures" target="_parent">
+                                            매뉴얼</a>
+                                        <a href="html/knowledge-centre/all.html?check=casestudy" target="_parent"> 적용
+                                            사례</a>
+                                        <a href="html/knowledge-centre/all.html?check=expertqnas" target="_parent"> 전문가
+                                            Q&A</a>
+                                        <a href="html/knowledge-centre/all.html?check=infographics" target="_parent"> 시각
+                                            자료</a>
+                                        <a href="html/knowledge-centre/all.html?check=oem" target="_parent"> OEM 인증 및
+                                            승인</a>
                                     </div>
 
                                     <div class="col-md-3 dropdown-section">
-                                        <a href="html/knowledge-centre/all.html?check=podcasts" target="_parent"> 팟캐스트 및 웨비나 자료 모음</a>
+                                        <a href="html/knowledge-centre/all.html?check=podcasts" target="_parent"> 팟캐스트 및
+                                            웨비나 자료 모음</a>
                                         <a href="html/knowledge-centre/all.html?check=sds" target="_parent"> SDS</a>
-                                        <a href="html/knowledge-centre/all.html?check=schematics" target="_parent">회로도</a>
-                                        <a href="html/knowledge-centre/all.html?check=techdata" target="_parent"> 기술 자료</a>
-                                        <a href="html/knowledge-centre/all.html?check=toolsandservices" target="_parent"> 지원 도구 및 서비스</a>
+                                        <a href="html/knowledge-centre/all.html?check=schematics"
+                                            target="_parent">회로도</a>
+                                        <a href="html/knowledge-centre/all.html?check=techdata" target="_parent"> 기술
+                                            자료</a>
+                                        <a href="html/knowledge-centre/all.html?check=toolsandservices"
+                                            target="_parent"> 지원 도구 및 서비스</a>
                                         <a href="html/knowledge-centre/all.html?check=videos" target="_parent"> 영상</a>
-                                        <a href="html/knowledge-centre/all.html?check=whitepapers" target="_parent"> 기술 백서</a>
+                                        <a href="html/knowledge-centre/all.html?check=whitepapers" target="_parent"> 기술
+                                            백서</a>
 
-                                        <a href="html/knowledge-centre/all.html" class="nav-cta-link" target="_parent">전체 자료 보기</a>
+                                        <a href="html/knowledge-centre/all.html" class="nav-cta-link"
+                                            target="_parent">전체 자료 보기</a>
 
                                     </div>
 
@@ -992,13 +1094,15 @@
                                 <div class="mobile-utililty-nav">
                                     <ul>
                                         <li>
-                                            <a href="html/contact/about.html" target="_parent" class="hidden-md">회사소개</a>
+                                            <a href="html/contact/about.html" target="_parent"
+                                                class="hidden-md">회사소개</a>
                                         </li>
                                         <li>
                                             <a href="html/contact/contact-us.html" target="_parent">문의하기</a>
                                         </li>
                                         <li>
-                                            <a href="html/knowledge-centre/all.html?check=sds" target="_parent" class="hidden-lg">SDS</a>
+                                            <a href="html/knowledge-centre/all.html?check=sds" target="_parent"
+                                                class="hidden-lg">SDS</a>
                                         </li>
                                         <li>
                                             <a href="html/knowledge-centre/all.html?check=techdata" target="_parent"
@@ -1017,33 +1121,4 @@
         </div>
     </div>
 </div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const basePath = location.pathname.includes("/html/")
-      ? "../../"
-      : "./";
-
-    // 이미지 경로 수정
-    const images = document.querySelectorAll("img");
-    images.forEach(img => {
-      const src = img.getAttribute("src");
-      if (src && src.startsWith("common/")) {
-        img.src = basePath + src;
-      }
-    });
-
-    // a 링크 경로 수정
-    const links = document.querySelectorAll("a");
-    links.forEach(a => {
-      const href = a.getAttribute("href");
-      if (!href) return;
-      if (href.startsWith("html/")) {
-        a.href = basePath + href;
-      } else if (href.startsWith("common/")) {
-        a.href = basePath + href;
-      }
-    });
-  });
-</script>
 
