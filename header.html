@@ -1019,10 +1019,13 @@
 </div>
 
 <script>
+    
   (function () {
     const basePath = location.pathname.includes("/html/")
       ? "../"
       : "./";
+
+      alert("test:"+basePath);
 
     // 이미지 경로 수정
     const images = document.querySelectorAll("img");
