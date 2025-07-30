@@ -1019,12 +1019,10 @@
 </div>
 
 <script>
-    
-  (function () {
+  document.addEventListener("DOMContentLoaded", function () {
     const basePath = location.pathname.includes("/html/")
       ? "../"
       : "./";
-
 
     // 이미지 경로 수정
     const images = document.querySelectorAll("img");
@@ -1044,5 +1042,5 @@
         a.href = basePath + href;
       }
     });
-  })();
+  });
 </script>
