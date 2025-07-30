@@ -1017,3 +1017,30 @@
         </div>
     </div>
 </div>
+
+<script>
+  (function () {
+    const basePath = location.pathname.includes("/html/")
+      ? "../"
+      : "./";
+
+    // 이미지 경로 수정
+    const images = document.querySelectorAll("img");
+    images.forEach(img => {
+      if (img.getAttribute("src")?.startsWith("common/")) {
+        img.src = basePath + img.getAttribute("src");
+      }
+    });
+
+    // a 링크 경로 수정
+    const links = document.querySelectorAll("a");
+    links.forEach(a => {
+      const href = a.getAttribute("href");
+      if (href && href.startsWith("html/")) {
+        a.href = basePath + href;
+      } else if (href && href.startsWith("common/")) {
+        a.href = basePath + href;
+      }
+    });
+  })();
+</script>
