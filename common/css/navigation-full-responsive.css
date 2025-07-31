@@ -206,7 +206,7 @@ body {
 }
   .nav-panel-group .nav-panel-heading a:after, .footer-nav-panel .nav-panel-heading a:after {
     content: '';
-    background: url('common/images/nav/minus_red.svg');
+    background: url('../../common/images/nav/minus_red.svg');
     position: absolute;
     width: 20px;
     height: 3px;
@@ -215,7 +215,7 @@ body {
   }
 .nav-panel-group .nav-panel-heading a.collapsed:after {
   content: '';
-  background: url('common/images/nav/plus_red.svg');
+  background: url('../../common/images/nav/plus_red.svg');
   position: absolute;
   width: 20px;
   height: 20px;
@@ -223,7 +223,7 @@ body {
 #product-collapse .nav-panel-heading a:after,
 #proven-collapse .nav-panel-heading a:after {
   content: '';
-  background: url('common/images/nav/minus_gray.svg');
+  background: url('../../common/images/nav/minus_gray.svg');
   position: absolute;
   width: 20px;
   height: 2px;
@@ -742,7 +742,7 @@ a.subnav-link-with-image:hover .subnav-image-text-link {
     max-height: 110px;
   }
   .main-nav-links-full-background {
-    background-image: url('common/images/nav/10x10.png');
+    background-image: url('../../common/images/nav/10x10.png');
     height: 110px;
     width: 100%;
     position: absolute;
@@ -753,7 +753,7 @@ a.subnav-link-with-image:hover .subnav-image-text-link {
   .main-nav-links-full-shard {
     position: relative;
     z-index: 1;
-    background-image: url('common/images/nav/pcl_navassets_shard-white.png');
+    background-image: url('../../common/images/nav/pcl_navassets_shard-white.png');
     background-position: 166px;
     background-repeat: no-repeat;
     width: 450px;
