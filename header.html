@@ -19,7 +19,7 @@
     document.querySelectorAll("a").forEach(a => {
       const href = a.getAttribute("href");
       if (!href) return;
-      if (href.startsWith("common/") || href.startsWith("html/")) {
+      if (href.includes("html")) {
         a.href = basePath + href;
       }
     });
@@ -45,7 +45,7 @@
 <div class="lube-container mainHeader-cont mainHeader-full">
     <div class="container-fluid main-nav-bar-full">
         <div class="nav-logo">
-            <a target="_parent" href='index.html'><img src="/common/images/logo.png"
+            <a target="_parent" href='/index.html'><img src="/common/images/logo.png"
                     alt="Petro-Canada Lubricants logo" /></a>
         </div>
         <div class="print-only-image">
