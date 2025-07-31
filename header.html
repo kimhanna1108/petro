@@ -1,48 +1,36 @@
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // 현재 페이지 경로 예시:
-        // 1) /petro/index.html        -> basePath = './'
-        // 2) /petro/html/brand/...    -> basePath = '../../'
-        // 3) /petro/html/a.html       -> basePath = '../'
+  document.addEventListener("DOMContentLoaded", function () {
+    const path = location.pathname;
 
-        const pathname = location.pathname;
-        //test
-        console.log("111111111111111pathname : "+pathname);
+    let basePath = './';
+    if (path.includes('/html/brand/')) basePath = '../../';
+    else if (path.includes('/html/')) basePath = '../';
+    else basePath = './';
 
-        let basePath = './'; // 기본값
-
-        if (pathname.includes('/html/brand/')) {
-            // 예: /petro/html/brand/duradrive.html
-            basePath = '../../';
-        } else if (pathname.includes('/html/')) {
-            // 예: /petro/html/a.html
-            basePath = '../';
-        } else {
-            // 예: /petro/index.html
-            basePath = './';
-        }
-
-        // 이미지 경로 수정
-        const images = document.querySelectorAll('img');
-        images.forEach(img => {
-            const src = img.getAttribute('src');
-            if (src && src.startsWith('common/')) {
-                img.src = basePath + src;
-            }
-        });
-
-        // a 링크 경로 수정
-        const links = document.querySelectorAll('a');
-        links.forEach(a => {
-            const href = a.getAttribute('href');
-            if (!href) return;
-
-            if (href.startsWith('html/') || href.startsWith('common/')) {
-                a.href = basePath + href;
-            }
-        });
+    // 이미지 경로 수정
+    document.querySelectorAll("img").forEach(img => {
+      const src = img.getAttribute("src");
+      if (src && src.startsWith("common/")) {
+        img.src = basePath + src;
+      }
     });
 
+    // 스타일 경로 수정
+    document.querySelectorAll("link[rel='stylesheet']").forEach(link => {
+      const href = link.getAttribute("href");
+      if (href && href.startsWith("common/")) {
+        link.href = basePath + href;
+      }
+    });
+
+    // 스크립트 경로 수정
+    document.querySelectorAll("script").forEach(script => {
+      const src = script.getAttribute("src");
+      if (src && src.startsWith("common/")) {
+        script.src = basePath + src;
+      }
+    });
+  });
 </script>
 
 <div class="lube-container mainHeader-cont mainHeader-full">
