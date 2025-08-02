@@ -56,8 +56,8 @@ div.contact-ribbon {
 
 @font-face {
     font-family: FontAwesome;
-    src: url(./font/fontawesome-webfont.woff2);
-    src: url(./font/fontawesome-webfont.woff2) format("embedded-opentype"), url(./font/fontawesome-webfont.woff2) format("woff2"), url(./font/fontawesome-webfont.woff2) format("woff"), url(./font/fontawesome-webfont.woff2) format("truetype"), url(./font/fontawesome-webfont.woff2) format("svg");
+    src: url(../../font/fontawesome-webfont.woff2);
+    src: url(../../font/fontawesome-webfont.woff2) format("embedded-opentype"), url(../../font/fontawesome-webfont.woff2) format("woff2"), url(../../font/fontawesome-webfont.woff2) format("woff"), url(../../font/fontawesome-webfont.woff2) format("truetype"), url(../../font/fontawesome-webfont.woff2) format("svg");
     font-weight: 400;
     font-style: normal
 }
