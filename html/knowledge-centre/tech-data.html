@@ -6147,7 +6147,7 @@
 </style>
 
 <script>
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
     const itemsPerLoad = 10; // 한 번에 로드할 항목 수
     const techDataItems = document.querySelectorAll('.tech-data-item');
     const loadMoreBtn = document.getElementById('load-more-btn');
@@ -6155,9 +6155,23 @@
     const totalItems = techDataItems.length;
     let currentlyVisible = 0;
 
+    console.log('Total tech data items found:', totalItems);
+
+    if (!loadMoreBtn || !itemsInfo) {
+        console.error('Load more button or items info not found');
+        return;
+    }
+
+    if (totalItems === 0) {
+        console.error('No tech data items found');
+        return;
+    }
+
     function loadMore() {
         const start = currentlyVisible;
         const end = Math.min(start + itemsPerLoad, totalItems);
+
+        console.log('Loading items from', start, 'to', end);
 
         for (let i = start; i < end; i++) {
             techDataItems[i].classList.add('visible');
@@ -6187,6 +6201,11 @@
     loadMore();
 
     // 더보기 버튼 클릭 이벤트
-    loadMoreBtn.addEventListener('click', loadMore);
-})();
+    loadMoreBtn.addEventListener('click', function() {
+        console.log('Load more button clicked');
+        loadMore();
+    });
+
+    console.log('Tech data pagination initialized successfully');
+});
 </script>
