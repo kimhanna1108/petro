@@ -250,17 +250,6 @@
             </div>
         </div>
 
-        <script>
-            const language = document.getElementById('language');
-
-            language.addEventListener('change', function () {
-                const selectedLangValue = this.value;
-
-                GetBrochurePdfSize(selectedLangValue);
-                GetBrochurePdfForLang(selectedLangValue);
-            });
-        </script>
-
         <div class="container-xxl">
 
             <div class="row products-overview-intro">
@@ -288,7 +277,7 @@
                 <div class="container container-md">
                     <div class="row justify-content-center">
                         <div class="col-md-6">
-                            <a href="../../../html/brand/suniso/suniso-gs.html" class="card h-100 bdr-r-0">
+                            <a href="suniso-gs.html" class="card h-100 bdr-r-0">
                                 <picture class="card-header mhauto phm">
                                     <source type="image/webp" srcset="" width="570" height="345">
                                     <img class="card-img" src="../../../common/images/brand/suniso/suniso-gs-mineral-webp.png" alt="" width="570" height="345" loading="lazy" decoding="async">
@@ -302,7 +291,7 @@
                             </a>
                         </div>
                         <div class="col-md-6">
-                            <a href="../../../html/brand/suniso/suniso-sl.html" class="card h-100 bdr-r-0">
+                            <a href="suniso-sl.html" class="card h-100 bdr-r-0">
                                 <picture class="card-header mhauto phm">
                                     <source type="image/webp" srcset="" width="570" height="345">
                                     <img class="card-img" src="../../../common/images/brand/suniso/suniso-sl-synthetic-webp.png" alt="" width="570" height="345" loading="lazy" decoding="async">
@@ -346,27 +335,6 @@
                     </div>
                 </div>
             </section>
-
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    var sideTabHidden = 0;
-                    var numOfTabs = $('.sideTabs').length;
-                    var tabHideSize = numOfTabs * 143;
-
-                    $(".sideTabArrow").click(function () {
-                        if (sideTabHidden == 0) {
-                            console.log("clicked!");
-                            $("#sideTabHoler").animate({ "right": "-" + tabHideSize + "px" }, 500);
-                            $(".sideTabArrow svg").css("transform", "rotate(180deg)");
-                            sideTabHidden = 1;
-                        } else {
-                            $("#sideTabHoler").animate({ "right": "0px" }, 500);
-                            $(".sideTabArrow svg").css("transform", "rotate(0deg)");
-                            sideTabHidden = 0;
-                        }
-                    });
-                });
-            </script>
 
         </div>
     </main>
