@@ -62,6 +62,9 @@
     <script src="../../../common/js/ps-custom.min.js"></script>
     <script src="../../../common/js/product-carousel.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="../../../common/css/suniso-homepage.css" />
+    <link rel="stylesheet" type="text/css" href="../../../common/css/suniso-homepage.min.css" />
+
     <script>
         var slideSpeed = 800;
         var paginationSpeed = 1000;
@@ -175,183 +178,185 @@
                             </div>
                         </div>
 
-                        <div class="lube-breadcrumb">
-                            <ul>
-                                <li><a href="/index.html" target="_parent"> Home </a></li>
-                                <li><a href="../../../html/brand/productoverview.html#brands" target="_parent"> 모든 제품 </a></li>
-                                <li class="active">SUNISO<sup>®</sup></li>
-                            </ul>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </div>
-        <div class="lube-container light-grey top-bottom-50">
-            <div class="container">
-                <div class="row lube-largeLeft">
-                    <div class="col-sm-8 first-column">
-                        <div class="row lube-col1">
-                            <div class="col-sm-12 first-column">
-                                <div class="lube-text-component">
-                                    <p>
-                                    <p>1933년, Suniso<sup>®</sup>는 냉동 윤활유 분야에서 새로운 기준을 세웠습니다.
-                                        탁월한 안정성, 최적의 수명, 문제없는 성능을 제공하도록 특별히 설계된 Suniso는, 90년 넘게 세계 최고의 냉동 윤활유 브랜드로 자리잡은 이유가 분명합니다.</p>
-                                    <br />
-                                    <p>
-                                        전 세계적으로 인정받고 있으며, 장비 제조업체(OEM)와 최종 사용자 모두에게 신뢰받는 Suniso 제품군은 현대 냉동 시스템의 요구사항과 윤활유 기유 기술의 변화에 발맞춰 지속적으로 발전해 왔습니다.
-                                    </p>
-                                    <br />
-                                    <p>
-                                        자세한 정보는 <a href="https://sunisolubricants.com">SUNISO 공식 웹사이트</a>에서 확인하실 수 있습니다.
-                                    </p>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row lube-col1 top-30">
-                            <div class="col-sm-12 first-column">
 
-                                <div class="row lube-col1">
+    <main id="top-of-content">
 
-                                    <div class="col-sm-12 first-column">
-                                        <div class="fact-figure-cont ">
+        <div role="dialog" id="modalPanel" class="modal-panel" aria-hidden="true" aria-labelledby="modalTitle" hidden>
+            <div class="modal-panel-container">
+                <div class="modal-panel-inner">
+                    <div class="modal-panel-body">
+                        <button class="btn--plain modal-close red" aria-label="Close modal" data-close-modal>
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke="currentColor" stroke-width="2">
+                                    <path d="M13 25C19.6274 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13C1 19.6274 6.37258 25 13 25Z" />
+                                    <path d="M9.1352 9.1352L16.8609 16.8609" stroke-miterlimit="10" />
+                                    <path d="M16.8609 9.1352L9.1352 16.8609" stroke-miterlimit="10" />
+                                </g>
+                            </svg>
+                        </button>
+
+                        <div class="container pvs">
+                            <form action="">
+                                <fieldset>
+                                    <div class="row | mbxs pts">
+                                        <div class="col-12 col-sm-4">
+                                            <svg role="img" width="172" height="46">
+                                                <title>Suniso logo</title>
+                                                <use xlink:href="/sites/suniso/design/images/icons.svg#suniso-logo" />
+                                            </svg>
                                         </div>
-                                        <div class="fact-figure-cont  ">
+                                        <div class="col-12 col-sm-7">
+                                            <h2 class="heading darkblue mvxs" id="modalTitle">Suniso product brochure</h2>
+                                            <p>Select a <strong>Language</strong> for the Suniso Product Brochure.</p>
                                         </div>
                                     </div>
+                                    <div class="row | pvxs">
+                                        <div class="col-4">
+                                            <label class="lbl darkblue" for="language">Language:</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <select class="w-100" id="language">
+                                            </select>
+
+                                            <p class="small grey pvs"></p>
+
+                                            <p class="pt-4">
+                                                <a href="" target="_blank" title="File opens in new browser tab" class="btn btn--blue btn--download">Open</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const language = document.getElementById('language');
+
+            language.addEventListener('change', function () {
+                const selectedLangValue = this.value;
+
+                GetBrochurePdfSize(selectedLangValue);
+                GetBrochurePdfForLang(selectedLangValue);
+            });
+        </script>
+
+        <div class="container-xxl">
+
+            <div class="row products-overview-intro">
+                <div class="col-md-7 col-lg-8">
+
+                    <div class="rte-content fs2 ptxs prm-md phm pbs">
+                        <h2 class="heading fs5">WORLD-LEADING REFRIGERATION LUBRICANTS</h2>
+                        <p>
+                        <p>The Suniso<sup>&reg;</sup> product range has evolved to match the requirements of modern refrigeration systems and changes in lubricating base oil technology.</p>
+
+                        <p>Specially formulated to provide exceptional stability, maximize service life and deliver trouble-free performance, there's a reason why Suniso has been the world's leading refrigeration lubricants brand for more than 90 years.</p>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <picture>
+                        <source type="image/webp" srcset="../../../common/images/brand/suniso/suniso-product-overview.webp">
+
+                        <img src="../../../common/images/brand/suniso/suniso-product-overview.webp" decoding="async" loading="lazy" class="w-100" alt="" />
+                    </picture>
+                </div>
+            </div>
+
+            <section class="section bg-lightgrey">
+                <div class="container container-md">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <a href="/en-gb/brand/suniso-gs" class="card h-100 bdr-r-0">
+                                <picture class="card-header mhauto phm">
+                                    <source type="image/webp" srcset="" width="570" height="345">
+                                    <img class="card-img" src="../../../common/images/brand/suniso/suniso-gs-mineral-webp.png" alt="" width="570" height="345" loading="lazy" decoding="async">
+                                </picture>
+                                <div class="card-body phm">
+                                    <h3 class="heading darkblue" data-link="ico-arrow">Suniso GS</h3>
+                                    <div class="fs2 mtxxs mbxs">
+                                        <p>Premium quality, highly-refined mineral refrigeration lubricants designed to lubricate refrigeration and air-conditioning compressors using CFC and HCFC refrigerants.</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                    </div>
-                    <div class="col-sm-4 second-column highlighted-resource">
-
-                        <div class="box-container hp-textImage-grid light-grey text-vertical-align btn-dwnld-text"
-                            style="height: 301px; min-height: inherit;">
-                            <div class="component-tag">매뉴얼</div>
-                            <div class="image-component">
-                                <img src="../../../common/images/brand/bg-sands.jpg" alt="" title="" />
-                            </div>
-                            <div class="text-component">
-                                <h3 class="title">SUNISO 제품 매뉴얼</h3>
-                                <a class="btn red-button ui-link" target="_blank"
-                                    href="../../../common/pdf/Suniso_Brochure.pdf"><b>PDF</b> 다운로드</a>
-                                <p class="pdf-size">(PDF, 3 MB)</p>
-                            </div>
+                        <div class="col-md-6">
+                            <a href="/en-gb/brand/suniso-sl" class="card h-100 bdr-r-0">
+                                <picture class="card-header mhauto phm">
+                                    <source type="image/webp" srcset="" width="570" height="345">
+                                    <img class="card-img" src="../../../common/images/brand/suniso/suniso-sl-synthetic-webp.png" alt="" width="570" height="345" loading="lazy" decoding="async">
+                                </picture>
+                                <div class="card-body phm">
+                                    <h3 class="heading darkblue" data-link="ico-arrow">Suniso SL</h3>
+                                    <div class="fs2 mtxxs mbxs">
+                                        <p>High-performance, synthetic refrigeration lubricants formulated for optimal performance of compressors using using HFC and HFC/HFO refrigerant blends.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="/en-gb/brand/suniso-4ht" class="card h-100 bdr-r-0">
+                                <picture class="card-header mhauto phm">
+                                    <source type="image/webp" srcset="" width="570" height="345">
+                                    <img class="card-img" src="../../../common/images/brand/suniso/Suniso 4HT 20L_396x232.png" alt="" width="570" height="345" loading="lazy" decoding="async">
+                                </picture>
+                                <div class="card-body phm">
+                                    <h3 class="heading darkblue" data-link="ico-arrow">Suniso 4HT</h3>
+                                    <div class="fs2 mtxxs mbxs">
+                                        <p>A hydrotreated refrigeration lubricant designed to lubricate commercial and industrial refrigeration compressors using ammonia (R-717) refrigerant.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="/en-gb/brand/suniso-4sa" class="card h-100 bdr-r-0">
+                                <picture class="card-header mhauto phm">
+                                    <source type="image/webp" srcset="" width="570" height="345">
+                                    <img class="card-img" src="../../../common/images/brand/suniso/Suniso 4SA 205L Drum_ 396x232.png" alt="" width="570" height="345" loading="lazy" decoding="async">
+                                </picture>
+                                <div class="card-body phm">
+                                    <h3 class="heading darkblue" data-link="ico-arrow">Suniso 4SA</h3>
+                                    <div class="fs2 mtxxs mbxs">
+                                        <p>A highly refined naphthenic refrigeration lubricant designed to lubricate refrigeration compressors using ammonia (R-717) refrigerant.</p>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    var sideTabHidden = 0;
+                    var numOfTabs = $('.sideTabs').length;
+                    var tabHideSize = numOfTabs * 143;
+
+                    $(".sideTabArrow").click(function () {
+                        if (sideTabHidden == 0) {
+                            console.log("clicked!");
+                            $("#sideTabHoler").animate({ "right": "-" + tabHideSize + "px" }, 500);
+                            $(".sideTabArrow svg").css("transform", "rotate(180deg)");
+                            sideTabHidden = 1;
+                        } else {
+                            $("#sideTabHoler").animate({ "right": "0px" }, 500);
+                            $(".sideTabArrow svg").css("transform", "rotate(0deg)");
+                            sideTabHidden = 0;
+                        }
+                    });
+                });
+            </script>
+
         </div>
-        <div class="lube-container top-bottom-60-20">
-            <div class="container">
-
-                <div class="row lube-col1 lube-title">
-
-                    <div class="col-sm-12 first-column">
-                        <h2>SUNISO<sup>&reg;</sup> 제품</h2>
-                    </div>
-                </div>
-                <div class="row brand-card product-line-grid">
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="brandcard-item ">
-                            <div class="image-component">
-                                <a href="../../../html/brand/suniso/suniso-sl.html" target="_parent">
-                                    <img src="../../../common/images/brand/Suniso_SL_Group_Shot.jpg"
-                                        alt="DURATAC" />
-                                </a>
-                            </div>
-                            <div class="text-component">
-                                <h3 class="title">
-                                    <a href="../../../html/brand/suniso/suniso-sl.html" target="_parent">
-                                        SUNISO<sup>&reg;</sup> SL
-                                    </a>
-                                </h3>
-                                <p class="hp-promoList-item">
-                                    Suniso<sup>®</sup> SL 윤활유는 고성능의 전합성 냉동유로, HFC 냉매를 사용하는 압축기의 최적 성능을 위해 제조되었습니다.
-                                </p>
-                            </div>
-                            <div class="button-group">
-                                <a href="../../../html/brand/suniso/suniso-sl.html" target="_parent" class="btn red-button">
-                                    <b>제품 보기</b>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="brandcard-item ">
-                            <div class="image-component">
-                                <a href="../../../html/brand/suniso/suniso-gs.html" target="_parent">
-                                    <img src="../../../common/images/brand/Suniso_SL_Group_Shot.jpg"
-                                        alt="DURATAC Non-Drop Oil" />
-                                </a>
-                            </div>
-                            <div class="text-component">
-                                <h3 class="title">
-                                    <a href="../../../html/brand/suniso/suniso-gs.html" target="_parent">
-                                        SUNISO<sup>&reg;</sup> GS
-                                    </a>
-                                </h3>
-                                <p class="hp-promoList-item">
-                                    Suniso<sup>®</sup> GS 윤활유는 프리미엄 품질의 고도로 정제된 미네랄 냉동유로, CFC 및 HCFC 냉매를 사용하는 냉동 및 에어컨 압축기를 윤활하도록 설계되었습니다.
-                                </p>
-                            </div>
-                            <div class="button-group">
-                                <a href="../../../html/brand/suniso/suniso-gs.html" target="_parent" class="btn red-button">
-                                    <b>제품 보기</b>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="lube-container top-bottom-60-20">
-            <div class="container">
-
-                <div class="row lube-col1 lube-title top-15">
-                    <div class="col-sm-12 first-column">
-                        <h2>관련 제품</h2>
-                    </div>
-                </div>
-                <div class="row lube-col3 lube-related-cat">
-                    <div class="col-sm-4 first-column">
-                        <div class="hp-textImage-grid light-grey ">
-                            <div class="image-component">
-                                <img src="../../../common/images/brand/BC-rel_Petroglide.jpg"
-                                    alt="PETROGLIDE" />
-                            </div>
-                            <div class="text-component">
-                                <h3 class="title">PETROGLIDE™</h3>
-                                <p>
-                                    톱 가이드 오일은 작동 주기 내내 녹 발생을 최소화하면서...
-                                </p>
-                                <a class="btn black-txt-button" href="../../../html/brand/petroglide/petroglide.html"
-                                    target="_parent"><b>제품 보기</b></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 first-column">
-                        <div class="hp-textImage-grid light-grey ">
-                            <div class="image-component">
-                                <img src="../../../common/images/brand/PCL-Categories_Hydrex_727x750.jpg"
-                                    alt="HYDREX" />
-                            </div>
-                            <div class="text-component">
-                                <h3 class="title">HYDREX™</h3>
-                                <p>
-                                    작동 환경에 관계없이 생산성 향상과 유지보수 비용 절감을 제공합니다.
-                                </p>
-                                <a class="btn black-txt-button" href="../../../html/brand/hydrex/hydrex.html"
-                                    target="_parent"><b>제품 보기</b></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    </main>
 
     </div>
     <!--Main Content END -->
