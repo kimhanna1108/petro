@@ -66,6 +66,13 @@
     <link rel="stylesheet" type="text/css" href="../../../common/css/suniso-homepage.css" />
     <link rel="stylesheet" type="text/css" href="../../../common/css/suniso-homepage.min.css" />
 
+    <style>
+        /* suniso CSS가 header와 footer에 영향주지 않도록 보호 */
+        #header, #footer {
+            all: revert;
+        }
+    </style>
+
     <link rel="apple-touch-icon" sizes="180x180" href="../../../common/images/brand/suniso/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../../common/images/brand/suniso/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../../common/images/brand/suniso/favicon-16x16.png">
@@ -194,7 +201,7 @@
             </div>
         </div>
 
-    <main id="top-of-content">
+    <main id="top-of-content" class="suniso-content">
 
         <div role="dialog" id="modalPanel" class="modal-panel" aria-hidden="true" aria-labelledby="modalTitle" hidden>
             <div class="modal-panel-container">
