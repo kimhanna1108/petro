@@ -28,7 +28,8 @@
     <link rel="icon" type="image" sizes="512x512" href="../../../common/images/android-chrome-512x512.png">
     <link rel="shortcut icon" type="image" sizes="512x512" href="../../../common/images/android-chrome-512x512.png">
     <link rel="icon" type="image" sizes="192x192" href="../../../common/images/android-chrome-192x192.png">
-    <link rel="shortcut icon" type="image" sizes="192x192" href="../../../common/images/android-chrome-192x192.png android-chrome-192x192.png">
+    <link rel="shortcut icon" type="image" sizes="192x192"
+        href="../../../common/images/android-chrome-192x192.png android-chrome-192x192.png">
     <link rel="manifest" href="../../../common/manifest.json">
     <link rel='stylesheet' href='../../../common/css/bootstrap.min.css'>
     <link rel='stylesheet' href='../../../common/css/bootstrap-custom.min.css'>
@@ -160,23 +161,26 @@
                     <div class="col-sm-12 first-column">
                         <div class="hero-banner">
                             <div class="herobanner-image">
-                                <img src="../../../common/images/brand/header-image-slim.jpg"
-                                    class="hero-bgImage" alt="DURATAC Non-Drip Oils" />
+                                <img src="../../../common/images/brand/header-image-slim.jpg" class="hero-bgImage"
+                                    alt="DURATAC Non-Drip Oils" />
 
                             </div>
                             <div class="herobanner-caption">
 
                                 <h2>SUNISO<sup>&reg;</sup> GS</h2>
                                 <p>
-                                <p>Mineral Refrigeration Fluids(광유 기반의 냉동용 윤활유)</p>
+                                <p>Mineral Refrigeration Fluids</p><br>
+                                <p>(광유 기반의 냉동용 윤활유)</p>
                                 </p>
                             </div>
                         </div>
                         <div class="lube-breadcrumb">
                             <ul>
                                 <li><a href="/index.html" target="_parent"> Home </a></li>
-                                <li><a href="../../../html/brand/productoverview.html#brands" target="_parent"> 모든 제품 </a></li>
-                                <li><a href="../../../html/brand/suniso/suniso.html" target="_parent"> SUNISO<sup>®</sup> </a></li>
+                                <li><a href="../../../html/brand/productoverview.html#brands" target="_parent"> 모든 제품
+                                    </a></li>
+                                <li><a href="../../../html/brand/suniso/suniso.html" target="_parent">
+                                        SUNISO<sup>®</sup> </a></li>
                                 <li class="active">SUNISO<sup>&reg;</sup> GS</li>
                             </ul>
                         </div>
@@ -184,107 +188,549 @@
                 </div>
             </div>
         </div>
-        <div class="lube-container product-line-cont light-grey top-bottom-50">
-            <div class="container">
+        <main id="top-of-content">
 
-                <div class="row lube-largeLeft">
+            <div role="dialog" id="modalPanel" class="modal-panel" aria-hidden="true" aria-labelledby="modalTitle"
+                hidden>
+                <div class="modal-panel-container">
+                    <div class="modal-panel-inner">
+                        <div class="modal-panel-body">
+                            <button class="btn--plain modal-close red" aria-label="Close modal" data-close-modal>
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M13 25C19.6274 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13C1 19.6274 6.37258 25 13 25Z" />
+                                        <path d="M9.1352 9.1352L16.8609 16.8609" stroke-miterlimit="10" />
+                                        <path d="M16.8609 9.1352L9.1352 16.8609" stroke-miterlimit="10" />
+                                    </g>
+                                </svg>
+                            </button>
 
-                    <div class="col-sm-8 first-column">
+                            <div class="container pvs">
+                                <form action="">
+                                    <fieldset>
+                                        <div class="row | mbxs pts">
+                                            <div class="col-12 col-sm-4">
+                                                <svg role="img" width="172" height="46">
+                                                    <title>Suniso logo</title>
+                                                    <use
+                                                        xlink:href="/sites/suniso/design/images/icons.svg#suniso-logo" />
+                                                </svg>
+                                            </div>
+                                            <div class="col-12 col-sm-7">
+                                                <h2 class="heading darkblue mvxs" id="modalTitle">Suniso product
+                                                    brochure</h2>
+                                                <p>Select a <strong>Language</strong> for the Suniso Product Brochure.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row | pvxs">
+                                            <div class="col-4">
+                                                <label class="lbl darkblue" for="language">Language:</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <select class="w-100" id="language">
+                                                </select>
 
-                        <div class="row lube-col1 product-content">
+                                                <p class="small grey pvs"></p>
 
-                            <div class="col-sm-12 first-column">
+                                                <p class="pt-4">
+                                                    <a href="" target="_blank" title="File opens in new browser tab"
+                                                        class="btn btn--blue btn--download">Open</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                                <div class="product-content-main">
-                                    <nav role="navigation" class="lubeTab product-content-tilte">
-                                        <ul>
-                                            <li><a href="#tab1" class="active">개요</a></li>
-                                        </ul>
-                                    </nav>
+            <script>
+
+                const language = document.getElementById('language');
+
+                language.addEventListener('change', function () {
+
+                    const selectedLangValue = this.value;
+
+                    GetBrochurePdfSize(selectedLangValue);
+                    GetBrochurePdfForLang(selectedLangValue);
+                });
+            </script>
+            <div class="container-xxl">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+
+
+
+                    <ol>
+                        <li><a href="/en-gb/" target="_parent"> Home </a></li>
+                        <li><a href="/products" target="_parent">Products</a></li>
+                        <li><span>Suniso GS</span></li>
+                    </ol>
+
+                </nav>
+                <section class="section-sm bg-lightgrey | mbxs">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="tabgroup">
+                                    <ul class="tabs-nav" role="tablist">
+                                        <li role="presentation">
+                                            <button class="btn--plain tab-ctrl | current" id="tab-overview"
+                                                aria-controls="panel-overview" aria-disabled="true" aria-selected="true"
+                                                role="tab">Overview</button>
+                                        </li>
+                                        <li role="presentation">
+                                            <button class="btn--plain tab-ctrl" tabindex="-1" id="tab-properties"
+                                                aria-controls="panel-properties" aria-selected="false"
+                                                role="tab">Features &amp; Benefits</button>
+                                        </li>
+                                        <li role="presentation">
+                                            <button class="btn--plain tab-ctrl" tabindex="-2" id="tab-features"
+                                                aria-controls="panel-features" aria-selected="false"
+                                                role="tab">Applications</button>
+                                        </li>
+                                    </ul>
                                     <div class="tab-content">
-                                        <div id="tab1" class="tab-pane active">
-                                            <p>
-                                            <p>Suniso<sup>®</sup> GS 윤활유는 프리미엄 품질의 고도로 정제된 광유계 냉동유로,
-                                                CFC 및 HCFC 냉매를 사용하는 냉동 및 에어컨 압축기용으로 설계되었습니다.
-                                            </p>
-                                            <br />
-                                            <p>
-                                                Suniso GS 제품군에 대한 자세한 정보는 <a href="https://sunisolubricants.com/brand/suniso-gs">SUNISO 공식 웹사이트</a>에서 확인하실 수 있습니다.
-                                            </p>
-                                            </p>
+                                        <div class="tab-panel active" id="panel-overview" role="tabpanel" tabindex="0"
+                                            aria-labelledby="tab-overview">
+                                            <div class="tab-panel__text rte-content fs2">
+                                                <p><strong>Suniso<sup>®</sup> GS</strong> oils are premium quality,
+                                                    highly-refined mineral refrigeration lubricants designed to
+                                                    lubricate refrigeration and air-conditioning compressors using CFC
+                                                    and HCFC refrigerants. Suniso GS lubricants are known for their low
+                                                    wax content, low pour point and high dielectric strength. For over
+                                                    50 years, Suniso GS lubricants have helped to ensure trouble-free
+                                                    operation and maximum service life with excellent chemical and
+                                                    thermal stability.</p>
+                                                <p><strong>Get in touch regarding the GS range:</strong></p>
+                                                <p>
+                                                    <a href="/en-gb/contact-us" target="_parent"
+                                                        class="btn btn--blue">Get in touch</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="tab-panel" id="panel-properties" role="tabpanel" tabindex="0"
+                                            aria-labelledby="tab-properties">
+                                            <div class="tab-panel__text rte-content fs2">
+                                                <ul>
+                                                    <li><strong>Low Wax Content &amp; Low Pour Point:</strong> Excellent
+                                                        low-temperature performance with no wax deposits to plug the
+                                                        system.</li>
+                                                    <li><strong>High Dielectric Strength/Good Electrical Insulating
+                                                            Properties:</strong> Suitable for hermetically sealed
+                                                        compressors (electric motor and windings exposed to refrigerant
+                                                        and oil).</li>
+                                                    <li><strong>Excellent Chemical Stability:</strong> Does not react
+                                                        with refrigerant or metal components in the system, extending
+                                                        machine service life and reducing maintenance costs.</li>
+                                                    <li><strong>High Thermal Stability:</strong> Cleaner operation of
+                                                        the compressor with minimal deposits and failures due to valve
+                                                        sticking.</li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                        <div class="tab-panel" id="panel-features" role="tabpanel" tabindex="0"
+                                            aria-labelledby="tab-features">
+                                            <div class="tab-panel__text rte-content fs2">
+                                                <ul>
+                                                    <li>Recommended for use in consumer and commercial refrigeration and
+                                                        air-conditioning systems charged with traditional and natural
+                                                        refrigerants.</li>
+                                                    <li>Ideally suited for low-temperature systems where evaporator
+                                                        temperatures are as low as -42&deg;C / -44&deg;F.</li>
+                                                    <li>Designed for use with CFC refrigerants (e.g. R-11, R-12, R-13,
+                                                        R-113, R-114, <br />R-115) and HCFC refrigerants (e.g. R-21,
+                                                        R-22, R-123, R-124, R-141b, R-142b, <br />R-502).</li>
+                                                    <li>Suitable for use with natural type refrigerants, including
+                                                        ammonia (R-717), isobutane (R-600a) and propane (R-290).</li>
+                                                </ul>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
+                            <div class="col-md-4">
+                                <div class="pdf-panel">
+                                    <picture role="none" aria-hidden="true" class="bg-img">
+                                        <source type="image/webp"
+                                            srcset="/-/media/images/suniso/brochures/bg-sands-webp.ashx">
+                                        <img src="/-/media/images/suniso/brochures/bg-sands.ashx" width="1200"
+                                            height="869" loading="lazy" decoding="async">
+                                    </picture>
+                                    <div class="pdf-panel__text">
+                                        <h2 class="heading fs4 mbhalfem">SUNISO PRODUCT BROCHURE</h2>
+                                        <p class="mbm">
+                                            <a href="#" data-modal-btn class="btn btn--blue"
+                                                onclick="GetBrochurePdfLanguage()" title="Opens in new browser tab">View
+                                                PDF...</a>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 second-column highlighted-resource">
+                </section>
+                <section class="section--pb">
+                    <div class="product-data | accordion accordion-spec">
 
-                        <div class="box-container hp-textImage-grid light-grey text-vertical-align btn-dwnld-text"
-                            style="height: 301px; min-height: inherit;">
-                            <div class="component-tag">매뉴얼</div>
-                            <div class="image-component">
-                                <img src="../../../common/images/brand/bg-sands.jpg" alt="" title="" />
+
+                        <div class="ac__item | pbxs">
+                            <div class="product-data__header">
+                                <button class="btn--plain ac__ctrl">
+                                    <h2 class="mvn">Suniso 3GS</h2>
+                                    <i aria-hidden="true" class="ico"></i>
+                                </button>
                             </div>
-                            <div class="text-component">
-                                <h3 class="title">SUNISO 제품 매뉴얼</h3>
-                                <a class="btn red-button ui-link" target="_blank"
-                                    href="../../../common/pdf/brand/Suniso Brochure.pdf"><b>PDF</b> 다운로드</a>
-                                <p class="pdf-size">(PDF, 3 MB)</p>
+                            <div class="bg-lightgrey">
+                                <ul class="product-data__info fs2">
+                                    <li>
+                                        <button class="btn--plain | info-item" data-accordion-toggle="true">
+                                            <span>Typical analysis</span>
+                                            <i class="ico ico--chevron darkblue"></i>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="btn--plain | info-item dropdownbtn"
+                                            onclick="GetTDAvailLangsDD('sunisogstds', 'Suniso 3GS')"
+                                            data-panel-toggle="tdsdiv_sunisogstds_Suniso 3GS"
+                                            aria-controls="tdsdiv_sunisogstds_Suniso 3GS">
+                                            <span>Tech Data Sheet</span>
+                                            <i class="ico ico--pdf darkblue"></i>
+                                        </button>
+                                        <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 3GS"
+                                            aria-hidden="true" hidden>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button class="btn--plain | info-item dropdownbtn"
+                                            onclick="GetSDSAvailLangsDD('sngs3', 'Suniso 3GS')"
+                                            data-panel-toggle="sdsddsiv_sngs3" aria-controls="sdsddsiv_sngs3">
+                                            <span>SDS</span>
+                                            <i class="ico ico--pdf darkblue"></i>
+                                        </button>
+                                        <div class="info-list-panel" id="sdsddsiv_sngs3" aria-hidden="true" hidden>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ac__panel">
+                                <div class="ac__text rte-content fs2">
+                                    <table class="mbs">
+                                        <thead style="color: white;background-color: #0081cb;">
+                                            <tr>
+                                                <th align="center"><strong>Property</strong></th>
+                                                <th align="center"><strong>ASTM Method </strong></th>
+                                                <th align="center"><strong>3GS</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 20%;">Density at 15&deg;C, Kg/L</td>
+                                                <td align="center">D4052</td>
+                                                <td align="center">0.910</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Viscosity at 40&deg;C, cSt</td>
+                                                <td align="center">D445</td>
+                                                <td align="center">30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Viscosity at 100&deg;C, cSt</td>
+                                                <td align="center">D445</td>
+                                                <td align="center">4.4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Flash Point &deg;C / &deg;F</td>
+                                                <td align="center">D92</td>
+                                                <td align="center">178/352</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pour Point, &deg;C / &deg;F</td>
+                                                <td align="center">D97</td>
+                                                <td align="center">-48/-54</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Floc Point &deg;C / &deg;F </td>
+                                                <td align="center">ASHRAE 86</td>
+                                                <td align="center">-58/-72</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dielectric Strength, kV</td>
+                                                <td align="center">D877</td>
+                                                <td align="center">37</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>The values quoted above are typical of normal production. They do not constitute
+                                        a specification.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="ac__item | pbxs">
+                            <div class="product-data__header">
+                                <button class="btn--plain ac__ctrl">
+                                    <h2 class="mvn">Suniso 4GS</h2>
+                                    <i aria-hidden="true" class="ico"></i>
+                                </button>
+                            </div>
+                            <div class="bg-lightgrey">
+                                <ul class="product-data__info fs2">
+                                    <li>
+                                        <button class="btn--plain | info-item" data-accordion-toggle="true">
+                                            <span>Typical analysis</span>
+                                            <i class="ico ico--chevron darkblue"></i>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="btn--plain | info-item dropdownbtn"
+                                            onclick="GetTDAvailLangsDD('sunisogstds', 'Suniso 4GS')"
+                                            data-panel-toggle="tdsdiv_sunisogstds_Suniso 4GS"
+                                            aria-controls="tdsdiv_sunisogstds_Suniso 4GS">
+                                            <span>Tech Data Sheet</span>
+                                            <i class="ico ico--pdf darkblue"></i>
+                                        </button>
+                                        <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 4GS"
+                                            aria-hidden="true" hidden>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button class="btn--plain | info-item dropdownbtn"
+                                            onclick="GetSDSAvailLangsDD('sngs4', 'Suniso 4GS')"
+                                            data-panel-toggle="sdsddsiv_sngs4" aria-controls="sdsddsiv_sngs4">
+                                            <span>SDS</span>
+                                            <i class="ico ico--pdf darkblue"></i>
+                                        </button>
+                                        <div class="info-list-panel" id="sdsddsiv_sngs4" aria-hidden="true" hidden>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ac__panel">
+                                <div class="ac__text rte-content fs2">
+                                    <table class="mbs">
+                                        <thead style="color: white;background-color: #0081cb;">
+                                            <tr>
+                                                <th align="center"><strong>Property</strong></th>
+                                                <th align="center"><strong>ASTM Method </strong></th>
+                                                <th align="center"><strong>4GS</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 20%;">Density at 15&deg;C, Kg/L</td>
+                                                <td align="center">D4052</td>
+                                                <td align="center">0.916</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Viscosity at 40&deg;C, cSt</td>
+                                                <td align="center">D445</td>
+                                                <td align="center">55</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Viscosity at 100&deg;C, cSt</td>
+                                                <td align="center">D445</td>
+                                                <td align="center">5.9</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Flash Point &deg;C / &deg;F</td>
+                                                <td align="center">D92</td>
+                                                <td align="center">184/364</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pour Point, &deg;C / &deg;F</td>
+                                                <td align="center">D97</td>
+                                                <td align="center">-42/-44</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Floc Point &deg;C / &deg;F </td>
+                                                <td align="center">ASHRAE 86</td>
+                                                <td align="center">-54/-66</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dielectric Strength, kV</td>
+                                                <td align="center">D877</td>
+                                                <td align="center">40</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>The values quoted above are typical of normal production. They do not constitute
+                                        a specification.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ac__item | pbxs">
+                            <div class="product-data__header">
+                                <button class="btn--plain ac__ctrl">
+                                    <h2 class="mvn">Suniso 5GS</h2>
+                                    <i aria-hidden="true" class="ico"></i>
+                                </button>
+                            </div>
+                            <div class="bg-lightgrey">
+                                <ul class="product-data__info fs2">
+                                    <li>
+                                        <button class="btn--plain | info-item" data-accordion-toggle="true">
+                                            <span>Typical analysis</span>
+                                            <i class="ico ico--chevron darkblue"></i>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="btn--plain | info-item dropdownbtn"
+                                            onclick="GetTDAvailLangsDD('sunisogstds', 'Suniso 5GS')"
+                                            data-panel-toggle="tdsdiv_sunisogstds_Suniso 5GS"
+                                            aria-controls="tdsdiv_sunisogstds_Suniso 5GS">
+                                            <span>Tech Data Sheet</span>
+                                            <i class="ico ico--pdf darkblue"></i>
+                                        </button>
+                                        <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 5GS"
+                                            aria-hidden="true" hidden>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button class="btn--plain | info-item dropdownbtn"
+                                            onclick="GetSDSAvailLangsDD('sngs5', 'Suniso 5GS')"
+                                            data-panel-toggle="sdsddsiv_sngs5" aria-controls="sdsddsiv_sngs5">
+                                            <span>SDS</span>
+                                            <i class="ico ico--pdf darkblue"></i>
+                                        </button>
+                                        <div class="info-list-panel" id="sdsddsiv_sngs5" aria-hidden="true" hidden>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ac__panel">
+                                <div class="ac__text rte-content fs2">
+                                    <table class="mbs">
+                                        <thead style="color: white;background-color: #0081cb;">
+                                            <tr>
+                                                <th align="center"><strong>Property</strong></th>
+                                                <th align="center"><strong>ASTM Method </strong></th>
+                                                <th align="center"><strong>5GS</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 20%;">Density at 15&deg;C, Kg/L</td>
+                                                <td align="center">D4052</td>
+                                                <td align="center">0.920</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Viscosity at 40&deg;C, cSt</td>
+                                                <td align="center">D445</td>
+                                                <td align="center">100</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Viscosity at 100&deg;C, cSt</td>
+                                                <td align="center">D445</td>
+                                                <td align="center">8.4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Flash Point &deg;C / &deg;F</td>
+                                                <td align="center">D92</td>
+                                                <td align="center">213/415</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pour Point, &deg;C / &deg;F</td>
+                                                <td align="center">D97</td>
+                                                <td align="center">-33/-27</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Floc Point &deg;C / &deg;F </td>
+                                                <td align="center">ASHRAE 86</td>
+                                                <td align="center">-45/-49</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dielectric Strength, kV</td>
+                                                <td align="center">D877</td>
+                                                <td align="center">38</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>The values quoted above are typical of normal production. They do not constitute
+                                        a specification.</p>
+                                </div>
+                            </div>
+                        </div>
 
+
+
+
+
+                    </div>
+                </section>
+                <!--<div class="lube-container home-component home-stackable">-->
+                <div class="sideTabHoler" id="sideTabHoler">
+                    <div class="sideTabArrowHolder" id="sideTabArrowHolder">
+                        <a href="#" class="sideTabArrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6.32" height="12.85"
+                                viewBox="0 0 8.437 14.249">
+                                <path id="Arrow" d="M495.568,1565.577l6.321,6.423-6.321,6.423"
+                                    transform="translate(-494.855 -1564.876)" fill="none" stroke="#fff"
+                                    stroke-width="2" />
+                            </svg>
+                        </a>
+                    </div>
+                    <a href="/en-gb/contact-us" class="sideTabs sideTab1" target="_parent">
+                        <img src="/-/media/images/suniso/product-selector/email-icon.ashx?la=en-GB" class="sideTabImage"
+                            alt="" />
+
+                        <span class="sideTabText">
+                            CONTACT US
+                        </span>
+                    </a>
+                    <a href="/en-gb/product-selector" class="sideTabs sideTab2" target="_parent">
+                        <img src="/-/media/images/suniso/product-selector/sign-icon.ashx?la=en-GB" class="sideTabImage"
+                            alt="" />
+
+                        <span class="sideTabText">
+                            PRODUCT SELECTOR
+                        </span>
+                    </a>
                 </div>
+                <!--</div>-->
+
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        var sideTabHidden = 0;
+                        var numOfTabs = $('.sideTabs').length;
+                        var tabHideSize = numOfTabs * 143;
+
+                        $(".sideTabArrow").click(function () {
+                            if (sideTabHidden == 0) {
+                                console.log("clicked!");
+                                $("#sideTabHoler").animate({ "right": "-" + tabHideSize + "px" }, 500);
+                                $(".sideTabArrow svg").css("transform", "rotate(180deg)");
+                                sideTabHidden = 1;
+                            } else {
+                                $("#sideTabHoler").animate({ "right": "0px" }, 500);
+                                $(".sideTabArrow svg").css("transform", "rotate(0deg)");
+                                sideTabHidden = 0;
+                            }
+                        });
+                    });
+                </script>
 
             </div>
-        </div>
-        <div class="lube-container top-bottom-60-20">
 
-            <div class="container">
-                <div class="row lube-col1 lube-title top-15">
-
-                    <div class="col-sm-12 first-column">
-                        <h2>관련 제품</h2>
+            <section class="section bg-brightblue | callout">
+                <div class="container text-center">
+                    <div class="phs">
+                        <p class="mvs fs4">
+                            Interested in our line of products?
+                            <a href="/en-gb/where-to-buy" class="chevron-link">Where To Buy</a>
+                        </p>
                     </div>
                 </div>
-                <div class="row product-related-line-grid bottom-30">
+            </section>
 
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="product-related-item  ">
-                            <div class="text-component">
-                                <h2> <a href="../../../html/brand/suniso/suniso-sl.html" target="_parent">SUNISO<sup>&reg;</sup> SL</a>
-                                </h2>
-                                <a href="../../../html/brand/suniso/suniso-sl.html" target="_parent" class="btn red-button">
-                                    <b>더보기</b>
-                                </a>
-                            </div>
-                            <div class="image-component">
-                                <a href="../../../html/brand/suniso/suniso-sl.html" target="_parent"><img
-                                        src="../../../common/images/brand/Suniso_SL_Group_Shot.jpg"
-                                        alt="DURATAC" /></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="product-related-item  ">
-                            <div class="text-component">
-                                <h2> <a href="../../../html/brand/reflo/reflo-a.html" target="_parent">REFLO™ A</a></h2>
-                                <a href="../../../html/brand/reflo/reflo-a.html" target="_parent" class="btn red-button">
-                                    <b>더보기</b>
-                                </a>
-                            </div>
-                            <div class="image-component">
-                                <a href="../../../html/brand/reflo/reflo-a.html" target="_parent"><img
-                                        src="../../../common/images/brand/PC_Reflo-46A.jpg"
-                                        alt="REFLO" /></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </main>
 
     </div>
     <!--Main Content END -->
