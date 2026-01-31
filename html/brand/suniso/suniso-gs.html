@@ -41,10 +41,361 @@
     <link rel='stylesheet' href='../../../common/css/print.min.css' media="print">
     <link rel="stylesheet" href="../../../common/css/navistar-location.min.css" />
     <link rel="stylesheet" href="../../../common/css/navigation-full-responsive.css" />
-    <link rel="canonical" href="https://petrocanadalubricants.com/en-kr/brand/suniso" />
+    <link rel="canonical" href="https://petrocanadalubricants.com/en-kr/brand/suniso-gs" />
 
-    <link rel="stylesheet" href="../../../common/css/suniso-homepage.css" />
-    <link rel="stylesheet" href="../../../common/css/suniso-homepage.min.css" />
+    <style>
+        /* Suniso page accordion and section styles */
+
+        .container-xxl {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Accordion styles */
+        .accordion-spec {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ac__item {
+            margin-bottom: 0;
+            border-bottom: 2px solid #fff;
+        }
+
+        .product-data {
+            margin-bottom: 8px;
+        }
+
+        .product-data__header {
+            background: linear-gradient(232deg, #003b5c 52.57%, #0081CB 115.51%);
+            align-items: center;
+            height: 80px;
+            display: flex;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
+        .product-data__header .ac__ctrl {
+            position: relative;
+            color: #fff;
+            font-weight: 700;
+            text-align: left;
+            font-size: medium;
+            width: 100%;
+            height: 100%;
+            padding-right: 50px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-data__header .ac__ctrl .ico {
+            color: inherit;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyNSAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIgMkwxMi41IDEzTDIzIDIiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=");
+            mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyNSAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIgMkwxMi41IDEzTDIzIDIiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=");
+            background-color: currentColor;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            width: 30px;
+            height: 17px;
+            transition: transform .15s;
+        }
+
+        .product-data__header .ac__ctrl:focus-visible {
+            outline: none;
+        }
+
+        .product-data__header .ac__ctrl:focus-visible::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            outline-offset: -3px;
+        }
+
+        .product-data__header .ac__text {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        .product-data__info {
+            display: flex;
+            padding: 0;
+            flex-flow: row nowrap;
+            list-style: none;
+            margin: 0;
+            background: #f5f5f5;
+            border-top: 3px solid #e0e0e0;
+        }
+
+        .product-data__info li {
+            flex: 1;
+            padding: 0;
+            margin: 0;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .product-data__info li:last-child {
+            border-right: none;
+        }
+
+        .product-data__info .info-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font: inherit;
+            color: #333;
+            letter-spacing: inherit;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            font-size: medium;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .product-data__info .info-item:hover {
+            background: #e8e8e8;
+        }
+
+        .product-data__info .info-item span {
+            padding-right: 0.5ch;
+        }
+
+        .product-data__info .info-item.show .ico--chevron {
+            transform: rotate(180deg);
+        }
+
+        .product-data__info .info-item:focus-visible {
+            outline: 2px solid #0081cb;
+            outline-offset: -2px;
+        }
+
+        @media(max-width: 575px) {
+            .product-data__info {
+                flex-direction: column;
+            }
+
+            .product-data__info li {
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            .product-data__info li:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media(min-width: 1340px) {
+            .product-data .ac__text {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+
+        .product-data .info-list-panel {
+            position: absolute;
+            z-index: 60;
+            color: #000;
+            background: #f3f3f3;
+            margin-top: .5em;
+            padding: 1rem;
+            max-height: 10em;
+            max-width: 240px;
+            min-width: 150px;
+            box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, .25);
+            overflow-y: scroll;
+        }
+
+        .product-data .info-list-panel ul {
+            list-style: none;
+            font-size: 1.55rem;
+        }
+
+        .product-data .info-list-panel ul li {
+            padding: 0;
+            margin: 0;
+        }
+
+        .product-data .info-list-panel ul li+li {
+            margin-top: .25em;
+        }
+
+        .product-data .info-list-panel a {
+            display: block;
+            padding: .125em 0;
+            text-decoration: none;
+        }
+
+        .product-data .info-list-panel a:hover {
+            background: #e4e5e6;
+        }
+
+        .ico--chevron,
+        .ico--pdf {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+
+        .darkblue {
+            color: #1e4a6a;
+        }
+
+        .ac__panel {
+            overflow: hidden;
+            transition: height 0.3s ease;
+            background: #fff;
+        }
+
+        .bg-lightgrey {
+            background: #f5f5f5;
+        }
+
+        .ac__text {
+            padding: 3rem 0;
+            background: #fff;
+        }
+
+        .ac__text table {
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .fs2 {
+            font-size: 0.95rem;
+        }
+
+        .pbxs {
+            padding-bottom: 0.5rem;
+        }
+
+        /* Table styles */
+        table.mbs {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            border: 1px solid #4a90d9;
+        }
+
+        table.mbs thead {
+            background: #4a90d9;
+        }
+
+        table.mbs th {
+            padding: 1.2rem 1rem;
+            color: white;
+            font-weight: 600;
+            text-align: left;
+            border: none;
+            font-size: 1.15rem;
+        }
+
+        table.mbs td {
+            padding: 1rem;
+            border: none;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: left;
+            background: #fff;
+            font-size: 1.05rem;
+        }
+
+        table.mbs tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        table.mbs tbody tr:hover {
+            background: #f8f8f8;
+        }
+
+        .rte-content p {
+            margin: 2rem 0 0 0;
+            color: #666;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        /* Section styles */
+        .section--pb {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            width: 100%;
+            margin: 0;
+            background: #fff;
+        }
+
+        .section--pb .product-data {
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+
+        .product-data {
+            width: 100%;
+        }
+
+        /* Info list panel */
+        .info-list-panel {
+            background: #f5f5f5;
+            padding: 1rem;
+            display: none;
+        }
+
+        .info-list-panel[aria-hidden="false"] {
+            display: block;
+        }
+
+        /* Footer wave design */
+        .footer {
+            position: relative;
+        }
+
+        .footer::before {
+            content: "";
+            position: absolute;
+            z-index: 5;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+        }
+
+        @media(max-width: 767px) {
+            .footer::before {
+                padding-bottom: 30%;
+                background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iMTgwIiB2aWV3Qm94PSIwIDAgNjAwIDE4MCI+DQo8cmVjdCB4PSItNTcxLjYiIHk9Ii00NTIuNSIgZmlsbD0iI2ZmZiIgd2lkdGg9IjEyNDYuNiIgaGVpZ2h0PSI1ODYuNCIvPg0KPGxpbmVhckdyYWRpZW50IGlkPSJTVkdJRF8xXyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSItNjEzLjI4NTgiIHkxPSI0LjQzNzUiIHgyPSI2NDQuMzQ0MyIgeTI9IjI0MS4xNjE0IiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgMCAtNDkpIj4NCgk8c3RvcCBvZmZzZXQ9IjAiIHN0eWxlPSJzdG9wLWNvbG9yOiMxQjgxQzQiLz4NCgk8c3RvcCBvZmZzZXQ9IjEiIHN0eWxlPSJzdG9wLWNvbG9yOiMwNjNCNUIiLz4NCjwvbGluZWFyR3JhZGllbnQ+DQo8cGF0aCBmaWxsPSJ1cmwoI1NWR0lEXzFfKSIgZD0iTTY3NS4xLTExLjdDLTQ5LjgsMTU5LTU3MS42LTIyMC40LTU3MS42LTIyMC40VjE2MGMwLDAsNjA5LjgsMjEwLjcsMTI0Ni42LDBWLTExLjd6Ii8+DQo8cGF0aCBmaWxsPSIjMUI4MUM0IiBkPSJNNjc1LjEtMTEuN0MtNDkuOCwxNTktNTcxLjYtMjIwLjQtNTcxLjYtMjIwLjR2NzIuM2MwLDAsNjA5LjgsMzU0LjEsMTI0Ni42LDE0My4zVi0xMS43eiIvPg0KPC9zdmc+DQo=") 100%/contain no-repeat;
+                bottom: calc(0px + -80*(100vw - 320px)/448);
+            }
+        }
+
+        @media(min-width: 768px) {
+            .footer::before {
+                padding-bottom: 41.375%;
+                background-position: 50% 100%;
+                background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI2NjIiIHZpZXdCb3g9IjAgMCAxNjAwIDY2MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4MV8xODA4KSI+CjxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjY2MiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTE2MDAgNDk3LjY1QzY2OS42OCA2OTAuMzU0IDAgMjYyIDAgMjYyVjY5MS41QzAgNjkxLjUgNzgyLjY0NCA5MjkuNDg3IDE2MDAgNjkxLjVWNDk3LjY1WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzE4MV8xODA4KSIvPgo8cGF0aCBkPSJNMTYwMCA0OTcuNjVDNjY5LjY4IDY5MC4zNTQgMCAyNjIgMCAyNjJWMzQzLjU1NEMwIDM0My41NTQgNzgyLjY0NCA3NDMuMzcgMTYwMCA1MDUuMzgzVjQ5Ny42NVoiIGZpbGw9IiMwMDgxQ0IiLz4KPC9nPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzE4MV8xODA4IiB4MT0iLTExIiB5MT0iMjYyIiB4Mj0iMTU5Mi41OSIgeTI9IjU2My44NDQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzAwODFDQiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMDNCNUMiLz4KPC9saW5lYXJHcmFkaWVudD4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xODFfMTgwOCI+CjxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjY2MiIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K") 80% 100%/cover no-repeat;
+            }
+        }
+
+        @media(min-width: 1925px) {
+            .footer::before {
+                background: linear-gradient(to top, #003b5c 0, #003b5c 80px, #0081cb 81px, #0081cb 111px, #fff 112px);
+            }
+        }
+    </style>
 
     <script src='../../../common/js/jquery.min.js'></script>
     <script src="../../../common/js/jquery-ui.min.js"></script>
@@ -64,7 +415,6 @@
     <script src="../../../common/js/navigation-full.js"></script>
     <script src="../../../common/js/ps-custom.min.js"></script>
     <script src="../../../common/js/product-carousel.js"></script>
-    <script src="../../../common/js/suniso-custom_v2.js"></script>
 
     <script>
         var slideSpeed = 800;
@@ -161,495 +511,408 @@
         <input id="hdnProductName" type="hidden" value="SUNISO&lt;sup&gt;&amp;reg;&lt;/sup&gt; GS" />
         <div class="lube-container hero-banner-main">
             <div class="container">
-                <div class="hero-banner">
-                    <div class="herobanner-image">
-                        <img src="../../../common/images/brand/header-image-slim.jpg" class="hero-bgImage"
-                            alt="DURATAC Non-Drip Oils" />
+                <div class="row lube-col1">
+                    <div class="col-sm-12 first-column">
+                        <div class="hero-banner">
+                            <div class="herobanner-image">
+                                <img src="../../../common/images/brand/header-image-slim.jpg" class="hero-bgImage"
+                                    alt="DURATAC Non-Drip Oils" />
 
+                            </div>
+                            <div class="herobanner-caption">
+
+                                <h2>SUNISO<sup>&reg;</sup> GS</h2>
+                                <p>
+                                <p>Mineral Refrigeration Fluids(광유 기반의 냉동용 윤활유)</p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lube-breadcrumb">
+                            <ul>
+                                <li><a href="/index.html" target="_parent"> Home </a></li>
+                                <li><a href="../../../html/brand/productoverview.html#brands" target="_parent"> 모든 제품
+                                    </a></li>
+                                <li><a href="../../../html/brand/suniso/suniso.html" target="_parent">
+                                        SUNISO<sup>®</sup> </a></li>
+                                <li class="active">SUNISO<sup>&reg;</sup> GS</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="herobanner-caption">
-                        <h2>SUNISO<sup>&reg;</sup> GS</h2>
-                        <p>
-                        <p>Mineral Refrigeration Fluids</p>
-                        <p>(광유 기반의 냉동용 윤활유)</p>
-                        </p>
-                    </div>
-                </div>
-                <div class="lube-breadcrumb">
-                    <ul>
-                        <li><a href="/index.html" target="_parent" class="ui-link"> Home </a></li>
-                        <li><a href="../../../html/brand/productoverview.html#brands" target="_parent" class="ui-link"> 모든 제품
-                            </a></li>
-                        <li><a href="../../../html/brand/suniso/suniso.html" target="_parent" class="ui-link">
-                                SUNISO<sup>®</sup> </a></li>
-                        <li class="active">SUNISO<sup>®</sup> GS</li>
-                    </ul>
                 </div>
             </div>
         </div>
-        <main id="top-of-content">
+        <div class="lube-container product-line-cont light-grey top-bottom-50">
+            <div class="container">
 
-            <div role="dialog" id="modalPanel" class="modal-panel" aria-hidden="true" aria-labelledby="modalTitle"
-                hidden>
-                <div class="modal-panel-container">
-                    <div class="modal-panel-inner">
-                        <div class="modal-panel-body">
-                            <button class="btn--plain modal-close red" aria-label="Close modal" data-close-modal>
-                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M13 25C19.6274 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13C1 19.6274 6.37258 25 13 25Z" />
-                                        <path d="M9.1352 9.1352L16.8609 16.8609" stroke-miterlimit="10" />
-                                        <path d="M16.8609 9.1352L9.1352 16.8609" stroke-miterlimit="10" />
-                                    </g>
-                                </svg>
-                            </button>
+                <div class="row lube-largeLeft">
 
-                            <div class="container pvs">
-                                <form action="">
-                                    <fieldset>
-                                        <div class="row | mbxs pts">
-                                            <div class="col-12 col-sm-4">
-                                                <svg role="img" width="172" height="46">
-                                                    <title>Suniso logo</title>
-                                                    <use
-                                                        xlink:href="../../../common/images/brand/suniso/icons.svg#suniso-logo" />
-                                                </svg>
-                                            </div>
-                                            <div class="col-12 col-sm-7">
-                                                <h2 class="heading darkblue mvxs" id="modalTitle">Suniso product
-                                                    brochure</h2>
-                                                <p>Select a <strong>Language</strong> for the Suniso Product Brochure.
-                                                </p>
-                                            </div>
+                    <div class="col-sm-8 first-column">
+
+                        <div class="row lube-col1 product-content">
+
+                            <div class="col-sm-12 first-column">
+
+                                <div class="product-content-main">
+                                    <nav role="navigation" class="lubeTab product-content-tilte">
+                                        <ul>
+                                            <li><a href="#tab1" class="active">개요 </a></li>
+                                            <li><a href="#tab2">특징 &amp; 장점</a></li>
+                                            <li><a href="#tab3">적용 분야</a></li>
+                                        </ul>
+                                    </nav>
+                                    <div class="tab-content">
+                                        <div id="tab1" class="tab-pane active">
+                                            <p>Suniso<sup>®</sup> GS 오일은 CFC 및 HCFC 냉매를 사용하는 냉동 및 공조 압축기의 윤활을 위해 설계된
+                                                고품질, 고도 정제된 광유 기반 냉동용 윤활유입니다. Suniso GS 윤활유는 낮은 왁스 함량, 낮은 유동점 및 높은 절연
+                                                강도로 잘 알려져 있습니다. 50년 이상 동안 Suniso GS 윤활유는 우수한 화학적 및 열적 안정성으로 무고장 작동과 최대
+                                                수명을 보장하는 데 도움을 주었습니다.</p>
                                         </div>
-                                        <div class="row | pvxs">
-                                            <div class="col-4">
-                                                <label class="lbl darkblue" for="language">Language:</label>
-                                            </div>
-                                            <div class="col-8">
-                                                <select class="w-100" id="language">
-                                                </select>
-
-                                                <p class="small grey pvs"></p>
-
-                                                <p class="pt-4">
-                                                    <a href="" target="_blank" title="File opens in new browser tab"
-                                                        class="btn btn--blue btn--download">Open</a>
-                                                </p>
-                                            </div>
+                                        <div id="tab2" class="tab-pane">
+                                            <p>
+                                            <ul>
+                                                <li><strong>낮은 왁스 함량 &amp; 낮은 유동점:</strong> 시스템을 막는 왁스 침전물 없이 우수한 저온 성능을
+                                                    제공합니다.
+                                                </li>
+                                                <li><strong>높은 절연 강도/우수한 전기 절연 특성:</strong> 밀폐형 압축기(냉매 및 오일에 노출된 전기 모터 및
+                                                    권선)에 적합합니다.</li>
+                                                <li><strong>우수한 화학적 안정성:</strong> 냉매 또는 시스템의 금속 부품과 반응하지 않아 기계 수명을 연장하고
+                                                    유지보수 비용을 절감합니다.</li>
+                                                <li><strong>높은 열적 안정성:</strong> 밸브 고착으로 인한 침전물 및 고장을 최소화하여 압축기를 더욱 깨끗하게
+                                                    작동시킵니다.
+                                                </li>
+                                            </ul>
+                                            </p>
                                         </div>
-                                    </fieldset>
-                                </form>
+                                        <div id="tab3" class="tab-pane">
+                                            <p>
+                                            <ul>
+                                                <li>전통적 냉매 및 자연 냉매가 충전된 가정용 및 상업용 냉동 및 공조 시스템에 사용하도록 권장됩니다.</li>
+                                                <li>증발기 온도가 -42°C / -44°F까지 낮은 저온 시스템에 이상적으로 적합합니다.</li>
+                                                <li>CFC 냉매(예: R-11, R-12, R-13, R-113, R-114, <br>R-115) 및 HCFC 냉매(예:
+                                                    R-21, R-22, R-123, R-124, R-141b, R-142b, <br>R-502)와 함께 사용하도록
+                                                    설계되었습니다.</li>
+                                                <li>암모니아(R-717), 이소부탄(R-600a) 및 프로판(R-290)을 포함한 자연형 냉매와 함께 사용하기에 적합합니다.
+                                                </li>
+                                            </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 second-column highlighted-resource">
+
+                        <div class="box-container hp-textImage-grid light-grey text-vertical-align btn-dwnld-text"
+                            style="height: 301px; min-height: inherit;">
+                            <div class="component-tag">매뉴얼</div>
+                            <div class="image-component">
+                                <img src="../../../common/images/brand/bg-sands.jpg" alt="" title="" />
+                            </div>
+                            <div class="text-component">
+                                <h3 class="title">SUNISO 제품 매뉴얼</h3>
+                                <a class="btn red-button ui-link" target="_blank"
+                                    href="../../../common/pdf/brand/Suniso Brochure.pdf"><b>PDF</b> 다운로드</a>
+                                <p class="pdf-size">(PDF, 3 MB)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <section class="section--pb">
+            <div class="product-data accordion accordion-spec">
+
+
+                <div class="ac__item | pbxs">
+                    <div class="product-data__header">
+                        <button class="btn--plain ac__ctrl ui-btn ui-shadow ui-corner-all">
+                            <h2 class="mvn">Suniso 3GS</h2>
+                            <i aria-hidden="true" class="ico"></i>
+                        </button>
+                    </div>
+                    <div class="bg-lightgrey">
+                        <ul class="product-data__info fs2">
+                            <li>
+                                <button class="btn--plain | info-item ui-btn ui-shadow ui-corner-all"
+                                    data-accordion-toggle="true">
+                                    <span>Typical analysis</span>
+                                    <i class="ico ico--chevron darkblue"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn--plain | info-item dropdownbtn ui-btn ui-shadow ui-corner-all"
+                                    onclick="GetTDAvailLangsDD('sunisogstds', 'Suniso 3GS')"
+                                    data-panel-toggle="tdsdiv_sunisogstds_Suniso 3GS"
+                                    aria-controls="tdsdiv_sunisogstds_Suniso 3GS">
+                                    <span>Tech Data Sheet</span>
+                                    <i class="ico ico--pdf darkblue"></i>
+                                </button>
+                                <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 3GS" aria-hidden="true"
+                                    hidden="hidden">
+                                </div>
+                            </li>
+                            <li>
+                                <button class="btn--plain | info-item dropdownbtn ui-btn ui-shadow ui-corner-all"
+                                    onclick="GetSDSAvailLangsDD('sngs3', 'Suniso 3GS')"
+                                    data-panel-toggle="sdsddsiv_sngs3" aria-controls="sdsddsiv_sngs3">
+                                    <span>SDS</span>
+                                    <i class="ico ico--pdf darkblue"></i>
+                                </button>
+                                <div class="info-list-panel" id="sdsddsiv_sngs3" aria-hidden="true" hidden="hidden">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ac__panel">
+                        <div class="ac__text rte-content fs2">
+                            <table class="mbs">
+                                <thead style="color: white;background-color: #0081cb;">
+                                    <tr>
+                                        <th align="center"><strong>Property</strong></th>
+                                        <th align="center"><strong>ASTM Method </strong></th>
+                                        <th align="center"><strong>3GS</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 20%;">Density at 15°C, Kg/L</td>
+                                        <td align="center">D4052</td>
+                                        <td align="center">0.910</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Viscosity at 40°C, cSt</td>
+                                        <td align="center">D445</td>
+                                        <td align="center">30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Viscosity at 100°C, cSt</td>
+                                        <td align="center">D445</td>
+                                        <td align="center">4.4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Flash Point °C / °F</td>
+                                        <td align="center">D92</td>
+                                        <td align="center">178/352</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pour Point, °C / °F</td>
+                                        <td align="center">D97</td>
+                                        <td align="center">-48/-54</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Floc Point °C / °F </td>
+                                        <td align="center">ASHRAE 86</td>
+                                        <td align="center">-58/-72</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dielectric Strength, kV</td>
+                                        <td align="center">D877</td>
+                                        <td align="center">37</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>The values quoted above are typical of normal production. They do not constitute
+                                a specification.</p>
                         </div>
                     </div>
                 </div>
+                <div class="ac__item | pbxs">
+                    <div class="product-data__header">
+                        <button class="btn--plain ac__ctrl ui-btn ui-shadow ui-corner-all">
+                            <h2 class="mvn">Suniso 4GS</h2>
+                            <i aria-hidden="true" class="ico"></i>
+                        </button>
+                    </div>
+                    <div class="bg-lightgrey">
+                        <ul class="product-data__info fs2">
+                            <li>
+                                <button class="btn--plain | info-item ui-btn ui-shadow ui-corner-all"
+                                    data-accordion-toggle="true">
+                                    <span>Typical analysis</span>
+                                    <i class="ico ico--chevron darkblue"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn--plain | info-item dropdownbtn ui-btn ui-shadow ui-corner-all"
+                                    onclick="GetTDAvailLangsDD('sunisogstds', 'Suniso 4GS')"
+                                    data-panel-toggle="tdsdiv_sunisogstds_Suniso 4GS"
+                                    aria-controls="tdsdiv_sunisogstds_Suniso 4GS">
+                                    <span>Tech Data Sheet</span>
+                                    <i class="ico ico--pdf darkblue"></i>
+                                </button>
+                                <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 4GS" aria-hidden="true"
+                                    hidden="hidden">
+                                </div>
+                            </li>
+                            <li>
+                                <button class="btn--plain | info-item dropdownbtn ui-btn ui-shadow ui-corner-all"
+                                    onclick="GetSDSAvailLangsDD('sngs4', 'Suniso 4GS')"
+                                    data-panel-toggle="sdsddsiv_sngs4" aria-controls="sdsddsiv_sngs4">
+                                    <span>SDS</span>
+                                    <i class="ico ico--pdf darkblue"></i>
+                                </button>
+                                <div class="info-list-panel" id="sdsddsiv_sngs4" aria-hidden="true" hidden="hidden">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ac__panel">
+                        <div class="ac__text rte-content fs2">
+                            <table class="mbs">
+                                <thead style="color: white;background-color: #0081cb;">
+                                    <tr>
+                                        <th align="center"><strong>Property</strong></th>
+                                        <th align="center"><strong>ASTM Method </strong></th>
+                                        <th align="center"><strong>4GS</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 20%;">Density at 15°C, Kg/L</td>
+                                        <td align="center">D4052</td>
+                                        <td align="center">0.916</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Viscosity at 40°C, cSt</td>
+                                        <td align="center">D445</td>
+                                        <td align="center">55</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Viscosity at 100°C, cSt</td>
+                                        <td align="center">D445</td>
+                                        <td align="center">5.9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Flash Point °C / °F</td>
+                                        <td align="center">D92</td>
+                                        <td align="center">184/364</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pour Point, °C / °F</td>
+                                        <td align="center">D97</td>
+                                        <td align="center">-42/-44</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Floc Point °C / °F </td>
+                                        <td align="center">ASHRAE 86</td>
+                                        <td align="center">-54/-66</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dielectric Strength, kV</td>
+                                        <td align="center">D877</td>
+                                        <td align="center">40</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>The values quoted above are typical of normal production. They do not constitute
+                                a specification.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ac__item | pbxs">
+                    <div class="product-data__header">
+                        <button class="btn--plain ac__ctrl ui-btn ui-shadow ui-corner-all">
+                            <h2 class="mvn">Suniso 5GS</h2>
+                            <i aria-hidden="true" class="ico"></i>
+                        </button>
+                    </div>
+                    <div class="bg-lightgrey">
+                        <ul class="product-data__info fs2">
+                            <li>
+                                <button class="btn--plain | info-item ui-btn ui-shadow ui-corner-all"
+                                    data-accordion-toggle="true">
+                                    <span>Typical analysis</span>
+                                    <i class="ico ico--chevron darkblue"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn--plain | info-item dropdownbtn ui-btn ui-shadow ui-corner-all"
+                                    onclick="GetTDAvailLangsDD('sunisogstds', 'Suniso 5GS')"
+                                    data-panel-toggle="tdsdiv_sunisogstds_Suniso 5GS"
+                                    aria-controls="tdsdiv_sunisogstds_Suniso 5GS">
+                                    <span>Tech Data Sheet</span>
+                                    <i class="ico ico--pdf darkblue"></i>
+                                </button>
+                                <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 5GS" aria-hidden="true"
+                                    hidden="hidden">
+                                </div>
+                            </li>
+                            <li>
+                                <button class="btn--plain | info-item dropdownbtn ui-btn ui-shadow ui-corner-all"
+                                    onclick="GetSDSAvailLangsDD('sngs5', 'Suniso 5GS')"
+                                    data-panel-toggle="sdsddsiv_sngs5" aria-controls="sdsddsiv_sngs5">
+                                    <span>SDS</span>
+                                    <i class="ico ico--pdf darkblue"></i>
+                                </button>
+                                <div class="info-list-panel" id="sdsddsiv_sngs5" aria-hidden="true" hidden="hidden">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ac__panel">
+                        <div class="ac__text rte-content fs2">
+                            <table class="mbs">
+                                <thead style="color: white;background-color: #0081cb;">
+                                    <tr>
+                                        <th align="center"><strong>Property</strong></th>
+                                        <th align="center"><strong>ASTM Method </strong></th>
+                                        <th align="center"><strong>5GS</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 20%;">Density at 15°C, Kg/L</td>
+                                        <td align="center">D4052</td>
+                                        <td align="center">0.920</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Viscosity at 40°C, cSt</td>
+                                        <td align="center">D445</td>
+                                        <td align="center">100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Viscosity at 100°C, cSt</td>
+                                        <td align="center">D445</td>
+                                        <td align="center">8.4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Flash Point °C / °F</td>
+                                        <td align="center">D92</td>
+                                        <td align="center">213/415</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pour Point, °C / °F</td>
+                                        <td align="center">D97</td>
+                                        <td align="center">-33/-27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Floc Point °C / °F </td>
+                                        <td align="center">ASHRAE 86</td>
+                                        <td align="center">-45/-49</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dielectric Strength, kV</td>
+                                        <td align="center">D877</td>
+                                        <td align="center">38</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>The values quoted above are typical of normal production. They do not constitute
+                                a specification.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
             </div>
-
-            <script>
-
-                const language = document.getElementById('language');
-
-                language.addEventListener('change', function () {
-
-                    const selectedLangValue = this.value;
-
-                    GetBrochurePdfSize(selectedLangValue);
-                    GetBrochurePdfForLang(selectedLangValue);
-                });
-            </script>
-            <div class="container-xxl">
-                <section class="section-sm bg-lightgrey | mbxs">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="tabgroup">
-                                    <ul class="tabs-nav" role="tablist">
-                                        <li role="presentation">
-                                            <button class="btn--plain tab-ctrl | current" id="tab-overview"
-                                                aria-controls="panel-overview" aria-disabled="true" aria-selected="true"
-                                                role="tab">Overview</button>
-                                        </li>
-                                        <li role="presentation">
-                                            <button class="btn--plain tab-ctrl" tabindex="-1" id="tab-properties"
-                                                aria-controls="panel-properties" aria-selected="false"
-                                                role="tab">Features &amp; Benefits</button>
-                                        </li>
-                                        <li role="presentation">
-                                            <button class="btn--plain tab-ctrl" tabindex="-2" id="tab-features"
-                                                aria-controls="panel-features" aria-selected="false"
-                                                role="tab">Applications</button>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-panel active" id="panel-overview" role="tabpanel" tabindex="0"
-                                            aria-labelledby="tab-overview">
-                                            <div class="tab-panel__text rte-content fs2">
-                                                <p><strong>Suniso<sup>®</sup> GS</strong> oils are premium quality,
-                                                    highly-refined mineral refrigeration lubricants designed to
-                                                    lubricate refrigeration and air-conditioning compressors using CFC
-                                                    and HCFC refrigerants. Suniso GS lubricants are known for their low
-                                                    wax content, low pour point and high dielectric strength. For over
-                                                    50 years, Suniso GS lubricants have helped to ensure trouble-free
-                                                    operation and maximum service life with excellent chemical and
-                                                    thermal stability.</p>
-                                            </div>
-                                        </div>
-                                        <div class="tab-panel" id="panel-properties" role="tabpanel" tabindex="0"
-                                            aria-labelledby="tab-properties">
-                                            <div class="tab-panel__text rte-content fs2">
-                                                <ul>
-                                                    <li><strong>Low Wax Content &amp; Low Pour Point:</strong> Excellent
-                                                        low-temperature performance with no wax deposits to plug the
-                                                        system.</li>
-                                                    <li><strong>High Dielectric Strength/Good Electrical Insulating
-                                                            Properties:</strong> Suitable for hermetically sealed
-                                                        compressors (electric motor and windings exposed to refrigerant
-                                                        and oil).</li>
-                                                    <li><strong>Excellent Chemical Stability:</strong> Does not react
-                                                        with refrigerant or metal components in the system, extending
-                                                        machine service life and reducing maintenance costs.</li>
-                                                    <li><strong>High Thermal Stability:</strong> Cleaner operation of
-                                                        the compressor with minimal deposits and failures due to valve
-                                                        sticking.</li>
-                                                </ul>
-
-                                            </div>
-                                        </div>
-                                        <div class="tab-panel" id="panel-features" role="tabpanel" tabindex="0"
-                                            aria-labelledby="tab-features">
-                                            <div class="tab-panel__text rte-content fs2">
-                                                <ul>
-                                                    <li>Recommended for use in consumer and commercial refrigeration and
-                                                        air-conditioning systems charged with traditional and natural
-                                                        refrigerants.</li>
-                                                    <li>Ideally suited for low-temperature systems where evaporator
-                                                        temperatures are as low as -42&deg;C / -44&deg;F.</li>
-                                                    <li>Designed for use with CFC refrigerants (e.g. R-11, R-12, R-13,
-                                                        R-113, R-114, <br />R-115) and HCFC refrigerants (e.g. R-21,
-                                                        R-22, R-123, R-124, R-141b, R-142b, <br />R-502).</li>
-                                                    <li>Suitable for use with natural type refrigerants, including
-                                                        ammonia (R-717), isobutane (R-600a) and propane (R-290).</li>
-                                                </ul>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="pdf-panel">
-                                    <picture role="none" aria-hidden="true" class="bg-img">
-                                        <source type="image/webp"
-                                            srcset="/-/media/images/suniso/brochures/bg-sands-webp.ashx">
-                                        <img src="../../../common/images/brand/suniso/bg-sands.jpg" width="1200"
-                                            height="869" loading="lazy" decoding="async">
-                                    </picture>
-                                    <div class="pdf-panel__text">
-                                        <h2 class="heading fs4 mbhalfem">SUNISO PRODUCT BROCHURE</h2>
-                                        <p class="mbm">
-                                            <a href="#" data-modal-btn class="btn btn--blue"
-                                                onclick="GetBrochurePdfLanguage()" title="Opens in new browser tab">View
-                                                PDF...</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section--pb">
-                    <div class="product-data | accordion accordion-spec">
-
-
-                        <div class="ac__item | pbxs">
-                            <div class="product-data__header">
-                                <button class="btn--plain ac__ctrl">
-                                    <h2 class="mvn">Suniso 3GS</h2>
-                                    <i aria-hidden="true" class="ico"></i>
-                                </button>
-                            </div>
-                            <div class="bg-lightgrey">
-                                <ul class="product-data__info fs2">
-                                    <li>
-                                        <button class="btn--plain | info-item" data-accordion-toggle="true">
-                                            <span>Typical analysis</span>
-                                            <i class="ico ico--chevron darkblue"></i>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button class="btn--plain | info-item dropdownbtn"
-                                            onclick="GetTDAvailLangsDD('sunisogstds', 'Suniso 3GS')"
-                                            data-panel-toggle="tdsdiv_sunisogstds_Suniso 3GS"
-                                            aria-controls="tdsdiv_sunisogstds_Suniso 3GS">
-                                            <span>Tech Data Sheet</span>
-                                            <i class="ico ico--pdf darkblue"></i>
-                                        </button>
-                                        <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 3GS"
-                                            aria-hidden="true" hidden>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <button class="btn--plain | info-item dropdownbtn"
-                                            onclick="GetSDSAvailLangsDD('sngs3', 'Suniso 3GS')"
-                                            data-panel-toggle="sdsddsiv_sngs3" aria-controls="sdsddsiv_sngs3">
-                                            <span>SDS</span>
-                                            <i class="ico ico--pdf darkblue"></i>
-                                        </button>
-                                        <div class="info-list-panel" id="sdsddsiv_sngs3" aria-hidden="true" hidden>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ac__panel">
-                                <div class="ac__text rte-content fs2">
-                                    <table class="mbs">
-                                        <thead style="color: white;background-color: #0081cb;">
-                                            <tr>
-                                                <th align="center"><strong>Property</strong></th>
-                                                <th align="center"><strong>ASTM Method </strong></th>
-                                                <th align="center"><strong>3GS</strong></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td style="width: 20%;">Density at 15&deg;C, Kg/L</td>
-                                                <td align="center">D4052</td>
-                                                <td align="center">0.910</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Viscosity at 40&deg;C, cSt</td>
-                                                <td align="center">D445</td>
-                                                <td align="center">30</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Viscosity at 100&deg;C, cSt</td>
-                                                <td align="center">D445</td>
-                                                <td align="center">4.4</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Flash Point &deg;C / &deg;F</td>
-                                                <td align="center">D92</td>
-                                                <td align="center">178/352</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Pour Point, &deg;C / &deg;F</td>
-                                                <td align="center">D97</td>
-                                                <td align="center">-48/-54</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Floc Point &deg;C / &deg;F </td>
-                                                <td align="center">ASHRAE 86</td>
-                                                <td align="center">-58/-72</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Dielectric Strength, kV</td>
-                                                <td align="center">D877</td>
-                                                <td align="center">37</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <p>The values quoted above are typical of normal production. They do not constitute
-                                        a specification.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ac__item | pbxs">
-                            <div class="product-data__header">
-                                <button class="btn--plain ac__ctrl">
-                                    <h2 class="mvn">Suniso 4GS</h2>
-                                    <i aria-hidden="true" class="ico"></i>
-                                </button>
-                            </div>
-                            <div class="bg-lightgrey">
-                                <ul class="product-data__info fs2">
-                                    <li>
-                                        <button class="btn--plain | info-item" data-accordion-toggle="true">
-                                            <span>Typical analysis</span>
-                                            <i class="ico ico--chevron darkblue"></i>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button class="btn--plain | info-item dropdownbtn"
-                                            onclick="GetTDAvailLangsDD('sunisogstds', 'Suniso 4GS')"
-                                            data-panel-toggle="tdsdiv_sunisogstds_Suniso 4GS"
-                                            aria-controls="tdsdiv_sunisogstds_Suniso 4GS">
-                                            <span>Tech Data Sheet</span>
-                                            <i class="ico ico--pdf darkblue"></i>
-                                        </button>
-                                        <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 4GS"
-                                            aria-hidden="true" hidden>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <button class="btn--plain | info-item dropdownbtn"
-                                            onclick="GetSDSAvailLangsDD('sngs4', 'Suniso 4GS')"
-                                            data-panel-toggle="sdsddsiv_sngs4" aria-controls="sdsddsiv_sngs4">
-                                            <span>SDS</span>
-                                            <i class="ico ico--pdf darkblue"></i>
-                                        </button>
-                                        <div class="info-list-panel" id="sdsddsiv_sngs4" aria-hidden="true" hidden>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ac__panel">
-                                <div class="ac__text rte-content fs2">
-                                    <table class="mbs">
-                                        <thead style="color: white;background-color: #0081cb;">
-                                            <tr>
-                                                <th align="center"><strong>Property</strong></th>
-                                                <th align="center"><strong>ASTM Method </strong></th>
-                                                <th align="center"><strong>4GS</strong></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td style="width: 20%;">Density at 15&deg;C, Kg/L</td>
-                                                <td align="center">D4052</td>
-                                                <td align="center">0.916</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Viscosity at 40&deg;C, cSt</td>
-                                                <td align="center">D445</td>
-                                                <td align="center">55</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Viscosity at 100&deg;C, cSt</td>
-                                                <td align="center">D445</td>
-                                                <td align="center">5.9</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Flash Point &deg;C / &deg;F</td>
-                                                <td align="center">D92</td>
-                                                <td align="center">184/364</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Pour Point, &deg;C / &deg;F</td>
-                                                <td align="center">D97</td>
-                                                <td align="center">-42/-44</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Floc Point &deg;C / &deg;F </td>
-                                                <td align="center">ASHRAE 86</td>
-                                                <td align="center">-54/-66</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Dielectric Strength, kV</td>
-                                                <td align="center">D877</td>
-                                                <td align="center">40</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <p>The values quoted above are typical of normal production. They do not constitute
-                                        a specification.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ac__item | pbxs">
-                            <div class="product-data__header">
-                                <button class="btn--plain ac__ctrl">
-                                    <h2 class="mvn">Suniso 5GS</h2>
-                                    <i aria-hidden="true" class="ico"></i>
-                                </button>
-                            </div>
-                            <div class="bg-lightgrey">
-                                <ul class="product-data__info fs2">
-                                    <li>
-                                        <button class="btn--plain | info-item" data-accordion-toggle="true">
-                                            <span>Typical analysis</span>
-                                            <i class="ico ico--chevron darkblue"></i>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button class="btn--plain | info-item dropdownbtn"
-                                            onclick="GetTDAvailLangsDD('sunisogstds', 'Suniso 5GS')"
-                                            data-panel-toggle="tdsdiv_sunisogstds_Suniso 5GS"
-                                            aria-controls="tdsdiv_sunisogstds_Suniso 5GS">
-                                            <span>Tech Data Sheet</span>
-                                            <i class="ico ico--pdf darkblue"></i>
-                                        </button>
-                                        <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 5GS"
-                                            aria-hidden="true" hidden>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <button class="btn--plain | info-item dropdownbtn"
-                                            onclick="GetSDSAvailLangsDD('sngs5', 'Suniso 5GS')"
-                                            data-panel-toggle="sdsddsiv_sngs5" aria-controls="sdsddsiv_sngs5">
-                                            <span>SDS</span>
-                                            <i class="ico ico--pdf darkblue"></i>
-                                        </button>
-                                        <div class="info-list-panel" id="sdsddsiv_sngs5" aria-hidden="true" hidden>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ac__panel">
-                                <div class="ac__text rte-content fs2">
-                                    <table class="mbs">
-                                        <thead style="color: white;background-color: #0081cb;">
-                                            <tr>
-                                                <th align="center"><strong>Property</strong></th>
-                                                <th align="center"><strong>ASTM Method </strong></th>
-                                                <th align="center"><strong>5GS</strong></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td style="width: 20%;">Density at 15&deg;C, Kg/L</td>
-                                                <td align="center">D4052</td>
-                                                <td align="center">0.920</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Viscosity at 40&deg;C, cSt</td>
-                                                <td align="center">D445</td>
-                                                <td align="center">100</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Viscosity at 100&deg;C, cSt</td>
-                                                <td align="center">D445</td>
-                                                <td align="center">8.4</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Flash Point &deg;C / &deg;F</td>
-                                                <td align="center">D92</td>
-                                                <td align="center">213/415</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Pour Point, &deg;C / &deg;F</td>
-                                                <td align="center">D97</td>
-                                                <td align="center">-33/-27</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Floc Point &deg;C / &deg;F </td>
-                                                <td align="center">ASHRAE 86</td>
-                                                <td align="center">-45/-49</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Dielectric Strength, kV</td>
-                                                <td align="center">D877</td>
-                                                <td align="center">38</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <p>The values quoted above are typical of normal production. They do not constitute
-                                        a specification.</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
-                    </div>
-                </section>
-                
-        </main>
+        </section>
 
     </div>
     <!--Main Content END -->
