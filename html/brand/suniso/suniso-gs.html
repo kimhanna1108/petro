@@ -43,6 +43,9 @@
     <link rel="stylesheet" href="../../../common/css/navigation-full-responsive.css" />
     <link rel="canonical" href="https://petrocanadalubricants.com/en-kr/brand/suniso" />
 
+    <link rel="stylesheet" href="../../../common/css/suniso-homepage.css" />
+    <link rel="stylesheet" href="../../../common/css/suniso-homepage.min.css" />
+
     <script src='../../../common/js/jquery.min.js'></script>
     <script src="../../../common/js/jquery-ui.min.js"></script>
     <script src="../../../common/js/jquery.validate.min.js"></script>
@@ -158,24 +161,29 @@
         <input id="hdnProductName" type="hidden" value="SUNISO&lt;sup&gt;&amp;reg;&lt;/sup&gt; GS" />
         <div class="lube-container hero-banner-main">
             <div class="container">
-                <div class="row lube-col1">
-                    <div class="col-sm-12 first-column">
-                        <div class="hero-banner">
-                            <div class="herobanner-image">
-                                <img src="../../../common/images/brand/header-image-slim.jpg" class="hero-bgImage"
-                                    alt="DURATAC Non-Drip Oils" />
+                <div class="hero-banner">
+                    <div class="herobanner-image">
+                        <img src="../../../common/images/brand/header-image-slim.jpg" class="hero-bgImage"
+                            alt="DURATAC Non-Drip Oils" />
 
-                            </div>
-                            <div class="herobanner-caption">
-
-                                <h2>SUNISO<sup>&reg;</sup> GS</h2>
-                                <p>
-                                <p>Mineral Refrigeration Fluids</p><br>
-                                <p>(광유 기반의 냉동용 윤활유)</p>
-                                </p>
-                            </div>
-                        </div>
                     </div>
+                    <div class="herobanner-caption">
+                        <h2>SUNISO<sup>&reg;</sup> GS</h2>
+                        <p>
+                        <p>Mineral Refrigeration Fluids</p>
+                        <p>(광유 기반의 냉동용 윤활유)</p>
+                        </p>
+                    </div>
+                </div>
+                <div class="lube-breadcrumb">
+                    <ul>
+                        <li><a href="/index.html" target="_parent" class="ui-link"> Home </a></li>
+                        <li><a href="../../../html/brand/productoverview.html#brands" target="_parent" class="ui-link"> 모든 제품
+                            </a></li>
+                        <li><a href="../../../html/brand/suniso/suniso.html" target="_parent" class="ui-link">
+                                SUNISO<sup>®</sup> </a></li>
+                        <li class="active">SUNISO<sup>®</sup> GS</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -206,7 +214,7 @@
                                                 <svg role="img" width="172" height="46">
                                                     <title>Suniso logo</title>
                                                     <use
-                                                        xlink:href="/sites/suniso/design/images/icons.svg#suniso-logo" />
+                                                        xlink:href="../../../common/images/brand/suniso/icons.svg#suniso-logo" />
                                                 </svg>
                                             </div>
                                             <div class="col-12 col-sm-7">
@@ -287,11 +295,6 @@
                                                     50 years, Suniso GS lubricants have helped to ensure trouble-free
                                                     operation and maximum service life with excellent chemical and
                                                     thermal stability.</p>
-                                                <p><strong>Get in touch regarding the GS range:</strong></p>
-                                                <p>
-                                                    <a href="/en-gb/contact-us" target="_parent"
-                                                        class="btn btn--blue">Get in touch</a>
-                                                </p>
                                             </div>
                                         </div>
                                         <div class="tab-panel" id="panel-properties" role="tabpanel" tabindex="0"
@@ -342,7 +345,7 @@
                                     <picture role="none" aria-hidden="true" class="bg-img">
                                         <source type="image/webp"
                                             srcset="/-/media/images/suniso/brochures/bg-sands-webp.ashx">
-                                        <img src="/-/media/images/suniso/brochures/bg-sands.ashx" width="1200"
+                                        <img src="../../../common/images/brand/suniso/bg-sands.jpg" width="1200"
                                             height="869" loading="lazy" decoding="async">
                                     </picture>
                                     <div class="pdf-panel__text">
@@ -645,71 +648,7 @@
 
                     </div>
                 </section>
-                <!--<div class="lube-container home-component home-stackable">-->
-                <div class="sideTabHoler" id="sideTabHoler">
-                    <div class="sideTabArrowHolder" id="sideTabArrowHolder">
-                        <a href="#" class="sideTabArrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="6.32" height="12.85"
-                                viewBox="0 0 8.437 14.249">
-                                <path id="Arrow" d="M495.568,1565.577l6.321,6.423-6.321,6.423"
-                                    transform="translate(-494.855 -1564.876)" fill="none" stroke="#fff"
-                                    stroke-width="2" />
-                            </svg>
-                        </a>
-                    </div>
-                    <a href="/en-gb/contact-us" class="sideTabs sideTab1" target="_parent">
-                        <img src="/-/media/images/suniso/product-selector/email-icon.ashx?la=en-GB" class="sideTabImage"
-                            alt="" />
-
-                        <span class="sideTabText">
-                            CONTACT US
-                        </span>
-                    </a>
-                    <a href="/en-gb/product-selector" class="sideTabs sideTab2" target="_parent">
-                        <img src="/-/media/images/suniso/product-selector/sign-icon.ashx?la=en-GB" class="sideTabImage"
-                            alt="" />
-
-                        <span class="sideTabText">
-                            PRODUCT SELECTOR
-                        </span>
-                    </a>
-                </div>
-                <!--</div>-->
-
-                <script type="text/javascript">
-                    $(document).ready(function () {
-                        var sideTabHidden = 0;
-                        var numOfTabs = $('.sideTabs').length;
-                        var tabHideSize = numOfTabs * 143;
-
-                        $(".sideTabArrow").click(function () {
-                            if (sideTabHidden == 0) {
-                                console.log("clicked!");
-                                $("#sideTabHoler").animate({ "right": "-" + tabHideSize + "px" }, 500);
-                                $(".sideTabArrow svg").css("transform", "rotate(180deg)");
-                                sideTabHidden = 1;
-                            } else {
-                                $("#sideTabHoler").animate({ "right": "0px" }, 500);
-                                $(".sideTabArrow svg").css("transform", "rotate(0deg)");
-                                sideTabHidden = 0;
-                            }
-                        });
-                    });
-                </script>
-
-            </div>
-
-            <section class="section bg-brightblue | callout">
-                <div class="container text-center">
-                    <div class="phs">
-                        <p class="mvs fs4">
-                            Interested in our line of products?
-                            <a href="/en-gb/where-to-buy" class="chevron-link">Where To Buy</a>
-                        </p>
-                    </div>
-                </div>
-            </section>
-
+                
         </main>
 
     </div>
