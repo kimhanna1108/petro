@@ -107,7 +107,11 @@
             mask-size: cover;
             width: 30px;
             height: 17px;
-            transition: transform .15s;
+            transition: transform 0.3s ease;
+        }
+
+        .product-data__header .ac__ctrl[aria-expanded="true"] .ico {
+            transform: translateY(-50%) rotate(180deg);
         }
 
         .product-data__header .ac__ctrl:focus-visible {
@@ -186,6 +190,30 @@
             outline-offset: -2px;
         }
 
+        /* Link styles for direct download links */
+        .product-data__info a.dropbtn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font: inherit;
+            color: #333;
+            letter-spacing: inherit;
+            background: transparent;
+            cursor: pointer;
+            width: 100%;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            font-size: medium;
+            font-weight: 500;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+
+        .product-data__info a.dropbtn:hover {
+            background: #e8e8e8;
+        }
+
         @media(max-width: 575px) {
             .product-data__info {
                 flex-direction: column;
@@ -259,8 +287,16 @@
 
         .ac__panel {
             overflow: hidden;
-            transition: height 0.3s ease;
+            max-height: 0;
+            transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
             background: #fff;
+            opacity: 0;
+        }
+
+        .ac__panel.open {
+            max-height: 2000px;
+            opacity: 1;
+            transition: max-height 0.5s ease-in, opacity 0.4s ease-in;
         }
 
         .bg-lightgrey {
@@ -602,31 +638,13 @@
                     <div class="bg-lightgrey">
                         <ul class="product-data__info fs2">
                             <li>
-                                <button class="btn--plain | info-item ui-btn ui-shadow ui-corner-all"
-                                    data-accordion-toggle="true">
-                                    <span>Typical analysis</span>
-                                    <i class="ico ico--chevron darkblue"></i>
-                                </button>
-                            </li>
-                            <li>
-                                <button class="btn--plain | info-item dropdownbtn ui-btn ui-shadow ui-corner-all"
-                                    onclick="GetTDAvailLangsDD('sunisogstds', 'Suniso 3GS')"
-                                    data-panel-toggle="tdsdiv_sunisogstds_Suniso 3GS"
-                                    aria-controls="tdsdiv_sunisogstds_Suniso 3GS">
-                                    <span>Tech Data Sheet</span>
-                                    <i class="ico ico--pdf darkblue"></i>
-                                </button>
+                                <a href="../../../common/pdf/brand/suniso/TechData_Suniso_3GS_sunisogstds _01-Feb-2026.pdf" class="dropbtn" target="_blank">기술 자료</a>
                                 <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 3GS" aria-hidden="true"
                                     hidden="hidden">
                                 </div>
                             </li>
                             <li>
-                                <button class="btn--plain | info-item dropdownbtn ui-btn ui-shadow ui-corner-all"
-                                    onclick="GetSDSAvailLangsDD('sngs3', 'Suniso 3GS')"
-                                    data-panel-toggle="sdsddsiv_sngs3" aria-controls="sdsddsiv_sngs3">
-                                    <span>SDS</span>
-                                    <i class="ico ico--pdf darkblue"></i>
-                                </button>
+                                <a href="../../../common/pdf/brand/suniso/SDS_Suniso_3GS_sngs3 _01-Feb-2026.pdf" class="dropbtn" target="_blank">SDS</a>
                                 <div class="info-list-panel" id="sdsddsiv_sngs3" aria-hidden="true" hidden="hidden">
                                 </div>
                             </li>
@@ -637,51 +655,50 @@
                             <table class="mbs">
                                 <thead style="color: white;background-color: #0081cb;">
                                     <tr>
-                                        <th align="center"><strong>Property</strong></th>
-                                        <th align="center"><strong>ASTM Method </strong></th>
+                                        <th align="center"><strong>속성</strong></th>
+                                        <th align="center"><strong>ASTM 방법</strong></th>
                                         <th align="center"><strong>3GS</strong></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td style="width: 20%;">Density at 15°C, Kg/L</td>
+                                        <td style="width: 20%;">15°C에서의 밀도, Kg/L</td>
                                         <td align="center">D4052</td>
                                         <td align="center">0.910</td>
                                     </tr>
                                     <tr>
-                                        <td>Viscosity at 40°C, cSt</td>
+                                        <td>40°C에서의 점도, cSt</td>
                                         <td align="center">D445</td>
                                         <td align="center">30</td>
                                     </tr>
                                     <tr>
-                                        <td>Viscosity at 100°C, cSt</td>
+                                        <td>100°C에서의 점도, cSt</td>
                                         <td align="center">D445</td>
                                         <td align="center">4.4</td>
                                     </tr>
                                     <tr>
-                                        <td>Flash Point °C / °F</td>
+                                        <td>인화점 °C / °F</td>
                                         <td align="center">D92</td>
                                         <td align="center">178/352</td>
                                     </tr>
                                     <tr>
-                                        <td>Pour Point, °C / °F</td>
+                                        <td>유동점, °C / °F</td>
                                         <td align="center">D97</td>
                                         <td align="center">-48/-54</td>
                                     </tr>
                                     <tr>
-                                        <td>Floc Point °C / °F </td>
+                                        <td>플록점 °C / °F </td>
                                         <td align="center">ASHRAE 86</td>
                                         <td align="center">-58/-72</td>
                                     </tr>
                                     <tr>
-                                        <td>Dielectric Strength, kV</td>
+                                        <td>유전 강도, kV</td>
                                         <td align="center">D877</td>
                                         <td align="center">37</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <p>The values quoted above are typical of normal production. They do not constitute
-                                a specification.</p>
+                            <p>위에 인용된 값은 일반적인 생산의 전형적인 값입니다. 이는 사양을 구성하지 않습니다.</p>
                         </div>
                     </div>
                 </div>
@@ -695,31 +712,13 @@
                     <div class="bg-lightgrey">
                         <ul class="product-data__info fs2">
                             <li>
-                                <button class="btn--plain | info-item ui-btn ui-shadow ui-corner-all"
-                                    data-accordion-toggle="true">
-                                    <span>Typical analysis</span>
-                                    <i class="ico ico--chevron darkblue"></i>
-                                </button>
-                            </li>
-                            <li>
-                                <button class="btn--plain | info-item dropdownbtn ui-btn ui-shadow ui-corner-all"
-                                    onclick="GetTDAvailLangsDD('sunisogstds', 'Suniso 4GS')"
-                                    data-panel-toggle="tdsdiv_sunisogstds_Suniso 4GS"
-                                    aria-controls="tdsdiv_sunisogstds_Suniso 4GS">
-                                    <span>Tech Data Sheet</span>
-                                    <i class="ico ico--pdf darkblue"></i>
-                                </button>
+                                <a href="../../../common/pdf/brand/suniso/TechData_Suniso_4GS_sunisogstds _01-Feb-2026.pdf" class="dropbtn" target="_blank">기술 자료</a>
                                 <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 4GS" aria-hidden="true"
                                     hidden="hidden">
                                 </div>
                             </li>
                             <li>
-                                <button class="btn--plain | info-item dropdownbtn ui-btn ui-shadow ui-corner-all"
-                                    onclick="GetSDSAvailLangsDD('sngs4', 'Suniso 4GS')"
-                                    data-panel-toggle="sdsddsiv_sngs4" aria-controls="sdsddsiv_sngs4">
-                                    <span>SDS</span>
-                                    <i class="ico ico--pdf darkblue"></i>
-                                </button>
+                                <a href="../../../common/pdf/brand/suniso/SDS_Suniso_4GS_sngs4 _01-Feb-2026.pdf" class="dropbtn" target="_blank">SDS</a>
                                 <div class="info-list-panel" id="sdsddsiv_sngs4" aria-hidden="true" hidden="hidden">
                                 </div>
                             </li>
@@ -730,51 +729,50 @@
                             <table class="mbs">
                                 <thead style="color: white;background-color: #0081cb;">
                                     <tr>
-                                        <th align="center"><strong>Property</strong></th>
-                                        <th align="center"><strong>ASTM Method </strong></th>
+                                        <th align="center"><strong>속성</strong></th>
+                                        <th align="center"><strong>ASTM 방법</strong></th>
                                         <th align="center"><strong>4GS</strong></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td style="width: 20%;">Density at 15°C, Kg/L</td>
+                                        <td style="width: 20%;">15°C에서의 밀도, Kg/L</td>
                                         <td align="center">D4052</td>
                                         <td align="center">0.916</td>
                                     </tr>
                                     <tr>
-                                        <td>Viscosity at 40°C, cSt</td>
+                                        <td>40°C에서의 점도, cSt</td>
                                         <td align="center">D445</td>
                                         <td align="center">55</td>
                                     </tr>
                                     <tr>
-                                        <td>Viscosity at 100°C, cSt</td>
+                                        <td>100°C에서의 점도, cSt</td>
                                         <td align="center">D445</td>
                                         <td align="center">5.9</td>
                                     </tr>
                                     <tr>
-                                        <td>Flash Point °C / °F</td>
+                                        <td>인화점 °C / °F</td>
                                         <td align="center">D92</td>
                                         <td align="center">184/364</td>
                                     </tr>
                                     <tr>
-                                        <td>Pour Point, °C / °F</td>
+                                        <td>유동점, °C / °F</td>
                                         <td align="center">D97</td>
                                         <td align="center">-42/-44</td>
                                     </tr>
                                     <tr>
-                                        <td>Floc Point °C / °F </td>
+                                        <td>플록점 °C / °F </td>
                                         <td align="center">ASHRAE 86</td>
                                         <td align="center">-54/-66</td>
                                     </tr>
                                     <tr>
-                                        <td>Dielectric Strength, kV</td>
+                                        <td>유전 강도, kV</td>
                                         <td align="center">D877</td>
                                         <td align="center">40</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <p>The values quoted above are typical of normal production. They do not constitute
-                                a specification.</p>
+                            <p>위에 인용된 값은 일반적인 생산의 전형적인 값입니다. 이는 사양을 구성하지 않습니다.</p>
                         </div>
                     </div>
                 </div>
@@ -788,31 +786,13 @@
                     <div class="bg-lightgrey">
                         <ul class="product-data__info fs2">
                             <li>
-                                <button class="btn--plain | info-item ui-btn ui-shadow ui-corner-all"
-                                    data-accordion-toggle="true">
-                                    <span>Typical analysis</span>
-                                    <i class="ico ico--chevron darkblue"></i>
-                                </button>
-                            </li>
-                            <li>
-                                <button class="btn--plain | info-item dropdownbtn ui-btn ui-shadow ui-corner-all"
-                                    onclick="GetTDAvailLangsDD('sunisogstds', 'Suniso 5GS')"
-                                    data-panel-toggle="tdsdiv_sunisogstds_Suniso 5GS"
-                                    aria-controls="tdsdiv_sunisogstds_Suniso 5GS">
-                                    <span>Tech Data Sheet</span>
-                                    <i class="ico ico--pdf darkblue"></i>
-                                </button>
+                                <a href="../../../common/pdf/brand/suniso/TechData_Suniso_5GS_sunisogstds _01-Feb-2026.pdf" class="dropbtn" target="_blank">기술 자료</a>
                                 <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 5GS" aria-hidden="true"
                                     hidden="hidden">
                                 </div>
                             </li>
                             <li>
-                                <button class="btn--plain | info-item dropdownbtn ui-btn ui-shadow ui-corner-all"
-                                    onclick="GetSDSAvailLangsDD('sngs5', 'Suniso 5GS')"
-                                    data-panel-toggle="sdsddsiv_sngs5" aria-controls="sdsddsiv_sngs5">
-                                    <span>SDS</span>
-                                    <i class="ico ico--pdf darkblue"></i>
-                                </button>
+                                <a href="../../../common/pdf/brand/suniso/SDS_Suniso_5GS_sngs5 _01-Feb-2026.pdf" class="dropbtn" target="_blank">SDS</a>
                                 <div class="info-list-panel" id="sdsddsiv_sngs5" aria-hidden="true" hidden="hidden">
                                 </div>
                             </li>
@@ -823,59 +803,53 @@
                             <table class="mbs">
                                 <thead style="color: white;background-color: #0081cb;">
                                     <tr>
-                                        <th align="center"><strong>Property</strong></th>
-                                        <th align="center"><strong>ASTM Method </strong></th>
+                                        <th align="center"><strong>속성</strong></th>
+                                        <th align="center"><strong>ASTM 방법</strong></th>
                                         <th align="center"><strong>5GS</strong></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td style="width: 20%;">Density at 15°C, Kg/L</td>
+                                        <td style="width: 20%;">15°C에서의 밀도, Kg/L</td>
                                         <td align="center">D4052</td>
                                         <td align="center">0.920</td>
                                     </tr>
                                     <tr>
-                                        <td>Viscosity at 40°C, cSt</td>
+                                        <td>40°C에서의 점도, cSt</td>
                                         <td align="center">D445</td>
                                         <td align="center">100</td>
                                     </tr>
                                     <tr>
-                                        <td>Viscosity at 100°C, cSt</td>
+                                        <td>100°C에서의 점도, cSt</td>
                                         <td align="center">D445</td>
                                         <td align="center">8.4</td>
                                     </tr>
                                     <tr>
-                                        <td>Flash Point °C / °F</td>
+                                        <td>인화점 °C / °F</td>
                                         <td align="center">D92</td>
                                         <td align="center">213/415</td>
                                     </tr>
                                     <tr>
-                                        <td>Pour Point, °C / °F</td>
+                                        <td>유동점, °C / °F</td>
                                         <td align="center">D97</td>
                                         <td align="center">-33/-27</td>
                                     </tr>
                                     <tr>
-                                        <td>Floc Point °C / °F </td>
+                                        <td>플록점 °C / °F </td>
                                         <td align="center">ASHRAE 86</td>
                                         <td align="center">-45/-49</td>
                                     </tr>
                                     <tr>
-                                        <td>Dielectric Strength, kV</td>
+                                        <td>유전 강도, kV</td>
                                         <td align="center">D877</td>
                                         <td align="center">38</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <p>The values quoted above are typical of normal production. They do not constitute
-                                a specification.</p>
+                            <p>위에 인용된 값은 일반적인 생산의 전형적인 값입니다. 이는 사양을 구성하지 않습니다.</p>
                         </div>
                     </div>
                 </div>
-
-
-
-
-
             </div>
         </section>
 
@@ -889,6 +863,27 @@
             .then(data => {
                 document.getElementById('footer').innerHTML = data;
             });
+
+        // Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionButtons = document.querySelectorAll('.product-data__header .ac__ctrl');
+
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const panel = this.closest('.ac__item').querySelector('.ac__panel');
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+                    // Toggle current panel only
+                    if (isExpanded) {
+                        panel.classList.remove('open');
+                        this.setAttribute('aria-expanded', 'false');
+                    } else {
+                        panel.classList.add('open');
+                        this.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+        });
     </script>
     <!--Footer END -->
 
