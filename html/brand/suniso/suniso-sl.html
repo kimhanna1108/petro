@@ -10,7 +10,7 @@
     <title>한국캐나디언골드</title>
     <meta name="Description" content="SUNISO<sup>&reg;</sup>" />
     <meta name="Keywords" content="SUNISO<sup>&reg;</sup>" />
-    <meta property="og:title" content="Suniso SL | SUNISO | Petro-Canada Lubricants" />
+    <meta property="og:title" content="SUNISO GS | SUNISO | Petro-Canada Lubricants" />
     <meta property="og:description" content="SUNISO<sup>&reg;</sup>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -28,7 +28,8 @@
     <link rel="icon" type="image" sizes="512x512" href="../../../common/images/android-chrome-512x512.png">
     <link rel="shortcut icon" type="image" sizes="512x512" href="../../../common/images/android-chrome-512x512.png">
     <link rel="icon" type="image" sizes="192x192" href="../../../common/images/android-chrome-192x192.png">
-    <link rel="shortcut icon" type="image" sizes="192x192" href="../../../common/images/android-chrome-192x192.png android-chrome-192x192.png">
+    <link rel="shortcut icon" type="image" sizes="192x192"
+        href="../../../common/images/android-chrome-192x192.png android-chrome-192x192.png">
     <link rel="manifest" href="../../../common/manifest.json">
     <link rel='stylesheet' href='../../../common/css/bootstrap.min.css'>
     <link rel='stylesheet' href='../../../common/css/bootstrap-custom.min.css'>
@@ -40,7 +41,362 @@
     <link rel='stylesheet' href='../../../common/css/print.min.css' media="print">
     <link rel="stylesheet" href="../../../common/css/navistar-location.min.css" />
     <link rel="stylesheet" href="../../../common/css/navigation-full-responsive.css" />
-    <link rel="canonical" href="https://petrocanadalubricants.com/en-kr/brand/suniso-sl" />
+    <link rel="canonical" href="https://petrocanadalubricants.com/en-kr/brand/suniso-gs" />
+
+    <style>
+        /* Suniso page accordion and section styles */
+
+        .container-xxl {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Accordion styles */
+        .accordion-spec {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ac__item {
+            margin-bottom: 0;
+            border-bottom: 2px solid #fff;
+        }
+
+        .product-data {
+            margin-bottom: 8px;
+        }
+
+        .product-data__header {
+            background: linear-gradient(232deg, #003b5c 52.57%, #0081CB 115.51%);
+            align-items: center;
+            height: 80px;
+            display: flex;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
+        .product-data__header .ac__ctrl {
+            position: relative;
+            color: #fff;
+            font-weight: 700;
+            text-align: left;
+            font-size: medium;
+            width: 100%;
+            height: 100%;
+            padding-right: 50px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-data__header .ac__ctrl .ico {
+            color: inherit;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyNSAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIgMkwxMi41IDEzTDIzIDIiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=");
+            mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyNSAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIgMkwxMi41IDEzTDIzIDIiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=");
+            background-color: currentColor;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            width: 30px;
+            height: 17px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-data__header .ac__ctrl[aria-expanded="true"] .ico {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .product-data__header .ac__ctrl:focus-visible {
+            outline: none;
+        }
+
+        .product-data__header .ac__ctrl:focus-visible::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            outline-offset: -3px;
+        }
+
+        .product-data__header .ac__text {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        .product-data__info {
+            display: flex;
+            padding: 0;
+            flex-flow: row nowrap;
+            list-style: none;
+            margin: 0;
+            background: #f5f5f5;
+            border-top: 3px solid #e0e0e0;
+        }
+
+        .product-data__info li {
+            flex: 1;
+            padding: 0;
+            margin: 0;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .product-data__info li:last-child {
+            border-right: none;
+        }
+
+        .product-data__info .info-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font: inherit;
+            color: #333;
+            letter-spacing: inherit;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            font-size: medium;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .product-data__info .info-item:hover {
+            background: #e8e8e8;
+        }
+
+        .product-data__info .info-item span {
+            padding-right: 0.5ch;
+        }
+
+        .product-data__info .info-item.show .ico--chevron {
+            transform: rotate(180deg);
+        }
+
+        .product-data__info .info-item:focus-visible {
+            outline: 2px solid #0081cb;
+            outline-offset: -2px;
+        }
+
+        /* Link styles for direct download links */
+        .product-data__info a.dropbtn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font: inherit;
+            color: #333;
+            letter-spacing: inherit;
+            background: transparent;
+            cursor: pointer;
+            width: 100%;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            font-size: medium;
+            font-weight: 500;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+
+        .product-data__info a.dropbtn:hover {
+            background: #e8e8e8;
+        }
+
+        @media(max-width: 575px) {
+            .product-data__info {
+                flex-direction: column;
+            }
+
+            .product-data__info li {
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            .product-data__info li:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media(min-width: 1340px) {
+            .product-data .ac__text {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+
+        .product-data .info-list-panel {
+            position: absolute;
+            z-index: 60;
+            color: #000;
+            background: #f3f3f3;
+            margin-top: .5em;
+            padding: 1rem;
+            max-height: 10em;
+            max-width: 240px;
+            min-width: 150px;
+            box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, .25);
+            overflow-y: scroll;
+        }
+
+        .product-data .info-list-panel ul {
+            list-style: none;
+            font-size: 1.55rem;
+        }
+
+        .product-data .info-list-panel ul li {
+            padding: 0;
+            margin: 0;
+        }
+
+        .product-data .info-list-panel ul li+li {
+            margin-top: .25em;
+        }
+
+        .product-data .info-list-panel a {
+            display: block;
+            padding: .125em 0;
+            text-decoration: none;
+        }
+
+        .product-data .info-list-panel a:hover {
+            background: #e4e5e6;
+        }
+
+        .ico--chevron,
+        .ico--pdf {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+
+        .darkblue {
+            color: #1e4a6a;
+        }
+
+        .ac__panel {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+            background: #fff;
+            opacity: 0;
+        }
+
+        .ac__panel.open {
+            max-height: 2000px;
+            opacity: 1;
+            transition: max-height 0.5s ease-in, opacity 0.4s ease-in;
+        }
+
+        .bg-lightgrey {
+            background: #f5f5f5;
+        }
+
+        .ac__text {
+            padding: 3rem 0;
+            background: #fff;
+        }
+
+        .ac__text table {
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .fs2 {
+            font-size: 0.95rem;
+        }
+
+        .pbxs {
+            padding-bottom: 0.5rem;
+        }
+
+        /* Table styles */
+        table.mbs {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            border: 1px solid #4a90d9;
+        }
+
+        table.mbs thead {
+            background: #4a90d9;
+        }
+
+        table.mbs th {
+            padding: 1.2rem 1rem;
+            color: white;
+            font-weight: 600;
+            text-align: left;
+            border: none;
+            font-size: 1.15rem;
+        }
+
+        table.mbs td {
+            padding: 1rem;
+            border: none;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: left;
+            background: #fff;
+            font-size: 1.05rem;
+        }
+
+        table.mbs tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        table.mbs tbody tr:hover {
+            background: #f8f8f8;
+        }
+
+        .rte-content p {
+            margin: 2rem 0 0 0;
+            color: #666;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        /* Section styles */
+        .section--pb {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            width: 100%;
+            margin: 0;
+            background: #fff;
+        }
+
+        .section--pb .product-data {
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+
+        .product-data {
+            width: 100%;
+        }
+
+        /* Info list panel */
+        .info-list-panel {
+            background: #f5f5f5;
+            padding: 1rem;
+            display: none;
+        }
+
+        .info-list-panel[aria-hidden="false"] {
+            display: block;
+        }
+
+        /* Footer wave design - disabled */
+    </style>
 
     <script src='../../../common/js/jquery.min.js'></script>
     <script src="../../../common/js/jquery-ui.min.js"></script>
@@ -153,31 +509,31 @@
     <div class='overlay'></div> <!-- overlay is required for mobile navigation -->
     <!--Main Content START -->
     <div class="page-wrapper ">
-        <input id="hdnProductName" type="hidden" value="SUNISO&lt;sup&gt;&amp;reg;&lt;/sup&gt; SL" />
+        <input id="hdnProductName" type="hidden" value="SUNISO&lt;sup&gt;&amp;reg;&lt;/sup&gt; GS" />
         <div class="lube-container hero-banner-main">
             <div class="container">
                 <div class="row lube-col1">
                     <div class="col-sm-12 first-column">
                         <div class="hero-banner">
                             <div class="herobanner-image">
-                                <img src="../../../common/images/brand/header-image-slim.jpg"
-                                    class="hero-bgImage" alt="DURATAC Chain Oil" />
+                                <img src="../../../common/images/brand/header-image-slim.jpg" class="hero-bgImage"
+                                    alt="DURATAC Non-Drip Oils" />
 
                             </div>
                             <div class="herobanner-caption">
 
                                 <h2>SUNISO<sup>&reg;</sup> SL</h2>
                                 <p>
-                                <p>Full Synthetic Refrigeration Fluids(완전 합성 냉동유)</p>
-                                </p>
                             </div>
                         </div>
                         <div class="lube-breadcrumb">
                             <ul>
                                 <li><a href="/index.html" target="_parent"> Home </a></li>
-                                <li><a href="../../../html/brand/productoverview.html#brands" target="_parent"> 모든 제품 </a></li>
-                                <li><a href="../../../html/brand/suniso/suniso.html" target="_parent"> SUNISO<sup>®</sup> </a></li>
-                                <li class="active">SUNISO<sup>&reg;</sup> SL</li>
+                                <li><a href="../../../html/brand/productoverview.html#brands" target="_parent"> 모든 제품
+                                    </a></li>
+                                <li><a href="../../../html/brand/suniso/suniso.html" target="_parent">
+                                        SUNISO<sup>®</sup> </a></li>
+                                <li class="active">SUNISO<sup>&reg;</sup> LS</li>
                             </ul>
                         </div>
                     </div>
@@ -198,19 +554,34 @@
                                 <div class="product-content-main">
                                     <nav role="navigation" class="lubeTab product-content-tilte">
                                         <ul>
-                                            <li><a href="#tab1" class="active">개요</a></li>
+                                            <li><a href="#tab1" class="active">개요 </a></li>
+                                            <li><a href="#tab2">특징 &amp; 장점</a></li>
+                                            <li><a href="#tab3">적용 분야</a></li>
                                         </ul>
                                     </nav>
                                     <div class="tab-content">
                                         <div id="tab1" class="tab-pane active">
+                                            <p>Suniso<sup>®</sup> SL 오일은 HFC 및 HFC / HFO 냉매 혼합물을 사용하는 압축기의 최적 성능을 위해 제조된 고성능 합성 냉동 윤활유입니다. 특수 설계된 폴리올레스터(POE)로 제조된 Suniso SL 윤활유는 증발기에서 압축기까지 시스템 전체에서 우수한 혼화성과 효율적인 오일 회수를 보장합니다. 또한 Suniso SL 윤활유는 냉매가 용해된 상태에서도 점도를 매우 잘 유지하여 압축기 베어링에 최대한의 보호를 제공합니다. Suniso SL 윤활유는 탁월한 열 안정성을 제공하므로 저온 냉동 시스템부터 고온 히트 펌프에 이르는 다양한 애플리케이션에 적합합니다.</p>
+                                        </div>
+                                        <div id="tab2" class="tab-pane">
                                             <p>
-                                            <p>Suniso® SL 윤활유는 HFC 냉매(예: R-134a, R-404A 등)를 사용하는 냉동 및 에어컨 압축기용으로 설계된 고성능 완전 합성 냉동유입니다.
-                                                이 제품은 POE (폴리올 에스터) 기반으로 제작되어, 다양한 운전 조건에서도 뛰어난 성능과 시스템 보호를 제공합니다.
+                                            <ul>
+    <li><strong>HFC 냉매와의 혼화성:</strong> 증발기에서 압축기로 효율적인 오일 회수를 촉진하여 증발기 및 기타 시스템 구성 요소에 오일이 축적되는 것을 방지하고 시스템 효율 저하 및 손상 위험을 최소화합니다.</li>
+    <li><strong>최적의 점도 유지:</strong> 균형 잡힌 배합으로 냉매에 의한 윤활유 희석으로 인한 과도한 점도 감소를 방지합니다. 이는 넓은 온도 범위에서 보호 윤활막을 유지하여 마찰을 줄이고 금속 간 접촉을 방지합니다.</li>
+    <li><strong>높은 열 안정성:</strong> 저온 냉동 시스템부터 고온 히트 펌프에 이르는 광범위한 애플리케이션에 적합합니다. </li>
+    <li>DIN 51503 KD 및 ISO6743-4 ISO-L-DRD 규격을 충족합니다.</li>
+</ul>
                                             </p>
-                                            <br />
+                                        </div>
+                                        <div id="tab3" class="tab-pane">
                                             <p>
-                                                Suniso SL 제품군에 대한 자세한 정보는 <a href="https://sunisolubricants.com/brand/suniso-sl">SUNISO 공식 웹사이트</a>에서 확인하실 수 있습니다.
-                                            </p>
+                                            <ul>
+                                               
+    <li>오존 친화적이고 염소가 없는 냉매를 사용하는 냉동, 공조 및 히트 펌프 시스템에 사용하도록 권장됩니다.</li>
+    <li>대부분의 HFC 냉매(예: R125, R134a, R143a, R152a, R404A, R407C, R410A, R422a, R422d, R427a, R507A) 및 HFC/HFO 혼합물(예: R448A, R449A, R449C, R452A, R452B, R454A, R454B, R454C, R507, R513A)과 호환됩니다. Suniso SL 윤활유는 극저온에서도 탁월한 혼화성을 나타냅니다.</li>
+    <li>석유화학, 냉장 보관, 운송, 슈퍼마켓 및 가정용 공조 시스템과 같은 애플리케이션에서 사용되는 왕복, 스크류, 원심 및 스크롤 압축기를 포함한 광범위한 압축기 유형에 적합합니다.</li>
+
+                                            </ul>
                                             </p>
                                         </div>
                                     </div>
@@ -240,51 +611,373 @@
 
             </div>
         </div>
-        <div class="lube-container top-bottom-60-20">
+        <section class="section--pb">
+            <div class="product-data accordion accordion-spec">
 
-            <div class="container">
-                <div class="row lube-col1 lube-title top-15">
 
-                    <div class="col-sm-12 first-column">
-                        <h2>관련 제품</h2>
+                <div class="ac__item | pbxs">
+                    <div class="product-data__header">
+                        <button class="btn--plain ac__ctrl ui-btn ui-shadow ui-corner-all">
+                            <h2 class="mvn">Suniso SL 22</h2>
+                            <i aria-hidden="true" class="ico"></i>
+                        </button>
+                    </div>
+                    <div class="bg-lightgrey">
+                        <ul class="product-data__info fs2">
+                            <li>
+                                <a href="../../../common/pdf/brand/suniso/TechData_Suniso_SL22_sunisosltds_english_01-Aug-2026.pdf" class="dropbtn" target="_blank">기술 자료</a>
+                                <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 3GS" aria-hidden="true"
+                                    hidden="hidden">
+                                </div>
+                            </li>
+                            <li>
+                                <a href="../../../common/pdf/brand/suniso/SDS_Suniso SL22_snsl22_koreankr_1-August-2026.pdf" class="dropbtn" target="_blank">SDS</a>
+                                <div class="info-list-panel" id="sdsddsiv_sngs3" aria-hidden="true" hidden="hidden">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ac__panel">
+                        <div class="ac__text rte-content fs2"><table class="mbs">
+                            <thead style="color: white;background-color: #0081cb;">
+                                <tr>
+                                    <th align="center"><strong>속성</strong></th>
+                                    <th align="center"><strong>ASTM 방법</strong></th>
+                                    <th align="center"><strong>SL 22</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 20%;">15°C에서의 밀도, Kg/L</td>
+                                    <td align="center">D4052</td>
+                                    <td align="center">0.993</td>
+                                </tr>
+                                <tr>
+                                    <td>40°C에서의 점도, cSt</td>
+                                    <td align="center">D445</td>
+                                    <td align="center">23.5</td>
+                                    </tr>
+                                <tr>
+                                    <td>100°C에서의 점도, cSt</td>
+                                    <td align="center">D445</td>
+                                    <td align="center">4.4</td>
+                                    </tr>
+                                <tr>
+                                    <td>수분, ppm</td>
+                                    <td align="center">D6304</td>
+                                    <td align="center">&lt;100</td>
+                                    </tr>
+                                <tr>
+                                    <td>인화점, °C / °F</td>
+                                    <td align="center">D92</td>
+                                    <td align="center">252/486</td>
+                                    </tr>
+                                <tr>
+                                    <td>유동점, °C / °F </td>
+                                    <td align="center">D5950</td>
+                                    <td align="center">-57/-71</td>
+                                    </tr>
+                                <tr>
+                                    <td>산가, mg KOH/gm</td>
+                                    <td align="center">D974 (Modified)</td>
+                                    <td align="center">&lt;0.1</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                        <p>위에 인용된 값은 일반적인 생산의 전형적인 값입니다. 이는 사양을 구성하지 않습니다.</p></div>
                     </div>
                 </div>
-                <div class="row product-related-line-grid bottom-30">
-
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="product-related-item  ">
-                            <div class="text-component">
-                                <h2> <a href="../../../html/brand/suniso/suniso-gs.html" target="_parent">SUNISO<sup>&reg;</sup> GS</a>
-                                </h2>
-                                <a href="../../../html/brand/suniso/suniso-gs.html" target="_parent" class="btn red-button">
-                                    <b>더보기</b>
-                                </a>
-                            </div>
-                            <div class="image-component">
-                                <a href="../../../html/brand/suniso/suniso-gs.html" target="_parent"><img
-                                        src="../../../common/images/brand/Suniso_GS_Group_Shot.jpg"
-                                        alt="DURATAC Non-Drop Oil" /></a>
-                            </div>
-                        </div>
+                <div class="ac__item | pbxs">
+                    <div class="product-data__header">
+                        <button class="btn--plain ac__ctrl ui-btn ui-shadow ui-corner-all">
+                            <h2 class="mvn">Suniso SL 32</h2>
+                            <i aria-hidden="true" class="ico"></i>
+                        </button>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="product-related-item  ">
-                            <div class="text-component">
-                                <h2> <a href="../../../html/brand/reflo/reflo-a.html" target="_parent">REFLO™ A</a></h2>
-                                <a href="../../../html/brand/reflo/reflo-a.html" target="_parent" class="btn red-button">
-                                    <b>더보기</b>
-                                </a>
-                            </div>
-                            <div class="image-component">
-                                <a href="../../../html/brand/reflo/reflo-a.html" target="_parent"><img
-                                        src="../../../common/images/brand/PC_Reflo-46A.jpg"
-                                        alt="REFLO" /></a>
-                            </div>
+                    <div class="bg-lightgrey">
+                        <ul class="product-data__info fs2">
+                            <li>
+                                <a href="../../../common/pdf/brand/suniso/TechData_Suniso_SL32_sunisosltds_english_01-Aug-2026.pdf" class="dropbtn" target="_blank">기술 자료</a>
+                                <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 4GS" aria-hidden="true"
+                                    hidden="hidden">
+                                </div>
+                            </li>
+                            <li>
+                                <a href="../../../common/pdf/brand/suniso/SDS_Suniso SL32_snsl32_koreankr_1-August-2026.pdf" class="dropbtn" target="_blank">SDS</a>
+                                <div class="info-list-panel" id="sdsddsiv_sngs4" aria-hidden="true" hidden="hidden">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ac__panel">
+                        <div class="ac__text rte-content fs2"><table class="mbs">
+                            <thead style="color: white;background-color: #0081cb;">
+                                <tr>
+                                    <th align="center"><strong>속성</strong></th>
+                                    <th align="center"><strong>ASTM 방법</strong></th>
+                                    <th align="center"><strong>SL 32</strong></th>
+                                    </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 20%;">15°C에서의 밀도, Kg/L</td>
+                                    <td align="center">D4052</td>
+                                    <td align="center">0.993</td>
+                                        </tr>
+                                <tr>
+                                    <td>40°C에서의 점도, cSt</td>
+                                    <td align="center">D445</td>
+                                <td align="center">32.0</td>
+                                    </tr>
+                                <tr>
+                                    <td>100°C에서의 점도, cSt</td>
+                                    <td align="center">D445</td>
+                                    <td align="center">5.6</td>
+                                    </tr>
+                                <tr>
+                                    <td>수분, ppm</td>
+                                    <td align="center">D6304</td>
+                                    <td align="center">&lt;100</td>
+                                    </tr>
+                                <tr>
+                                    <td>인화점, °C / °F</td>
+                                    <td align="center">D92</td>
+                                    <td align="center">250/482</td>
+                                        </tr>
+                                <tr>
+                                    <td>유동점, °C / °F </td>
+                                    <td align="center">D5950</td>
+                                    <td align="center">-54/-65</td>
+                                    </tr>
+                                <tr>
+                                    <td>산가, mg KOH/gm</td>
+                                    <td align="center">D974 (Modified)</td>
+                                    <td align="center">&lt;0.1</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                        <p>The values quoted above are typical of normal production. They do not constitute a specification.</p>
+                    </div>
+                </div>
+                <div class="ac__item | pbxs">
+                    <div class="product-data__header">
+                        <button class="btn--plain ac__ctrl ui-btn ui-shadow ui-corner-all">
+                            <h2 class="mvn">Suniso SL 46</h2>
+                            <i aria-hidden="true" class="ico"></i>
+                        </button>
+                    </div>
+                    <div class="bg-lightgrey">
+                        <ul class="product-data__info fs2">
+                            <li>
+                                <a href="../../../common/pdf/brand/suniso/TechData_Suniso_SL46_sunisosltds_english_01-Aug-2026.pdf" class="dropbtn" target="_blank">기술 자료</a>
+                                <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 5GS" aria-hidden="true"
+                                    hidden="hidden">
+                                </div>
+                            </li>
+                            <li>
+                                <a href="../../../common/pdf/brand/suniso/SDS_Suniso SL46_snsl46_koreankr_1-August-2026.pdf" class="dropbtn" target="_blank">SDS</a>
+                                <div class="info-list-panel" id="sdsddsiv_sngs5" aria-hidden="true" hidden="hidden">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ac__panel">
+                        <div class="ac__text rte-content fs2"><table class="mbs">
+                            <thead style="color: white;background-color: #0081cb;">
+                                <tr>
+                                    <th align="center"><strong>속성</strong></th>
+                                    <th align="center"><strong>ASTM 방법</strong></th>
+                                    <th align="center"><strong>SL 46</strong></th>
+                                    </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 20%;">15°C에서의 밀도, Kg/L</td>
+                                    <td align="center">D4052</td>
+                                    <td align="center">0.981</td>
+                                    </tr>
+                                <tr>
+                                    <td>40°C에서의 점도, cSt</td>
+                                    <td align="center">D445</td>
+                                    <td align="center">46.1</td>
+                                    </tr>
+                                <tr>
+                                    <td>100°C에서의 점도, cSt</td>
+                                    <td align="center">D445</td>
+                                    <td align="center">6.9</td>
+                                    </tr>
+                                <tr>
+                                    <td>수분, ppm</td>
+                                    <td align="center">D6304</td>
+                                    <td align="center">&lt;100</td>
+                                    </tr>
+                                <tr>
+                                    <td>인화점, °C / °F</td>
+                                    <td align="center">D92</td>
+                                    <td align="center">253/487</td>
+                                    </tr>
+                                <tr>
+                                    <td>유동점, °C / °F </td>
+                                    <td align="center">D5950</td>
+                                    <td align="center">-48/-54</td>
+                                    </tr>
+                                <tr>
+                                    <td>산가, mg KOH/gm</td>
+                                    <td align="center">D974 (Modified)</td>
+                                    <td align="center">&lt;0.1</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                        <p>위에 인용된 값은 일반적인 생산의 전형적인 값입니다. 이는 사양을 구성하지 않습니다.</p>
+                    </div>
+                </div>
+                <div class="ac__item | pbxs">
+                    <div class="product-data__header">
+                        <button class="btn--plain ac__ctrl ui-btn ui-shadow ui-corner-all">
+                            <h2 class="mvn">Suniso SL 68</h2>
+                            <i aria-hidden="true" class="ico"></i>
+                        </button>
+                    </div>
+                    <div class="bg-lightgrey">
+                        <ul class="product-data__info fs2">
+                            <li>
+                                <a href="../../../common/pdf/brand/suniso/TechData_Suniso_SL68_sunisosltds_english_01-Aug-2026.pdf" class="dropbtn" target="_blank">기술 자료</a>
+                                <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 5GS" aria-hidden="true"
+                                    hidden="hidden">
+                                </div>
+                            </li>
+                            <li>
+                                <a href="../../../common/pdf/brand/suniso/SDS_Suniso SL68_snsl68_koreankr_1-August-2026.pdf" class="dropbtn" target="_blank">SDS</a>
+                                <div class="info-list-panel" id="sdsddsiv_sngs5" aria-hidden="true" hidden="hidden">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ac__panel">
+                        <div class="ac__text rte-content fs2"><table class="mbs">
+                            <thead style="color: white;background-color: #0081cb;">
+                                <tr>
+                                    <th align="center"><strong>속성</strong></th>
+                                    <th align="center"><strong>ASTM 방법</strong></th>
+                                    <th align="center"><strong>SL 68</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 20%;">15°C에서의 밀도, Kg/L</td>
+                                    <td align="center">D4052</td>
+                                    <td align="center">0.973</td>
+                                </tr>
+                                <tr>
+                                    <td>40°C에서의 점도, cSt</td>
+                                    <td align="center">D445</td>
+                                    <td align="center">65.0</td>
+                                </tr>
+                                <tr>
+                                    <td>100°C에서의 점도, cSt</td>
+                                    <td align="center">D445</td>
+                                    <td align="center">8.3</td>
+                                </tr>
+                                <tr>
+                                    <td>수분, ppm</td>
+                                    <td align="center">D6304</td>
+                                    <td align="center">&lt;100</td>
+                                </tr>
+                                <tr>
+                                    <td>인화점, °C / °F</td>
+                                    <td align="center">D92</td>
+                                    <td align="center">255/491</td>
+                                </tr>
+                                <tr>
+                                    <td>유동점, °C / °F </td>
+                                    <td align="center">D5950</td>
+                                    <td align="center">-36/-33</td>
+                                </tr>
+                                <tr>
+                                    <td>산가, mg KOH/gm</td>
+                                    <td align="center">D974 (Modified)</td>
+                                    <td align="center">&lt;0.1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>위에 인용된 값은 일반적인 생산의 전형적인 값입니다. 이는 사양을 구성하지 않습니다.</p>
+                    </div>
+                </div>
+                <div class="ac__item | pbxs">
+                    <div class="product-data__header">
+                        <button class="btn--plain ac__ctrl ui-btn ui-shadow ui-corner-all">
+                            <h2 class="mvn">Suniso SL 100</h2>
+                            <i aria-hidden="true" class="ico"></i>
+                        </button>
+                    </div>
+                    <div class="bg-lightgrey">
+                        <ul class="product-data__info fs2">
+                            <li>
+                                <a href="../../../common/pdf/brand/suniso/TechData_Suniso_SL100_sunisosltds_english_01-Aug-2026.pdf" class="dropbtn" target="_blank">기술 자료</a>
+                                <div class="info-list-panel" id="tdsdiv_sunisogstds_Suniso 5GS" aria-hidden="true"
+                                    hidden="hidden">
+                                </div>
+                            </li>
+                            <li>
+                                <a href="../../../common/pdf/brand/suniso/SDS_Suniso SL100_snsl100_koreankr_1-August-2026.pdf" class="dropbtn" target="_blank">SDS</a>
+                                <div class="info-list-panel" id="sdsddsiv_sngs5" aria-hidden="true" hidden="hidden">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ac__panel">
+                        <div class="ac__text rte-content fs2"><table class="mbs">
+                            <thead style="color: white;background-color: #0081cb;">
+                                <tr>
+                                    <th align="center"><strong>속성</strong></th>
+                                    <th align="center"><strong>ASTM 방법</strong></th>
+                                    <th align="center"><strong>SL 100</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 20%;">15°C에서의 밀도, Kg/L</td>
+                                    <td align="center">D4052</td>
+                                    <td align="center">0.966</td>
+                                </tr>
+                                <tr>
+                                    <td>40°C에서의 점도, cSt</td>
+                                    <td align="center">D445</td>
+                                    <td align="center">100.0</td>
+                                </tr>
+                                <tr>
+                                    <td>100°C에서의 점도, cSt</td>
+                                    <td align="center">D445</td>
+                                    <td align="center">10.9</td>
+                                </tr>
+                                <tr>
+                                    <td>수분, ppm</td>
+                                    <td align="center">D6304</td>
+                                    <td align="center">&lt;100</td>
+                                </tr>
+                                <tr>
+                                    <td>인화점, °C / °F</td>
+                                    <td align="center">D92</td>
+                                    <td align="center">270/518</td>
+                                </tr>
+                                <tr>
+                                    <td>유동점, °C / °F </td>
+                                    <td align="center">D5950</td>
+                                    <td align="center">-33/-27</td>
+                                </tr>
+                                <tr>
+                                    <td>산가, mg KOH/gm</td>
+                                    <td align="center">D974 (Modified)</td>
+                                    <td align="center">&lt;0.1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>위에 인용된 값은 일반적인 생산의 전형적인 값입니다. 이는 사양을 구성하지 않습니다.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
     </div>
     <!--Main Content END -->
@@ -296,6 +989,27 @@
             .then(data => {
                 document.getElementById('footer').innerHTML = data;
             });
+
+        // Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionButtons = document.querySelectorAll('.product-data__header .ac__ctrl');
+
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const panel = this.closest('.ac__item').querySelector('.ac__panel');
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+                    // Toggle current panel only
+                    if (isExpanded) {
+                        panel.classList.remove('open');
+                        this.setAttribute('aria-expanded', 'false');
+                    } else {
+                        panel.classList.add('open');
+                        this.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+        });
     </script>
     <!--Footer END -->
 
